@@ -1,3 +1,4 @@
+dateModified: 1549486526
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -5,6 +6,11 @@ email:
 fieldGroups:
   ac757e69-61e5-4446-a1c8-0a249fd73e3d:
     name: Common
+plugins:
+  imager:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
 siteGroups:
   d14c9dca-37c3-4439-9c6c-7cbbbb484c9e:
     name: Metacell
