@@ -1,3 +1,4 @@
+dateModified: 1549488620
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -5,6 +6,32 @@ email:
 fieldGroups:
   ac757e69-61e5-4446-a1c8-0a249fd73e3d:
     name: Common
+plugins:
+  imager:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+sections:
+  305bc43d-5031-4475-bd90-e9a309e799ff:
+    enableVersioning: true
+    entryTypes:
+      ff0cb636-0cc9-49ae-8586-b665747b212f:
+        handle: homepage
+        hasTitleField: false
+        name: Homepage
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: null
+    handle: homepage
+    name: Homepage
+    propagateEntries: true
+    siteSettings:
+      5d321cb4-ef6f-4ec7-8ea5-edbb05b24c96:
+        enabledByDefault: true
+        hasUrls: true
+        template: homepage/_entry
+        uriFormat: __home__
+    type: single
 siteGroups:
   d14c9dca-37c3-4439-9c6c-7cbbbb484c9e:
     name: Metacell
