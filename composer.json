@@ -2,6 +2,9 @@
   "require": {
     "aelvan/imager": "v2.1.4",
     "craftcms/cms": "^3.0.0",
+    "sebastianlenz/linkfield": "^1.0",
+    "superbig/craft3-templateselect": "^2.0",
+    "verbb/super-table": "^2.1",
     "vlucas/phpdotenv": "^2.4.0"
   },
   "autoload": {

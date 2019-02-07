@@ -1,0 +1,64 @@
+{% macro image(image, options) %}
+
+  {% set class = options.class ?? '' %}
+  {% set mode = options.mode ?? 'crop' %}
+  {% set ratio = options.ratio ?? (16/9) %}
+  {% set format = options.format ?? 'jpg' %}
+  {% set quality = options.quality ?? 80 %}
+  {% set sizes = options.sizes ?? '100vw' %}
+  {% set srcset = options.srcset ?? [
+    { width: 1600 },
+    { width: 1200 },
+    { width: 960, ratio: 16/10, jpegQuality: 65 },
+    { width: 640, ratio: 16/10, jpegQuality: 65 },
+  ] %}
+
+
+  {% if image.getExtension() != "svg" %}
+
+    {% set transformedImages = craft.imager.transformImage(image,
+      srcset,
+      {
+        ratio: ratio,
+        mode: mode,
+        format: format,
+        allowUpscale: false,
+        mode: 'crop',
+        jpegQuality: quality,
+        position: image.getFocalPoint(true),
+        interlace: true
+      }
+    ) %}
+    <img class="lazyload {{ class }}"
+    data-src="{{ transformedImages[0].url }}"
+    srcset="{{ craft.imager.placeholder({ width: transformedImages[0].width, height: transformedImages[0].height }) }}"
+    data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+    alt="{{ image.title }}">
+  {% else %}
+    <img class="lazyload {{ class }}"
+    data-src="{{ image.url }}"
+    data-srcset="{{ image.url }}"
+    alt="{{ image.title }}">
+  {% endif %}
+{% endmacro %}
+
+{% macro background(image) %}
+  {% set transformedImages = craft.imager.transformImage(image,
+    [
+      { width: 1600 },
+      { width: 1200 },
+      { width: 960, ratio: 16/10, jpegQuality: 65 },
+      { width: 640, ratio: 16/10, jpegQuality: 65 },
+    ],
+    {
+        format: 'jpg',
+        allowUpscale: false,
+        mode: 'crop',
+        jpegQuality: 80,
+        position: image.getFocalPoint(true),
+        interlace: true
+    }
+  ) %}
+
+  style="background-image: url('{{ transformedImages[1].url }}'); background-position: {{ image.getFocalPoint(true) }}"
+{% endmacro %}

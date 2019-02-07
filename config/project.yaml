@@ -1,27 +1,267 @@
-dateModified: 1549488620
+dateModified: 1549583174
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
+  1c3c6758-372a-418f-92f6-6c4ece97c5ad:
+    name: Layout
   ac757e69-61e5-4446-a1c8-0a249fd73e3d:
     name: Common
+fields:
+  1abf9822-347f-4961-98c4-bed06e2e42c8:
+    contentColumnType: string
+    fieldGroup: 1c3c6758-372a-418f-92f6-6c4ece97c5ad
+    handle: layoutComponents
+    instructions: 'This are the components that will create the page layout and content.'
+    name: 'Layout Components'
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_layoutcomponents}}'
+      localizeBlocks: false
+      maxBlocks: ''
+      minBlocks: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
+matrixBlockTypes:
+  daf0be23-a36a-45dc-86fc-d16c683bfba2:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      a7668d9e-d701-40e1-8706-70ae90afccd8:
+        tabs:
+          -
+            fields:
+              21809e57-fdc5-46df-b163-d2ad31c3ef38:
+                required: true
+                sortOrder: 2
+              3a572883-2502-4626-bcee-ba431ae944af:
+                required: false
+                sortOrder: 4
+              3b96a340-0ccf-4a49-ac8c-a6da1f9495b1:
+                required: false
+                sortOrder: 5
+              424dbbec-2b14-49b0-9142-305b224cee3b:
+                required: true
+                sortOrder: 7
+              8b039a9a-0718-4423-8fe5-47e1adfd4a2c:
+                required: true
+                sortOrder: 6
+              d5440e7d-9852-4308-93f1-55cab050a88e:
+                required: true
+                sortOrder: 1
+              eb2395aa-d2fb-41a8-a10e-e87d7f430ba8:
+                required: false
+                sortOrder: 3
+            name: Content
+            sortOrder: 1
+    fields:
+      21809e57-fdc5-46df-b163-d2ad31c3ef38:
+        contentColumnType: text
+        fieldGroup: null
+        handle: titleColor1
+        instructions: ''
+        name: 'Title Color 1'
+        searchable: true
+        settings:
+          charLimit: '50'
+          code: ''
+          columnType: text
+          initialRows: '3'
+          multiline: '1'
+          placeholder: 'World leaders in'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      3a572883-2502-4626-bcee-ba431ae944af:
+        contentColumnType: text
+        fieldGroup: null
+        handle: description
+        instructions: ''
+        name: Description
+        searchable: true
+        settings:
+          charLimit: '150'
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: '1'
+          placeholder: 'MetaCell is a software company that puts neuroscience data online, creating compelling visual and collaborative experiences.'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      3b96a340-0ccf-4a49-ac8c-a6da1f9495b1:
+        contentColumnType: text
+        fieldGroup: null
+        handle: button
+        instructions: ''
+        name: Button
+        searchable: true
+        settings:
+          allowCustomText: '1'
+          allowTarget: ''
+          allowedLinkNames:
+            1: asset
+            2: category
+            3: entry
+            4: site
+            6: custom
+            7: email
+            8: tel
+            9: url
+          autoNoReferrer: ''
+          defaultLinkName: entry
+          defaultText: ''
+          enableAriaLabel: ''
+          enableTitle: ''
+          typeSettings:
+            asset:
+              allowCustomQuery: ''
+              sources: '*'
+            category:
+              allowCustomQuery: ''
+              sources: '*'
+            custom:
+              allowAliases: ''
+              disableValidation: ''
+            email:
+              allowAliases: ''
+              disableValidation: ''
+            entry:
+              allowCustomQuery: ''
+              sources: '*'
+            site:
+              sites: '*'
+            tel:
+              allowAliases: ''
+              disableValidation: ''
+            url:
+              allowAliases: ''
+              disableValidation: ''
+            user:
+              allowCustomQuery: ''
+              sources: '*'
+        translationKeyFormat: null
+        translationMethod: none
+        type: typedlinkfield\fields\LinkField
+      424dbbec-2b14-49b0-9142-305b224cee3b:
+        contentColumnType: string
+        fieldGroup: null
+        handle: bottomLinks
+        instructions: ''
+        name: 'Bottom links'
+        searchable: true
+        settings:
+          columns:
+            9:
+              width: ''
+            10:
+              width: ''
+          contentTable: '{{%stc_1_bottomlinks}}'
+          fieldLayout: table
+          localizeBlocks: false
+          maxRows: '3'
+          minRows: '3'
+          selectionLabel: ''
+          staticField: ''
+        translationKeyFormat: null
+        translationMethod: site
+        type: verbb\supertable\fields\SuperTableField
+      8b039a9a-0718-4423-8fe5-47e1adfd4a2c:
+        contentColumnType: string
+        fieldGroup: null
+        handle: image
+        instructions: 'Recommended size of image is 900x600  and aspect ratio is 3:2.'
+        name: Image
+        searchable: true
+        settings:
+          allowedKinds: null
+          defaultUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: ''
+          selectionLabel: 'Select image'
+          singleUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources: '*'
+          targetSiteId: null
+          useSingleFolder: ''
+          viewMode: list
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+      d5440e7d-9852-4308-93f1-55cab050a88e:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: 'Select a template that will be used to render the content.'
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\leadImage\
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+      eb2395aa-d2fb-41a8-a10e-e87d7f430ba8:
+        contentColumnType: text
+        fieldGroup: null
+        handle: titleColor2
+        instructions: ''
+        name: 'Title Color 2'
+        searchable: true
+        settings:
+          charLimit: '50'
+          code: ''
+          columnType: text
+          initialRows: '3'
+          multiline: '1'
+          placeholder: 'software for neuroscience'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+    handle: leadImage
+    name: 'Lead Image'
+    sortOrder: 1
 plugins:
   imager:
     edition: standard
     enabled: true
     schemaVersion: 2.0.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.8
+  template-select:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 sections:
   305bc43d-5031-4475-bd90-e9a309e799ff:
     enableVersioning: true
     entryTypes:
       ff0cb636-0cc9-49ae-8586-b665747b212f:
+        fieldLayouts:
+          4b99e9e4-3d83-467b-a76e-44d7684ed1ed:
+            tabs:
+              -
+                fields:
+                  1abf9822-347f-4961-98c4-bed06e2e42c8:
+                    required: true
+                    sortOrder: 1
+                name: Content
+                sortOrder: 1
         handle: homepage
         hasTitleField: false
         name: Homepage
         sortOrder: 1
         titleFormat: '{section.name|raw}'
-        titleLabel: null
+        titleLabel: ''
     handle: homepage
     name: Homepage
     propagateEntries: true
@@ -45,6 +285,102 @@ sites:
     primary: true
     siteGroup: d14c9dca-37c3-4439-9c6c-7cbbbb484c9e
     sortOrder: 1
+superTableBlockTypes:
+  8d023d9d-1cd7-4c1d-a376-5456862bbd80:
+    field: 424dbbec-2b14-49b0-9142-305b224cee3b
+    fieldLayouts:
+      c9cd8843-7d26-4f5e-afe0-849daf82253b:
+        tabs:
+          -
+            fields:
+              4bb5c04b-7be2-43b2-a9dd-8dcb7e80865b:
+                required: true
+                sortOrder: 1
+              fd5228d4-cb0c-4827-84cd-418b4d9bac27:
+                required: true
+                sortOrder: 2
+            name: Content
+            sortOrder: 1
+    fields:
+      4bb5c04b-7be2-43b2-a9dd-8dcb7e80865b:
+        contentColumnType: string
+        fieldGroup: null
+        handle: image
+        instructions: ''
+        name: Image
+        searchable: true
+        settings:
+          allowedKinds: null
+          defaultUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: ''
+          selectionLabel: 'Select image'
+          singleUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources: '*'
+          targetSiteId: null
+          useSingleFolder: ''
+          viewMode: list
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+      fd5228d4-cb0c-4827-84cd-418b4d9bac27:
+        contentColumnType: text
+        fieldGroup: null
+        handle: linkTo
+        instructions: ''
+        name: 'Link to'
+        searchable: true
+        settings:
+          allowCustomText: '1'
+          allowTarget: ''
+          allowedLinkNames:
+            1: asset
+            2: category
+            3: entry
+            4: site
+            6: custom
+            7: email
+            8: tel
+            9: url
+          autoNoReferrer: ''
+          defaultLinkName: entry
+          defaultText: ''
+          enableAriaLabel: ''
+          enableTitle: ''
+          typeSettings:
+            asset:
+              allowCustomQuery: ''
+              sources: '*'
+            category:
+              allowCustomQuery: ''
+              sources: '*'
+            custom:
+              allowAliases: ''
+              disableValidation: ''
+            email:
+              allowAliases: ''
+              disableValidation: ''
+            entry:
+              allowCustomQuery: ''
+              sources: '*'
+            site:
+              sites: '*'
+            tel:
+              allowAliases: ''
+              disableValidation: ''
+            url:
+              allowAliases: ''
+              disableValidation: ''
+            user:
+              allowCustomQuery: ''
+              sources: '*'
+        translationKeyFormat: null
+        translationMethod: none
+        type: typedlinkfield\fields\LinkField
 system:
   edition: solo
   live: true
@@ -57,3 +393,13 @@ users:
   photoSubpath: ''
   photoVolumeUid: null
   requireEmailVerification: true
+volumes:
+  37d4eab2-7b5c-41b8-828e-be194d1f3fd0:
+    handle: images
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/assets/images'
+    sortOrder: 1
+    type: craft\volumes\Local
+    url: '@web/assets/images'
