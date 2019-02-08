@@ -1,4 +1,4 @@
-dateModified: 1549601831
+dateModified: 1549602638
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -254,6 +254,131 @@ matrixBlockTypes:
     handle: spotlight
     name: Spotlight
     sortOrder: 2
+  c718fcfc-e410-4da1-b753-7b352a46cc67:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      be6ec331-bfd7-4b9e-8f17-f40ddd8f095a:
+        tabs:
+          -
+            fields:
+              1d6e0569-5692-4649-9341-c8403a084144:
+                required: true
+                sortOrder: 2
+              3e160a2e-0c84-4df1-acdf-167bbd0aeeb1:
+                required: true
+                sortOrder: 3
+              6d226f7b-5700-424d-8fb0-075fb38f9b8d:
+                required: true
+                sortOrder: 4
+              e95fafe3-731d-4be5-bf77-f352ea4f21bb:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      1d6e0569-5692-4649-9341-c8403a084144:
+        contentColumnType: text
+        fieldGroup: null
+        handle: description
+        instructions: ''
+        name: Description
+        searchable: true
+        settings:
+          charLimit: '100'
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: 'Let us know what challenges you are trying to solve so we can help.'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      3e160a2e-0c84-4df1-acdf-167bbd0aeeb1:
+        contentColumnType: text
+        fieldGroup: null
+        handle: button
+        instructions: ''
+        name: Button
+        searchable: true
+        settings:
+          allowCustomText: '1'
+          allowTarget: ''
+          allowedLinkNames:
+            1: asset
+            2: category
+            3: entry
+            4: site
+            6: custom
+            7: email
+            8: tel
+            9: url
+          autoNoReferrer: ''
+          defaultLinkName: entry
+          defaultText: ''
+          enableAriaLabel: ''
+          enableTitle: ''
+          typeSettings:
+            asset:
+              allowCustomQuery: ''
+              sources: '*'
+            category:
+              allowCustomQuery: ''
+              sources: '*'
+            custom:
+              allowAliases: ''
+              disableValidation: ''
+            email:
+              allowAliases: ''
+              disableValidation: ''
+            entry:
+              allowCustomQuery: ''
+              sources: '*'
+            site:
+              sites: '*'
+            tel:
+              allowAliases: ''
+              disableValidation: ''
+            url:
+              allowAliases: ''
+              disableValidation: ''
+            user:
+              allowCustomQuery: ''
+              sources: '*'
+        translationKeyFormat: null
+        translationMethod: none
+        type: typedlinkfield\fields\LinkField
+      6d226f7b-5700-424d-8fb0-075fb38f9b8d:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\callToAction\
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+      e95fafe3-731d-4be5-bf77-f352ea4f21bb:
+        contentColumnType: text
+        fieldGroup: null
+        handle: heading
+        instructions: ''
+        name: Heading
+        searchable: true
+        settings:
+          charLimit: '50'
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: 'Let’s make something great together.'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+    handle: callToAction
+    name: 'Call to Action'
+    sortOrder: 4
   daf0be23-a36a-45dc-86fc-d16c683bfba2:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
