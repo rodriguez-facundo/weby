@@ -1,0 +1,14 @@
+{% import '_macros/image' as imageMacros %}
+<div class="image">
+    {{ imageMacros.image(component.image[0], {
+                ratio: "",
+                srcset: [
+                    { width: 1600 },
+                    { width: 1200 },
+                    { width: 900, jpegQuality: 65 },
+                    { width: 600, jpegQuality: 65 },
+                ]
+            }
+        )   
+    }}
+</div>
