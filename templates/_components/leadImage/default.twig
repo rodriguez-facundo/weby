@@ -35,7 +35,7 @@
             </div>
         </div>
         <nav class="nav">
-            {% for link in component.bottomLinks %}
+            {% for link in component.bottomLinks.all() %}
                 <a href="{{ link.linkTo.getUrl() }}">
                     {{ imageMacros.image(link.image[0], {
                                 ratio: (1/1),
