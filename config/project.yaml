@@ -1,4 +1,4 @@
-dateModified: 1549583174
+dateModified: 1549601831
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -25,6 +25,235 @@ fields:
     translationMethod: site
     type: craft\fields\Matrix
 matrixBlockTypes:
+  0b888bc7-f151-4625-851d-71057c414692:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      19aaeb9c-5549-432d-9562-e96d60a935ac:
+        tabs:
+          -
+            fields:
+              a64b99af-3baf-47f2-868e-54b6129c3ff5:
+                required: true
+                sortOrder: 2
+              d5c676e9-511e-479a-ab85-b6d172ea8127:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      a64b99af-3baf-47f2-868e-54b6129c3ff5:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\image\
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+      d5c676e9-511e-479a-ab85-b6d172ea8127:
+        contentColumnType: string
+        fieldGroup: null
+        handle: image
+        instructions: 'Recommended image size is 1440x540'
+        name: Image
+        searchable: true
+        settings:
+          allowedKinds: null
+          defaultUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: ''
+          selectionLabel: 'Select image'
+          singleUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources: '*'
+          targetSiteId: null
+          useSingleFolder: ''
+          viewMode: list
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+    handle: image
+    name: Image
+    sortOrder: 3
+  4d7f8824-dd92-4d26-bf10-f457f573f9c0:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      054e5008-2b7c-4306-ac39-69f6d59d8e32:
+        tabs:
+          -
+            fields:
+              0c1e6527-3212-43ac-8667-58aafd826905:
+                required: true
+                sortOrder: 6
+              4ea963b0-48e4-4081-9c58-54a533b90e26:
+                required: true
+                sortOrder: 2
+              6e63d03d-587d-4e14-b79f-586f987bc930:
+                required: true
+                sortOrder: 3
+              d4133f7c-733d-4868-8344-2d77ab214e21:
+                required: true
+                sortOrder: 1
+              eeb5a0f5-000a-4e40-a516-b14fe9e96c0b:
+                required: true
+                sortOrder: 5
+              efc8a47b-9446-4c6e-bbf5-7516fd016c2a:
+                required: false
+                sortOrder: 4
+            name: Content
+            sortOrder: 1
+    fields:
+      0c1e6527-3212-43ac-8667-58aafd826905:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\spotlight\
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+      4ea963b0-48e4-4081-9c58-54a533b90e26:
+        contentColumnType: text
+        fieldGroup: null
+        handle: subheading
+        instructions: ''
+        name: Subheading
+        searchable: true
+        settings:
+          charLimit: '30'
+          code: ''
+          columnType: text
+          initialRows: ''
+          multiline: ''
+          placeholder: 'OUR PLATFORM'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      6e63d03d-587d-4e14-b79f-586f987bc930:
+        contentColumnType: text
+        fieldGroup: null
+        handle: description
+        instructions: ''
+        name: Description
+        searchable: true
+        settings:
+          charLimit: '200'
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: '1'
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      d4133f7c-733d-4868-8344-2d77ab214e21:
+        contentColumnType: text
+        fieldGroup: null
+        handle: heading
+        instructions: ''
+        name: Heading
+        searchable: true
+        settings:
+          charLimit: '50'
+          code: ''
+          columnType: text
+          initialRows: '3'
+          multiline: '1'
+          placeholder: 'A Showcase of MetaCell Platform'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      eeb5a0f5-000a-4e40-a516-b14fe9e96c0b:
+        contentColumnType: string
+        fieldGroup: null
+        handle: image
+        instructions: 'Recommended image size is 1400x1400 and aspect ration is 1:1.'
+        name: Image
+        searchable: true
+        settings:
+          allowedKinds: null
+          defaultUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: ''
+          selectionLabel: 'Select Image'
+          singleUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources: '*'
+          targetSiteId: null
+          useSingleFolder: ''
+          viewMode: list
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+      efc8a47b-9446-4c6e-bbf5-7516fd016c2a:
+        contentColumnType: text
+        fieldGroup: null
+        handle: button
+        instructions: ''
+        name: Button
+        searchable: true
+        settings:
+          allowCustomText: '1'
+          allowTarget: ''
+          allowedLinkNames:
+            1: asset
+            2: category
+            3: entry
+            4: site
+            6: custom
+            7: email
+            8: tel
+            9: url
+          autoNoReferrer: ''
+          defaultLinkName: entry
+          defaultText: ''
+          enableAriaLabel: ''
+          enableTitle: ''
+          typeSettings:
+            asset:
+              allowCustomQuery: ''
+              sources: '*'
+            category:
+              allowCustomQuery: ''
+              sources: '*'
+            custom:
+              allowAliases: ''
+              disableValidation: ''
+            email:
+              allowAliases: ''
+              disableValidation: ''
+            entry:
+              allowCustomQuery: ''
+              sources: '*'
+            site:
+              sites: '*'
+            tel:
+              allowAliases: ''
+              disableValidation: ''
+            url:
+              allowAliases: ''
+              disableValidation: ''
+            user:
+              allowCustomQuery: ''
+              sources: '*'
+        translationKeyFormat: null
+        translationMethod: none
+        type: typedlinkfield\fields\LinkField
+    handle: spotlight
+    name: Spotlight
+    sortOrder: 2
   daf0be23-a36a-45dc-86fc-d16c683bfba2:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
@@ -34,34 +263,34 @@ matrixBlockTypes:
             fields:
               21809e57-fdc5-46df-b163-d2ad31c3ef38:
                 required: true
-                sortOrder: 2
+                sortOrder: 1
               3a572883-2502-4626-bcee-ba431ae944af:
-                required: false
-                sortOrder: 4
+                required: true
+                sortOrder: 3
               3b96a340-0ccf-4a49-ac8c-a6da1f9495b1:
                 required: false
-                sortOrder: 5
+                sortOrder: 4
               424dbbec-2b14-49b0-9142-305b224cee3b:
                 required: true
-                sortOrder: 7
+                sortOrder: 6
               8b039a9a-0718-4423-8fe5-47e1adfd4a2c:
                 required: true
-                sortOrder: 6
+                sortOrder: 5
               d5440e7d-9852-4308-93f1-55cab050a88e:
                 required: true
-                sortOrder: 1
+                sortOrder: 7
               eb2395aa-d2fb-41a8-a10e-e87d7f430ba8:
                 required: false
-                sortOrder: 3
+                sortOrder: 2
             name: Content
             sortOrder: 1
     fields:
       21809e57-fdc5-46df-b163-d2ad31c3ef38:
         contentColumnType: text
         fieldGroup: null
-        handle: titleColor1
+        handle: headingColor1
         instructions: ''
-        name: 'Title Color 1'
+        name: 'Heading Color 1'
         searchable: true
         settings:
           charLimit: '50'
@@ -207,9 +436,9 @@ matrixBlockTypes:
       eb2395aa-d2fb-41a8-a10e-e87d7f430ba8:
         contentColumnType: text
         fieldGroup: null
-        handle: titleColor2
+        handle: headingColor2
         instructions: ''
-        name: 'Title Color 2'
+        name: 'Heading Color 2'
         searchable: true
         settings:
           charLimit: '50'
