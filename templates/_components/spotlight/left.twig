@@ -1,8 +1,8 @@
 {% import '_macros/image' as imageMacros %}
-
-<div class="spotlight undefined">
-    <div class="background-image">
-        {{ imageMacros.image(component.image[0], {
+<div class="component-container">
+    <div class="spotlight undefined">
+        <div class="background-image">
+            {{ imageMacros.image(component.image[0], {
                                 ratio: (1/1),
                                 class: "animation",
                                 srcset: [
@@ -13,23 +13,24 @@
                             }
                         )   
                     }}
-    </div>
-    <div class="spotlight-inner">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 text-wrapper">
-                    <div class="text-content">
-                        <h6>
-                            {{ component.subheading }}</h6>
-                        <h2>
-                            {{ component.heading }}</h2>
-                        <p>
-                            {{ component.description }}
-                        </p>
-                        {% if not component.button.isEmpty() %}
-                            <a class="btn-primary" href="{{ component.button.getUrl() }}">
-                                {{ component.button.getText() }}</a>
-                        {% endif %}
+        </div>
+        <div class="spotlight-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 text-wrapper">
+                        <div class="text-content">
+                            <h6>
+                                {{ component.subheading }}</h6>
+                            <h2>
+                                {{ component.heading }}</h2>
+                            <p>
+                                {{ component.description }}
+                            </p>
+                            {% if not component.button.isEmpty() %}
+                                <a class="btn-primary" href="{{ component.button.getUrl() }}">
+                                    {{ component.button.getText() }}</a>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
