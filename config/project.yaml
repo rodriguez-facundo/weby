@@ -1,4 +1,4 @@
-dateModified: 1549602638
+dateModified: 1549603345
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -81,6 +81,54 @@ matrixBlockTypes:
     handle: image
     name: Image
     sortOrder: 3
+  10df3d54-d3fd-4d9f-b960-ca80de3cc1a9:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      31094ccf-c02c-49d2-b15e-f9b1833357cb:
+        tabs:
+          -
+            fields:
+              2062e029-0f46-4e2c-9303-9801450db2c7:
+                required: true
+                sortOrder: 2
+              a5eabda2-35b9-42aa-a459-33f6b794814d:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      2062e029-0f46-4e2c-9303-9801450db2c7:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\sectionTitle\
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+      a5eabda2-35b9-42aa-a459-33f6b794814d:
+        contentColumnType: text
+        fieldGroup: null
+        handle: heading
+        instructions: ''
+        name: Heading
+        searchable: true
+        settings:
+          charLimit: '100'
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: 'What''s included?'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+    handle: sectionTitle
+    name: 'Section Title'
+    sortOrder: 5
   4d7f8824-dd92-4d26-bf10-f457f573f9c0:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
