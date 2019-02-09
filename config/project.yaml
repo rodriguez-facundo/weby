@@ -1,4 +1,4 @@
-dateModified: 1549603345
+dateModified: 1549737629
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -302,6 +302,74 @@ matrixBlockTypes:
     handle: spotlight
     name: Spotlight
     sortOrder: 2
+  9b2dd408-9140-4954-92a4-29434aa63921:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      d277f46e-8921-4a6b-b57a-396aac455956:
+        tabs:
+          -
+            fields:
+              8d0f29c0-7875-4011-bf63-d3d574ec2f8f:
+                required: true
+                sortOrder: 1
+              b929cc5a-36aa-47dd-95e1-5ca560658c0d:
+                required: true
+                sortOrder: 3
+              d9eae1b5-0e48-40b9-84bb-2c318d64f4a5:
+                required: false
+                sortOrder: 2
+            name: Content
+            sortOrder: 1
+    fields:
+      8d0f29c0-7875-4011-bf63-d3d574ec2f8f:
+        contentColumnType: text
+        fieldGroup: null
+        handle: heading
+        instructions: ''
+        name: Heading
+        searchable: true
+        settings:
+          charLimit: '30'
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: 'Our Platform'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      b929cc5a-36aa-47dd-95e1-5ca560658c0d:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\pageTitle\
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+      d9eae1b5-0e48-40b9-84bb-2c318d64f4a5:
+        contentColumnType: text
+        fieldGroup: null
+        handle: description
+        instructions: ''
+        name: Description
+        searchable: true
+        settings:
+          charLimit: '100'
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: 'We have deconstructed the world’s most valuable human neuroscience datasets'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+    handle: pageTitle
+    name: 'Page Title'
+    sortOrder: 6
   c718fcfc-e410-4da1-b753-7b352a46cc67:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
