@@ -1,4 +1,4 @@
-dateModified: 1549737629
+dateModified: 1549738814
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -302,6 +302,55 @@ matrixBlockTypes:
     handle: spotlight
     name: Spotlight
     sortOrder: 2
+  9437acc9-d9a4-4ed6-a582-59f4983edffe:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      3ee14fb8-e29d-4daf-856b-61169282ed50:
+        tabs:
+          -
+            fields:
+              31f359d1-4275-4740-b55d-c8d5d8a55f05:
+                required: true
+                sortOrder: 1
+              9798275e-9774-4c2f-9c13-d72517147bfe:
+                required: true
+                sortOrder: 2
+            name: Content
+            sortOrder: 1
+    fields:
+      31f359d1-4275-4740-b55d-c8d5d8a55f05:
+        contentColumnType: text
+        fieldGroup: null
+        handle: text
+        instructions: ''
+        name: Text
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes: '*'
+          cleanupHtml: '1'
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: Simple.json
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+      9798275e-9774-4c2f-9c13-d72517147bfe:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\text\
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+    handle: text
+    name: Text
+    sortOrder: 7
   9b2dd408-9140-4954-92a4-29434aa63921:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
@@ -699,6 +748,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
   super-table:
     edition: standard
     enabled: true
