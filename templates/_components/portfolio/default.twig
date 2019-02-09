@@ -1,0 +1,49 @@
+<div class="container list-content">
+    <h6>
+        {{ component.heading }}
+    </h6>
+    {% for item in component.items.all() %}
+        <div class="portfolio-item">
+            {% if loop.index is odd %}
+                <div class="row image-right">
+                    <div class="col-6">
+                        <div class="content">
+                            <h2>{{ item.title }}</h2>
+                            {{ item.description }}
+                            <a class="button-download" href="#">Download Case Study</a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="video-wrapper rounded">
+                            <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/O5sGESdr1hQ"></iframe>
+                        </div>
+                        <div class="logos">
+                            <img alt="" src="/static/images/portfolio-suny.svg"/>
+                            <img alt="" src="/static/images/portfolio-university.svg"/>
+                            <img alt="" src="/static/images/portfolio-incf.svg"/>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="row">
+                    <div class="col-6">
+                        <div class="video-wrapper rounded">
+                            <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/O5sGESdr1hQ"></iframe>
+                        </div>
+                        <div class="logos">
+                            <span>In coloboration with</span>
+                            <img alt="" src="/static/images/portfolio-ucl.svg"/>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="content">
+                            <h2>{{ item.title }}</h2>
+                            {{ item.description }}
+                            <a class="button-download" href="#">Download Case Study</a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>

@@ -1,4 +1,4 @@
-dateModified: 1549738814
+dateModified: 1549745930
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -24,6 +24,24 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Matrix
+  dd0ccf63-85af-48ac-9721-e31ba4d68714:
+    contentColumnType: text
+    fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
+    handle: description
+    instructions: ''
+    name: Description
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: '1'
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
 matrixBlockTypes:
   0b888bc7-f151-4625-851d-71057c414692:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
@@ -302,6 +320,76 @@ matrixBlockTypes:
     handle: spotlight
     name: Spotlight
     sortOrder: 2
+  66ee294b-3efe-4b96-b308-721276ad1397:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      b5b6ecf0-0cb9-40d5-be19-5f846f7c88c3:
+        tabs:
+          -
+            fields:
+              7471db44-e144-4539-86ce-e3000a28e331:
+                required: true
+                sortOrder: 2
+              9683f155-de9e-4916-8991-62e3183b38cd:
+                required: true
+                sortOrder: 3
+              97c47023-3f71-4fe5-acd1-0aa33fd7db03:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      7471db44-e144-4539-86ce-e3000a28e331:
+        contentColumnType: string
+        fieldGroup: null
+        handle: items
+        instructions: ''
+        name: Items
+        searchable: true
+        settings:
+          limit: ''
+          localizeRelations: false
+          selectionLabel: 'Add items'
+          source: null
+          sources:
+            - 'section:f8fd00db-1e8a-45e2-b55e-65b03be90e01'
+          targetSiteId: null
+          viewMode: null
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Entries
+      9683f155-de9e-4916-8991-62e3183b38cd:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\portfolio\
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+      97c47023-3f71-4fe5-acd1-0aa33fd7db03:
+        contentColumnType: text
+        fieldGroup: null
+        handle: heading
+        instructions: ''
+        name: Heading
+        searchable: true
+        settings:
+          charLimit: '50'
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: 'Our portfilio'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+    handle: portfolio
+    name: Portfolio
+    sortOrder: 8
   9437acc9-d9a4-4ed6-a582-59f4983edffe:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
@@ -795,6 +883,36 @@ sections:
         template: homepage/_entry
         uriFormat: __home__
     type: single
+  f8fd00db-1e8a-45e2-b55e-65b03be90e01:
+    enableVersioning: true
+    entryTypes:
+      79f6742a-e399-409b-8054-4cdf9c7fa93c:
+        fieldLayouts:
+          8b8c7bdb-d238-4a98-bc31-916d2df9d0d5:
+            tabs:
+              -
+                fields:
+                  dd0ccf63-85af-48ac-9721-e31ba4d68714:
+                    required: false
+                    sortOrder: 1
+                name: Content
+                sortOrder: 1
+        handle: portfolio
+        hasTitleField: true
+        name: Portfolio
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: portfolio
+    name: Portfolio
+    propagateEntries: true
+    siteSettings:
+      5d321cb4-ef6f-4ec7-8ea5-edbb05b24c96:
+        enabledByDefault: true
+        hasUrls: false
+        template: null
+        uriFormat: null
+    type: channel
 siteGroups:
   d14c9dca-37c3-4439-9c6c-7cbbbb484c9e:
     name: Metacell
