@@ -3,23 +3,17 @@
     <head>
         {# Required meta tags #}
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        {# CSS #}
-        <link rel="stylesheet" href="assets/css/app.css">
-
-        {# {% hook "seo" %} #}
-    </head>
-    <body>
-
-        {% include 'partials/_header' %}
-
-        {% block content %}{% endblock %}
-
-        {% include 'partials/_footer' %}
-
-        {#  JavaScript  #}
-        {# <script src="{{ mix('js/app.js') }}"></script> #}
-        <script src="assets/js/lazysizes.min.js" async=""></script>
-    </body>
-</html>
+            <meta
+                content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+                {# CSS #}
+                <link
+                    href="assets/css/app.css" rel="stylesheet">{# {% hook "seo" %} #}
+                </head>
+                <body>
+                    {% include 'partials/_header' %}
+                    {% block content %}{% endblock %}
+                    {% include 'partials/_footer' %}{#  JavaScript  #}
+                    {# <script src="{{ mix('js/app.js') }}"></script> #}<script async="" src="assets/js/lazysizes.min.js"> </script>
+                </body>
+            </html>
+        

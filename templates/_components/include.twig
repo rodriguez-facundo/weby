@@ -1,5 +1,4 @@
 {% set components = entry.layoutComponents.all() %}
-
 {% for component in components %}
     {% include '_components/'~ component.type ~'/'~ component.template %}
 {% endfor %}

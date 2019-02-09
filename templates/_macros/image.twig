@@ -1,22 +1,18 @@
 {% macro image(image, options) %}
-
-  {% set class = options.class ?? '' %}
-  {% set mode = options.mode ?? 'crop' %}
-  {% set ratio = options.ratio ?? (16/9) %}
-  {% set format = options.format ?? 'jpg' %}
-  {% set quality = options.quality ?? 80 %}
-  {% set sizes = options.sizes ?? '100vw' %}
-  {% set srcset = options.srcset ?? [
+    {% set class = options.class ?? '' %}
+    {% set mode = options.mode ?? 'crop' %}
+    {% set ratio = options.ratio ?? (16/9) %}
+    {% set format = options.format ?? 'jpg' %}
+    {% set quality = options.quality ?? 80 %}
+    {% set sizes = options.sizes ?? '100vw' %}
+    {% set srcset = options.srcset ?? [
     { width: 1600 },
     { width: 1200 },
     { width: 960, ratio: 16/10, jpegQuality: 65 },
     { width: 640, ratio: 16/10, jpegQuality: 65 },
   ] %}
-
-
-  {% if image.getExtension() != "svg" %}
-
-    {% set transformedImages = craft.imager.transformImage(image,
+    {% if image.getExtension() != "svg" %}
+        {% set transformedImages = craft.imager.transformImage(image,
       srcset,
       {
         ratio: ratio,
@@ -29,21 +25,13 @@
         interlace: true
       }
     ) %}
-    <img class="lazyload {{ class }}"
-    data-src="{{ transformedImages[0].url }}"
-    srcset="{{ craft.imager.placeholder({ width: transformedImages[0].width, height: transformedImages[0].height }) }}"
-    data-srcset="{{ craft.imager.srcset(transformedImages) }}"
-    alt="{{ image.title }}">
-  {% else %}
-    <img class="lazyload {{ class }}"
-    data-src="{{ image.url }}"
-    data-srcset="{{ image.url }}"
-    alt="{{ image.title }}">
-  {% endif %}
-{% endmacro %}
-
-{% macro background(image) %}
-  {% set transformedImages = craft.imager.transformImage(image,
+        <img class="lazyload {{ class }}" data-src="{{ transformedImages[0].url }}" srcset="{{ craft.imager.placeholder({ width: transformedImages[0].width, height: transformedImages[0].height }) }}" data-srcset="{{ craft.imager.srcset(transformedImages) }}" alt="{{ image.title }}">
+            {% else %}
+            <img class="lazyload {{ class }}" data-src="{{ image.url }}" data-srcset="{{ image.url }}" alt="{{ image.title }}">
+            {% endif %}
+        {% endmacro %}
+        {% macro background(image) %}
+            {% set transformedImages = craft.imager.transformImage(image,
     [
       { width: 1600 },
       { width: 1200 },
@@ -59,6 +47,7 @@
         interlace: true
     }
   ) %}
-
-  style="background-image: url('{{ transformedImages[1].url }}'); background-position: {{ image.getFocalPoint(true) }}"
-{% endmacro %}
+            style="background-image: url('{{ transformedImages[1].url }}'); background-position:
+            {{ image.getFocalPoint(true) }}"
+        {% endmacro %}
+    
