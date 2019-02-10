@@ -1,3 +1,4 @@
+{% import '_macros/image' as imageMacros %}
 <div class="container list-content">
     <h6>
         {{ component.heading }}
@@ -27,7 +28,14 @@
                                 <div class="logos">
                                     <span>In coloboration with</span>
                                 {% endif %}
-                                <img alt="{{ partner.title }}" src="{{ partner.logo.one().url() }}"/>
+                                {{ imageMacros.image(partner.logo.one(), {
+                                            ratio: "",
+                                            srcset: [
+                                                { height: 55, jpegQuality: 65 },
+                                            ]
+                                        }
+                                    )   
+                                }}
                                 {% if loop.last %}
                                 </div>
                             {% endif %}
@@ -45,7 +53,14 @@
                                 <div class="logos">
                                     <span>In coloboration with</span>
                                 {% endif %}
-                                <img alt="{{ partner.title }}" src="{{ partner.logo.one().url() }}"/>
+                                {{ imageMacros.image(partner.logo.one(), {
+                                            ratio: "",
+                                            srcset: [
+                                                { height: 55, jpegQuality: 65 },
+                                            ]
+                                        }
+                                    )   
+                                }}
                                 {% if loop.last %}
                                 </div>
                             {% endif %}
