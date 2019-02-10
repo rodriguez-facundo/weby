@@ -1,4 +1,4 @@
-dateModified: 1549745930
+dateModified: 1549797600
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -24,6 +24,54 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Matrix
+  55eec0ce-f51f-4a94-b302-d918b27db232:
+    contentColumnType: text
+    fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
+    handle: downloadLink
+    instructions: ''
+    name: 'Download link'
+    searchable: true
+    settings:
+      allowCustomText: '1'
+      allowTarget: ''
+      allowedLinkNames:
+        1: asset
+      autoNoReferrer: ''
+      defaultLinkName: asset
+      defaultText: Download
+      enableAriaLabel: ''
+      enableTitle: ''
+      typeSettings:
+        asset:
+          allowCustomQuery: ''
+          sources:
+            - 'folder:f2d01184-41cb-464d-8c4f-7527b9192a73'
+        category:
+          allowCustomQuery: ''
+          sources: '*'
+        custom:
+          allowAliases: ''
+          disableValidation: ''
+        email:
+          allowAliases: ''
+          disableValidation: ''
+        entry:
+          allowCustomQuery: ''
+          sources: '*'
+        site:
+          sites: '*'
+        tel:
+          allowAliases: ''
+          disableValidation: ''
+        url:
+          allowAliases: ''
+          disableValidation: ''
+        user:
+          allowCustomQuery: ''
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: typedlinkfield\fields\LinkField
   dd0ccf63-85af-48ac-9721-e31ba4d68714:
     contentColumnType: text
     fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
@@ -79,17 +127,19 @@ matrixBlockTypes:
         name: Image
         searchable: true
         settings:
-          allowedKinds: null
+          allowedKinds:
+            - image
           defaultUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
           defaultUploadLocationSubpath: ''
           limit: '1'
           localizeRelations: false
-          restrictFiles: ''
+          restrictFiles: '1'
           selectionLabel: 'Select image'
           singleUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
           singleUploadLocationSubpath: ''
           source: null
-          sources: '*'
+          sources:
+            - 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
           targetSiteId: null
           useSingleFolder: ''
           viewMode: list
@@ -246,17 +296,19 @@ matrixBlockTypes:
         name: Image
         searchable: true
         settings:
-          allowedKinds: null
+          allowedKinds:
+            - image
           defaultUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
           defaultUploadLocationSubpath: ''
           limit: '1'
           localizeRelations: false
-          restrictFiles: ''
+          restrictFiles: '1'
           selectionLabel: 'Select Image'
           singleUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
           singleUploadLocationSubpath: ''
           source: null
-          sources: '*'
+          sources:
+            - 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
           targetSiteId: null
           useSingleFolder: ''
           viewMode: list
@@ -782,17 +834,19 @@ matrixBlockTypes:
         name: Image
         searchable: true
         settings:
-          allowedKinds: null
+          allowedKinds:
+            - image
           defaultUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
           defaultUploadLocationSubpath: ''
           limit: '1'
           localizeRelations: false
-          restrictFiles: ''
+          restrictFiles: '1'
           selectionLabel: 'Select image'
           singleUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
           singleUploadLocationSubpath: ''
           source: null
-          sources: '*'
+          sources:
+            - 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
           targetSiteId: null
           useSingleFolder: ''
           viewMode: list
@@ -892,8 +946,11 @@ sections:
             tabs:
               -
                 fields:
+                  55eec0ce-f51f-4a94-b302-d918b27db232:
+                    required: true
+                    sortOrder: 2
                   dd0ccf63-85af-48ac-9721-e31ba4d68714:
-                    required: false
+                    required: true
                     sortOrder: 1
                 name: Content
                 sortOrder: 1
@@ -1035,6 +1092,15 @@ users:
   photoVolumeUid: null
   requireEmailVerification: true
 volumes:
+  10926480-dfe2-4405-a77e-e4a24ec7e455:
+    handle: files
+    hasUrls: true
+    name: Files
+    settings:
+      path: '@webroot/assets/files'
+    sortOrder: 1
+    type: craft\volumes\Local
+    url: '@web/assets/files'
   37d4eab2-7b5c-41b8-828e-be194d1f3fd0:
     handle: images
     hasUrls: true
