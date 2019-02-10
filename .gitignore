@@ -3,4 +3,5 @@
 /vendor
 /web/cache
 /web/assets/images
+/web/assets/files
 .DS_Store
