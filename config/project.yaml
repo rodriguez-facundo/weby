@@ -1,4 +1,4 @@
-dateModified: 1549831750
+dateModified: 1549835996
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -359,12 +359,14 @@ matrixBlockTypes:
               width: ''
             58:
               width: ''
+            59:
+              width: ''
           contentTable: '{{%stc_11_offices}}'
-          fieldLayout: table
+          fieldLayout: row
           localizeBlocks: false
           maxRows: ''
-          minRows: ''
-          selectionLabel: ''
+          minRows: '1'
+          selectionLabel: 'Add office'
           staticField: ''
         translationKeyFormat: null
         translationMethod: site
@@ -1233,6 +1235,13 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.2.1
+  simplemap:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+    settings:
+      apiKey: AIzaSyCDC9AcVb-sRPmBHEvSvQQw07rghZkxCoA
+      unrestrictedApiKey: ''
   super-table:
     edition: standard
     enabled: true
@@ -1603,16 +1612,19 @@ superTableBlockTypes:
             fields:
               02049cd3-fea6-4ce5-962c-6a2b35a14d47:
                 required: true
-                sortOrder: 1
+                sortOrder: 2
               336a57d3-d8fe-49d4-8a20-895448e4d993:
                 required: true
-                sortOrder: 2
+                sortOrder: 3
               44c9f16c-ac01-4744-8661-fd998079a92f:
                 required: true
-                sortOrder: 4
+                sortOrder: 5
+              45301164-aad2-49d6-b8da-725142f675a8:
+                required: true
+                sortOrder: 1
               53dc926d-ae6b-4fd6-b1be-25082f9f9145:
                 required: true
-                sortOrder: 3
+                sortOrder: 4
             name: Content
             sortOrder: 1
     fields:
@@ -1667,6 +1679,30 @@ superTableBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: craft\fields\PlainText
+      45301164-aad2-49d6-b8da-725142f675a8:
+        contentColumnType: string
+        fieldGroup: null
+        handle: address
+        instructions: ''
+        name: Address
+        searchable: true
+        settings:
+          boundary: '""'
+          boundaryRestrictionNELat: ''
+          boundaryRestrictionNELng: ''
+          boundaryRestrictionSWLat: ''
+          boundaryRestrictionSWLng: ''
+          countryRestriction: ''
+          height: '400'
+          hideLatLng: '1'
+          hideMap: ''
+          lat: '51.272154'
+          lng: '0.514951'
+          typeRestriction: ''
+          zoom: '15'
+        translationKeyFormat: null
+        translationMethod: none
+        type: ether\simplemap\fields\MapField
       53dc926d-ae6b-4fd6-b1be-25082f9f9145:
         contentColumnType: text
         fieldGroup: null
