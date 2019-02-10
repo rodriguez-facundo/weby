@@ -1,4 +1,4 @@
-dateModified: 1549824064
+dateModified: 1549831750
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -326,6 +326,64 @@ matrixBlockTypes:
     handle: image
     name: Image
     sortOrder: 3
+  0c7a763d-1db9-447d-a87c-b49a4adfa36e:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      6797f98c-bec8-4897-95c6-92c38d74c384:
+        tabs:
+          -
+            fields:
+              4eda84a2-2821-436f-948f-0037d4caa142:
+                required: true
+                sortOrder: 1
+              f097cefb-9d8f-4f63-bfb4-37298d95f676:
+                required: true
+                sortOrder: 2
+            name: Content
+            sortOrder: 1
+    fields:
+      4eda84a2-2821-436f-948f-0037d4caa142:
+        contentColumnType: string
+        fieldGroup: null
+        handle: offices
+        instructions: ''
+        name: Offices
+        searchable: true
+        settings:
+          columns:
+            55:
+              width: ''
+            56:
+              width: ''
+            57:
+              width: ''
+            58:
+              width: ''
+          contentTable: '{{%stc_11_offices}}'
+          fieldLayout: table
+          localizeBlocks: false
+          maxRows: ''
+          minRows: ''
+          selectionLabel: ''
+          staticField: ''
+        translationKeyFormat: null
+        translationMethod: site
+        type: verbb\supertable\fields\SuperTableField
+      f097cefb-9d8f-4f63-bfb4-37298d95f676:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\offices\
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+    handle: offices
+    name: Offices
+    sortOrder: 11
   10df3d54-d3fd-4d9f-b960-ca80de3cc1a9:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
@@ -1536,6 +1594,96 @@ superTableBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: typedlinkfield\fields\LinkField
+  f8dde418-64b9-4984-aa1b-76fdefb7bb29:
+    field: 4eda84a2-2821-436f-948f-0037d4caa142
+    fieldLayouts:
+      d32e001b-172e-4508-8be9-8472a9836c99:
+        tabs:
+          -
+            fields:
+              02049cd3-fea6-4ce5-962c-6a2b35a14d47:
+                required: true
+                sortOrder: 1
+              336a57d3-d8fe-49d4-8a20-895448e4d993:
+                required: true
+                sortOrder: 2
+              44c9f16c-ac01-4744-8661-fd998079a92f:
+                required: true
+                sortOrder: 4
+              53dc926d-ae6b-4fd6-b1be-25082f9f9145:
+                required: true
+                sortOrder: 3
+            name: Content
+            sortOrder: 1
+    fields:
+      02049cd3-fea6-4ce5-962c-6a2b35a14d47:
+        contentColumnType: text
+        fieldGroup: null
+        handle: addressLine1
+        instructions: ''
+        name: 'Address line 1'
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: '30 Millbank Mill Street'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      336a57d3-d8fe-49d4-8a20-895448e4d993:
+        contentColumnType: text
+        fieldGroup: null
+        handle: addressLine2
+        instructions: ''
+        name: 'Address line 2'
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: 'Oxford, OX2 0HJ'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      44c9f16c-ac01-4744-8661-fd998079a92f:
+        contentColumnType: text
+        fieldGroup: null
+        handle: phone
+        instructions: ''
+        name: Phone
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: '+44 (0)74 475 40306'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      53dc926d-ae6b-4fd6-b1be-25082f9f9145:
+        contentColumnType: text
+        fieldGroup: null
+        handle: country
+        instructions: ''
+        name: Country
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: 'United Kingdom'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
 system:
   edition: solo
   live: true
