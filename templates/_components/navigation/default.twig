@@ -3,7 +3,7 @@
     <div class="navigation">
         <div class="container">
             <nav>
-                {% for link in component.links %}
+                {% for link in component.links.all() %}
                     <a href="{{ link.linkTo.getUrl() }}">
                         <img alt="" src="/static/images/icon-1.svg"/>
                         {{ imageMacros.image(link.image.one(), {

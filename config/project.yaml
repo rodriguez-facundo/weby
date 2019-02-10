@@ -1,4 +1,4 @@
-dateModified: 1549821484
+dateModified: 1549824064
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -82,6 +82,80 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: typedlinkfield\fields\LinkField
+  712f1e4f-64d0-471b-bb0d-c93c854d9439:
+    contentColumnType: string
+    fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
+    handle: image
+    instructions: ''
+    name: Image
+    searchable: false
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Select image'
+      singleUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  8f2765e1-c533-4145-a088-1b5167412db9:
+    contentColumnType: text
+    fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
+    handle: email
+    instructions: ''
+    name: Email
+    searchable: true
+    settings:
+      allowCustomText: '1'
+      allowTarget: ''
+      allowedLinkNames:
+        7: email
+      autoNoReferrer: ''
+      defaultLinkName: asset
+      defaultText: ''
+      enableAriaLabel: ''
+      enableTitle: ''
+      typeSettings:
+        asset:
+          allowCustomQuery: ''
+          sources: '*'
+        category:
+          allowCustomQuery: ''
+          sources: '*'
+        custom:
+          allowAliases: ''
+          disableValidation: ''
+        email:
+          allowAliases: ''
+          disableValidation: ''
+        entry:
+          allowCustomQuery: ''
+          sources: '*'
+        site:
+          sites: '*'
+        tel:
+          allowAliases: ''
+          disableValidation: ''
+        url:
+          allowAliases: ''
+          disableValidation: ''
+        user:
+          allowCustomQuery: ''
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: typedlinkfield\fields\LinkField
   a1e295a3-abd0-4b32-bff4-af4a2a4d2ce9:
     contentColumnType: string
     fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
@@ -101,6 +175,53 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
+  a8ffffa2-e9b2-4021-8355-1750eabba625:
+    contentColumnType: text
+    fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
+    handle: linketin
+    instructions: ''
+    name: LinketIn
+    searchable: true
+    settings:
+      allowCustomText: '1'
+      allowTarget: ''
+      allowedLinkNames:
+        9: url
+      autoNoReferrer: ''
+      defaultLinkName: url
+      defaultText: ''
+      enableAriaLabel: ''
+      enableTitle: ''
+      typeSettings:
+        asset:
+          allowCustomQuery: ''
+          sources: '*'
+        category:
+          allowCustomQuery: ''
+          sources: '*'
+        custom:
+          allowAliases: ''
+          disableValidation: ''
+        email:
+          allowAliases: ''
+          disableValidation: ''
+        entry:
+          allowCustomQuery: ''
+          sources: '*'
+        site:
+          sites: '*'
+        tel:
+          allowAliases: ''
+          disableValidation: ''
+        url:
+          allowAliases: ''
+          disableValidation: ''
+        user:
+          allowCustomQuery: ''
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: typedlinkfield\fields\LinkField
   d27e0e0c-9432-490d-b8e5-c277d515cd6e:
     contentColumnType: string
     fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
@@ -678,6 +799,9 @@ matrixBlockTypes:
             fields:
               18a9f66b-ae5c-4d89-984c-5aa3b33b2536:
                 required: true
+                sortOrder: 2
+              31741e1e-0e81-47dc-b2d6-200222c2207d:
+                required: true
                 sortOrder: 1
             name: Content
             sortOrder: 1
@@ -694,6 +818,25 @@ matrixBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
+      31741e1e-0e81-47dc-b2d6-200222c2207d:
+        contentColumnType: string
+        fieldGroup: null
+        handle: team
+        instructions: ''
+        name: Team
+        searchable: true
+        settings:
+          limit: ''
+          localizeRelations: false
+          selectionLabel: Select
+          source: null
+          sources:
+            - 'section:8e4d9968-cea1-4ad0-872b-389d98f0193d'
+          targetSiteId: null
+          viewMode: null
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Entries
     handle: team
     name: Team
     sortOrder: 10
@@ -1109,6 +1252,45 @@ sections:
         template: homepage/_entry
         uriFormat: __home__
     type: single
+  8e4d9968-cea1-4ad0-872b-389d98f0193d:
+    enableVersioning: true
+    entryTypes:
+      25241f27-35a7-4b7b-9abf-161fd1834500:
+        fieldLayouts:
+          c338cb60-5fb8-4a93-8a29-cf1cf8f623e1:
+            tabs:
+              -
+                fields:
+                  712f1e4f-64d0-471b-bb0d-c93c854d9439:
+                    required: true
+                    sortOrder: 1
+                  8f2765e1-c533-4145-a088-1b5167412db9:
+                    required: false
+                    sortOrder: 3
+                  a8ffffa2-e9b2-4021-8355-1750eabba625:
+                    required: false
+                    sortOrder: 4
+                  dd0ccf63-85af-48ac-9721-e31ba4d68714:
+                    required: true
+                    sortOrder: 2
+                name: Info
+                sortOrder: 1
+        handle: team
+        hasTitleField: true
+        name: Team
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Name
+    handle: team
+    name: Team
+    propagateEntries: true
+    siteSettings:
+      5d321cb4-ef6f-4ec7-8ea5-edbb05b24c96:
+        enabledByDefault: true
+        hasUrls: false
+        template: null
+        uriFormat: null
+    type: channel
   f8fd00db-1e8a-45e2-b55e-65b03be90e01:
     enableVersioning: true
     entryTypes:
