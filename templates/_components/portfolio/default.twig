@@ -22,11 +22,16 @@
                         <div class="video-wrapper rounded">
                             <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" src="{{ craft.videoEmbedder.getEmbedUrl(item.videoLink) }}"></iframe>
                         </div>
-                        <div class="logos">
-                            <img alt="" src="/static/images/portfolio-suny.svg"/>
-                            <img alt="" src="/static/images/portfolio-university.svg"/>
-                            <img alt="" src="/static/images/portfolio-incf.svg"/>
-                        </div>
+                        {% for partner in item.partners.all() %}
+                            {% if loop.first %}
+                                <div class="logos">
+                                    <span>In coloboration with</span>
+                                {% endif %}
+                                <img alt="{{ partner.title }}" src="{{ partner.logo.one().url() }}"/>
+                                {% if loop.last %}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
                 {% else %}
@@ -35,10 +40,16 @@
                         <div class="video-wrapper rounded">
                             <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" src="{{ craft.videoEmbedder.getEmbedUrl(item.videoLink) }}"></iframe>
                         </div>
-                        <div class="logos">
-                            <span>In coloboration with</span>
-                            <img alt="" src="/static/images/portfolio-ucl.svg"/>
-                        </div>
+                        {% for partner in item.partners.all() %}
+                            {% if loop.first %}
+                                <div class="logos">
+                                    <span>In coloboration with</span>
+                                {% endif %}
+                                <img alt="{{ partner.title }}" src="{{ partner.logo.one().url() }}"/>
+                                {% if loop.last %}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                     <div class="col-6">
                         <div class="content">

@@ -1,4 +1,4 @@
-dateModified: 1549811045
+dateModified: 1549814206
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -82,6 +82,52 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: typedlinkfield\fields\LinkField
+  a1e295a3-abd0-4b32-bff4-af4a2a4d2ce9:
+    contentColumnType: string
+    fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
+    handle: partners
+    instructions: 'In coloboration with'
+    name: Partners
+    searchable: false
+    settings:
+      limit: '3'
+      localizeRelations: false
+      selectionLabel: 'Add partners'
+      source: null
+      sources:
+        - 'section:008e1a8c-ff96-451f-8a64-d1cebafb64ca'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  d27e0e0c-9432-490d-b8e5-c277d515cd6e:
+    contentColumnType: string
+    fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
+    handle: logo
+    instructions: ''
+    name: Logo
+    searchable: false
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Select logo'
+      singleUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
   dd0ccf63-85af-48ac-9721-e31ba4d68714:
     contentColumnType: text
     fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
@@ -921,6 +967,36 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
 sections:
+  008e1a8c-ff96-451f-8a64-d1cebafb64ca:
+    enableVersioning: true
+    entryTypes:
+      7bcabbdc-8c13-4ad3-b12f-3e104f2d501f:
+        fieldLayouts:
+          b277da4c-ead6-4be9-9f7a-5ff9e27d9a12:
+            tabs:
+              -
+                fields:
+                  d27e0e0c-9432-490d-b8e5-c277d515cd6e:
+                    required: false
+                    sortOrder: 1
+                name: Content
+                sortOrder: 1
+        handle: partners
+        hasTitleField: true
+        name: Partners
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Name
+    handle: partners
+    name: Partners
+    propagateEntries: true
+    siteSettings:
+      5d321cb4-ef6f-4ec7-8ea5-edbb05b24c96:
+        enabledByDefault: true
+        hasUrls: false
+        template: null
+        uriFormat: null
+    type: channel
   305bc43d-5031-4475-bd90-e9a309e799ff:
     enableVersioning: true
     entryTypes:
@@ -966,6 +1042,9 @@ sections:
                   55eec0ce-f51f-4a94-b302-d918b27db232:
                     required: true
                     sortOrder: 2
+                  a1e295a3-abd0-4b32-bff4-af4a2a4d2ce9:
+                    required: false
+                    sortOrder: 4
                   dd0ccf63-85af-48ac-9721-e31ba4d68714:
                     required: true
                     sortOrder: 1
