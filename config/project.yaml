@@ -1,4 +1,4 @@
-dateModified: 1549814206
+dateModified: 1549821484
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -615,6 +615,88 @@ matrixBlockTypes:
     handle: pageTitle
     name: 'Page Title'
     sortOrder: 6
+  a6e66c3d-0b0b-4f7f-a21f-913221a5a825:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      d715d902-742b-4087-befe-7e6af35b0b43:
+        tabs:
+          -
+            fields:
+              0794a62b-43e8-404c-a9aa-852761d60d7c:
+                required: true
+                sortOrder: 2
+              42ce70ca-0f94-4c01-ae87-45df28f1827d:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      0794a62b-43e8-404c-a9aa-852761d60d7c:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\navigation\
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+      42ce70ca-0f94-4c01-ae87-45df28f1827d:
+        contentColumnType: string
+        fieldGroup: null
+        handle: links
+        instructions: ''
+        name: Links
+        searchable: true
+        settings:
+          columns:
+            42:
+              width: ''
+            43:
+              width: ''
+          contentTable: '{{%stc_9_links}}'
+          fieldLayout: table
+          localizeBlocks: false
+          maxRows: '3'
+          minRows: '1'
+          selectionLabel: 'Add link'
+          staticField: ''
+        translationKeyFormat: null
+        translationMethod: site
+        type: verbb\supertable\fields\SuperTableField
+    handle: navigation
+    name: Navigation
+    sortOrder: 9
+  aa1e8ba5-8745-4c65-b161-b8807824f455:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      591feb27-4189-4ad6-a0a2-a89d8a2b2633:
+        tabs:
+          -
+            fields:
+              18a9f66b-ae5c-4d89-984c-5aa3b33b2536:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      18a9f66b-ae5c-4d89-984c-5aa3b33b2536:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\team\
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+    handle: team
+    name: Team
+    sortOrder: 10
   c718fcfc-e410-4da1-b753-7b352a46cc67:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
@@ -1080,6 +1162,103 @@ sites:
     siteGroup: d14c9dca-37c3-4439-9c6c-7cbbbb484c9e
     sortOrder: 1
 superTableBlockTypes:
+  4f026965-d622-4d06-b37c-e188b3e49773:
+    field: 42ce70ca-0f94-4c01-ae87-45df28f1827d
+    fieldLayouts:
+      9ddb8819-6cbf-4700-9188-b8b660862446:
+        tabs:
+          -
+            fields:
+              7110b38e-c70a-4b13-a266-0c355b6b1366:
+                required: true
+                sortOrder: 1
+              9560254d-6012-48c4-ba2a-a815c8ad3168:
+                required: true
+                sortOrder: 2
+            name: Content
+            sortOrder: 1
+    fields:
+      7110b38e-c70a-4b13-a266-0c355b6b1366:
+        contentColumnType: string
+        fieldGroup: null
+        handle: image
+        instructions: ''
+        name: Image
+        searchable: true
+        settings:
+          allowedKinds:
+            - image
+          defaultUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: '1'
+          selectionLabel: 'Select image'
+          singleUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources:
+            - 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          targetSiteId: null
+          useSingleFolder: ''
+          viewMode: list
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+      9560254d-6012-48c4-ba2a-a815c8ad3168:
+        contentColumnType: text
+        fieldGroup: null
+        handle: linkTo
+        instructions: ''
+        name: 'Link to'
+        searchable: true
+        settings:
+          allowCustomText: '1'
+          allowTarget: ''
+          allowedLinkNames:
+            1: asset
+            2: category
+            3: entry
+            4: site
+            6: custom
+            7: email
+            8: tel
+            9: url
+          autoNoReferrer: ''
+          defaultLinkName: asset
+          defaultText: ''
+          enableAriaLabel: ''
+          enableTitle: ''
+          typeSettings:
+            asset:
+              allowCustomQuery: ''
+              sources: '*'
+            category:
+              allowCustomQuery: ''
+              sources: '*'
+            custom:
+              allowAliases: ''
+              disableValidation: ''
+            email:
+              allowAliases: ''
+              disableValidation: ''
+            entry:
+              allowCustomQuery: ''
+              sources: '*'
+            site:
+              sites: '*'
+            tel:
+              allowAliases: ''
+              disableValidation: ''
+            url:
+              allowAliases: ''
+              disableValidation: ''
+            user:
+              allowCustomQuery: ''
+              sources: '*'
+        translationKeyFormat: null
+        translationMethod: none
+        type: typedlinkfield\fields\LinkField
   8d023d9d-1cd7-4c1d-a376-5456862bbd80:
     field: 424dbbec-2b14-49b0-9142-305b224cee3b
     fieldLayouts:

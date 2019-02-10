@@ -1,0 +1,23 @@
+{% import '_macros/image' as imageMacros %}
+<div class="component-container">
+    <div class="navigation">
+        <div class="container">
+            <nav>
+                {% for link in component.links %}
+                    <a href="{{ link.linkTo.getUrl() }}">
+                        <img alt="" src="/static/images/icon-1.svg"/>
+                        {{ imageMacros.image(link.image.one(), {
+                                    ratio: (1/1),
+                                    srcset: [
+                                        { width: 40, jpegQuality: 80 },
+                                    ]
+                                }
+                            )   
+                        }}
+                        <span class="link-text">{{ link.linkTo.getText() }}</span>
+                    </a>
+                {% endfor %}
+            </nav>
+        </div>
+    </div>
+</div>
