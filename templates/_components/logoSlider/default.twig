@@ -1,0 +1,43 @@
+{% import '_macros/image' as imageMacros %}
+<div class="component-container">
+    <div class="logos-slider">
+        <div class="grid-bg-wrapper container">
+            <div class="background-grid"></div>
+        </div>
+        <div class="container slider-inner">
+            <div class="spacing-both">
+                <h5 class="title">
+                    {{ component.heading }}
+                </h5>
+                <div class="swiper-container swiper-container-horizontal">
+                    <div class="swiper-wrapper" style="transform: translate3d(-750px, 0px, 0px); transition-duration: 0ms;">
+                        {% for item in component.items.all() %}
+                            <div class="swiper-slide slide" style="width: 160px; margin-right: 90px;">
+                                {{ imageMacros.image(item.image.one(), {
+                                                ratio: (2/1),
+                                                srcset: [
+                                                    { width: 160, jpegQuality: 85 },
+                                                ]
+                                            }
+                                        )   
+                                    }}
+                                <p>
+                                    {{ item.text }}
+                                </p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                        <span aria-label="Go to slide 1" class="swiper-pagination-bullet" role="button" tabindex="0"></span>
+                        <span aria-label="Go to slide 2" class="swiper-pagination-bullet" role="button" tabindex="0"></span>
+                        <span aria-label="Go to slide 3" class="swiper-pagination-bullet" role="button" tabindex="0"></span>
+                        <span aria-label="Go to slide 4" class="swiper-pagination-bullet swiper-pagination-bullet-active" role="button" tabindex="0"></span>
+                    </div>
+                    <span aria-atomic="true" aria-live="assertive" class="swiper-notification"></span>
+                </div>
+                <button class="swiper-button-next"></button>
+                <button class="swiper-button-prev"></button>
+            </div>
+        </div>
+    </div>
+</div>
