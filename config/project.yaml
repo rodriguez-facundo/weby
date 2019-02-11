@@ -1,4 +1,4 @@
-dateModified: 1549835996
+dateModified: 1549905768
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -482,7 +482,7 @@ matrixBlockTypes:
         name: Subheading
         searchable: true
         settings:
-          charLimit: '30'
+          charLimit: '50'
           code: ''
           columnType: text
           initialRows: ''
@@ -516,7 +516,7 @@ matrixBlockTypes:
         name: Heading
         searchable: true
         settings:
-          charLimit: '50'
+          charLimit: '100'
           code: ''
           columnType: text
           initialRows: '3'
@@ -1240,7 +1240,7 @@ plugins:
     enabled: true
     schemaVersion: 3.0.0
     settings:
-      apiKey: AIzaSyCDC9AcVb-sRPmBHEvSvQQw07rghZkxCoA
+      apiKey: AIzaSyCFodlEo7f5CQ0kI9ZsJzpJT28NUBATZKQ
       unrestrictedApiKey: ''
   super-table:
     edition: standard
