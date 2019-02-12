@@ -1,4 +1,4 @@
-dateModified: 1549989981
+dateModified: 1549990824
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -602,13 +602,13 @@ matrixBlockTypes:
       eeb5a0f5-000a-4e40-a516-b14fe9e96c0b:
         contentColumnType: string
         fieldGroup: null
-        handle: image
-        instructions: 'Recommended image size is 1400x1400 and aspect ration is 1:1.'
-        name: Image
+        handle: video
+        instructions: ''
+        name: Video
         searchable: true
         settings:
           allowedKinds:
-            - image
+            - video
           defaultUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
           defaultUploadLocationSubpath: ''
           limit: '1'
@@ -619,7 +619,7 @@ matrixBlockTypes:
           singleUploadLocationSubpath: ''
           source: null
           sources:
-            - 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+            - 'volume:fef177e8-2f5b-4cd1-8055-a393d357fa24'
           targetSiteId: null
           useSingleFolder: ''
           viewMode: list

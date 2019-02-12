@@ -1,42 +1,31 @@
-{% import '_macros/image' as imageMacros %}
 <div class="component-container">
     <div class="spotlight undefined">
         <div class="background-image">
-            {{ imageMacros.image(component.image[0], {
-                                ratio: (1/1),
-                                class: "animation",
-                                srcset: [
-                                    { width: 1400 },
-                                    { width: 900, jpegQuality: 65 },
-                                    { width: 600, jpegQuality: 65 },
-                                ]
-                            }
-                        )   
-                    }}
-        </div>
-        <div class="spotlight-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6 text-wrapper">
-                        <div class="text-content">
-                            <h6>
-                                {{ component.subheading }}</h6>
-                            <h2>
-                                {{ component.heading }}</h2>
-                            <p>
-                                {{ component.description }}
-                            </p>
-                            {% if not component.button.isEmpty() %}
-                                <a class="btn-primary" href="{{ component.button.getUrl() }}">
-                                    {{ component.button.getText() }}</a>
-                            {% endif %}
+            <video autoplay="" class="animation" loop="" muted="" playsinline="">
+                <source src="{{ component.video.one().url }}" type="video/mp4"></video>
+            </div>
+            <div class="spotlight-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 text-wrapper">
+                            <div class="text-content">
+                                <h6>
+                                    {{ component.subheading }}</h6>
+                                <h2>
+                                    {{ component.heading }}</h2>
+                                <p>
+                                    {{ component.description }}</p>
+                                {% if not component.button.isEmpty() %}
+                                    <a class="btn-primary" href="{{ component.button.getUrl() }}">
+                                        {{ component.button.getText() }}</a>
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="grid-bg-wrapper container">
-            <div class="background-grid"></div>
+            <div class="grid-bg-wrapper container">
+                <div class="background-grid"></div>
+            </div>
         </div>
     </div>
-</div>
