@@ -1,4 +1,4 @@
-dateModified: 1549910494
+dateModified: 1549945833
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -974,6 +974,75 @@ matrixBlockTypes:
     handle: team
     name: Team
     sortOrder: 10
+  b893aa44-2455-4732-b3f1-630b437d426e:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      51edccd4-201f-4f07-9bd1-b7e4ff9d09da:
+        tabs:
+          -
+            fields:
+              07cf3ed3-7aa7-4d6b-ab15-b05872da1a22:
+                required: true
+                sortOrder: 3
+              11ffda47-951c-46f2-9f65-7e7a601ffe48:
+                required: true
+                sortOrder: 1
+              2d980c3f-de18-4ba3-9baa-0086d10dd566:
+                required: true
+                sortOrder: 2
+            name: Content
+            sortOrder: 1
+    fields:
+      07cf3ed3-7aa7-4d6b-ab15-b05872da1a22:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\resourcesSlider
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+      11ffda47-951c-46f2-9f65-7e7a601ffe48:
+        contentColumnType: text
+        fieldGroup: null
+        handle: heading
+        instructions: ''
+        name: Heading
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      2d980c3f-de18-4ba3-9baa-0086d10dd566:
+        contentColumnType: string
+        fieldGroup: null
+        handle: resources
+        instructions: ''
+        name: Resources
+        searchable: true
+        settings:
+          contentTable: '{{%stc_13_resources}}'
+          fieldLayout: table
+          localizeBlocks: false
+          maxRows: ''
+          minRows: '1'
+          selectionLabel: 'Add resource'
+          staticField: ''
+        translationKeyFormat: null
+        translationMethod: site
+        type: verbb\supertable\fields\SuperTableField
+    handle: resourcesSlider
+    name: 'Resources Slider'
+    sortOrder: 13
   c718fcfc-e410-4da1-b753-7b352a46cc67:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
@@ -1393,6 +1462,99 @@ sections:
         template: homepage/_entry
         uriFormat: __home__
     type: single
+  4351b4a2-a499-4863-bf67-64a6f01a6140:
+    enableVersioning: true
+    entryTypes:
+      36b8a06e-a7d6-4a13-a92c-2f7e24788307:
+        fieldLayouts:
+          f5df5085-7adb-43d9-beec-66c9266ff30d:
+            tabs:
+              -
+                fields:
+                  712f1e4f-64d0-471b-bb0d-c93c854d9439:
+                    required: true
+                    sortOrder: 1
+                  dd0ccf63-85af-48ac-9721-e31ba4d68714:
+                    required: true
+                    sortOrder: 2
+                name: Content
+                sortOrder: 1
+        handle: pressReleace
+        hasTitleField: true
+        name: 'Press Releace'
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+      77032e38-c2fa-43cf-a918-776024bb39c0:
+        fieldLayouts:
+          912f73f2-c529-4e2b-8a21-8b00add144af:
+            tabs:
+              -
+                fields:
+                  712f1e4f-64d0-471b-bb0d-c93c854d9439:
+                    required: true
+                    sortOrder: 1
+                  dd0ccf63-85af-48ac-9721-e31ba4d68714:
+                    required: true
+                    sortOrder: 2
+                name: Content
+                sortOrder: 1
+        handle: webinar
+        hasTitleField: true
+        name: Webinar
+        sortOrder: 2
+        titleFormat: ''
+        titleLabel: Title
+      d3776047-731f-427f-9fe0-1275bbb871de:
+        fieldLayouts:
+          3dd8ff63-b1bb-46de-bfc0-8cc93f8a0af0:
+            tabs:
+              -
+                fields:
+                  55eec0ce-f51f-4a94-b302-d918b27db232:
+                    required: true
+                    sortOrder: 2
+                  dd0ccf63-85af-48ac-9721-e31ba4d68714:
+                    required: true
+                    sortOrder: 1
+                name: Content
+                sortOrder: 1
+        handle: whirePaper
+        hasTitleField: true
+        name: 'Whire Paper'
+        sortOrder: 3
+        titleFormat: ''
+        titleLabel: Title
+      fb867341-2eca-4d5a-8972-fedbf0219255:
+        fieldLayouts:
+          aa0b7089-5f2b-4340-a7b6-08cb092797ee:
+            tabs:
+              -
+                fields:
+                  55eec0ce-f51f-4a94-b302-d918b27db232:
+                    required: true
+                    sortOrder: 2
+                  dd0ccf63-85af-48ac-9721-e31ba4d68714:
+                    required: true
+                    sortOrder: 1
+                name: Content
+                sortOrder: 1
+        handle: caseStudy
+        hasTitleField: true
+        name: 'Case Study'
+        sortOrder: 4
+        titleFormat: ''
+        titleLabel: Title
+    handle: resources
+    name: Resources
+    propagateEntries: true
+    siteSettings:
+      5d321cb4-ef6f-4ec7-8ea5-edbb05b24c96:
+        enabledByDefault: true
+        hasUrls: true
+        template: ''
+        uriFormat: 'resources/{slug}'
+    type: channel
   8e4d9968-cea1-4ad0-872b-389d98f0193d:
     enableVersioning: true
     entryTypes:
@@ -1677,6 +1839,38 @@ superTableBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: typedlinkfield\fields\LinkField
+  ced9a40f-d8ee-4b6f-b6d4-7be2e401c89e:
+    field: 2d980c3f-de18-4ba3-9baa-0086d10dd566
+    fieldLayouts:
+      fb8ce58f-19f0-4f78-bfe8-ee3feb049489:
+        tabs:
+          -
+            fields:
+              c6a48f45-0af3-4ce8-9b4a-f02a8e56b601:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      c6a48f45-0af3-4ce8-9b4a-f02a8e56b601:
+        contentColumnType: string
+        fieldGroup: null
+        handle: resource
+        instructions: ''
+        name: Resource
+        searchable: true
+        settings:
+          limit: '1'
+          localizeRelations: false
+          selectionLabel: 'Select resource'
+          source: null
+          sources:
+            - 'section:4351b4a2-a499-4863-bf67-64a6f01a6140'
+          targetSiteId: null
+          viewMode: null
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Entries
   d34fd874-0cef-44e1-8f99-7a1c6313752c:
     field: 95023b21-caf2-4423-8266-7e5b90a192bf
     fieldLayouts:
