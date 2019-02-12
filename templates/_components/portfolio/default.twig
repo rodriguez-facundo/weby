@@ -1,85 +1,89 @@
 {% import '_macros/image' as imageMacros %}
-<div class="container list-content">
-    <h6>
-        {{ component.heading }}
-    </h6>
-    {% for item in component.items.all() %}
-        <div class="portfolio-item">
-            {% if loop.index is odd %}
-                <div class="row image-right">
-                    <div class="col-6">
-                        <div class="content">
-                            <h2>
-                                {{ item.title }}
-                            </h2>
-                            {{ item.description }}
-                            {% if not item.downloadLink.isEmpty() %}
-                                <a class="button-download" href="{{ item.downloadLink.getUrl }}">
-                                    {{ item.downloadLink.getText() }}</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="video-wrapper rounded">
-                            <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" src="{{ craft.videoEmbedder.getEmbedUrl(item.videoLink) }}"></iframe>
-                        </div>
-                        {% for partner in item.partners.all() %}
-                            {% if loop.first %}
-                                <div class="logos">
-                                    <span>In coloboration with</span>
-                                {% endif %}
-                                {{ imageMacros.image(partner.logo.one(), {
-                                            ratio: "",
-                                            srcset: [
-                                                { height: 55, jpegQuality: 65 },
-                                            ]
-                                        }
-                                    )   
-                                }}
-                                {% if loop.last %}
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </div>
-                {% else %}
-                <div class="row">
-                    <div class="col-6">
-                        <div class="video-wrapper rounded">
-                            <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" src="{{ craft.videoEmbedder.getEmbedUrl(item.videoLink) }}"></iframe>
-                        </div>
-                        {% for partner in item.partners.all() %}
-                            {% if loop.first %}
-                                <div class="logos">
-                                    <span>In coloboration with</span>
-                                {% endif %}
-                                {{ imageMacros.image(partner.logo.one(), {
-                                            ratio: "",
-                                            srcset: [
-                                                { height: 55, jpegQuality: 65 },
-                                            ]
-                                        }
-                                    )   
-                                }}
-                                {% if loop.last %}
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                    <div class="col-6">
-                        <div class="content">
-                            <h2>
-                                {{ item.title }}
-                            </h2>
-                            {{ item.description }}
-                            {% if not item.downloadLink.isEmpty() %}
-                                <a class="button-download" href="{{ item.downloadLink.getUrl }}">
-                                    {{ item.downloadLink.getText() }}</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
+<div class="component-container">
+    <div class="portfolio-list spacing-both">
+        <div class="grid-bg-wrapper container">
+            <div class="background-grid"></div>
         </div>
-    {% endfor %}
-</div>
+        <div class="container list-content">
+            <h6>
+                {{ component.heading }}</h6>
+            {% for item in component.items.all() %}
+                <div class="portfolio-item">
+                    {% if loop.index is odd %}
+                        <div class="row image-right">
+                            <div class="col-6">
+                                <div class="content">
+                                    <h2>
+                                        {{ item.title }}</h2>
+                                    {{ item.description }}
+                                    {% if not item.downloadLink.isEmpty() %}
+                                        <a class="button-download" href="{{ item.downloadLink.getUrl }}">
+                                            {{ item.downloadLink.getText() }}</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="video-wrapper rounded">
+                                    <video autoplay="" loop="" muted="" playsinline="">
+                                        <source src="{{ item.video.one().url }}" type="video/mp4"></video>
+                                    </div>
+                                    <div class="logos">
+                                        {% for partner in item.partners.all() %}
+                                            {{ imageMacros.image(partner.logo.one(), {
+                                            ratio: "",
+                                            srcset: [
+                                                { height: 55, jpegQuality: 65 },
+                                            ]
+                                        }
+                                    )   
+                                }}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            {% else %}
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="video-wrapper rounded">
+                                        <video autoplay="" loop="" muted="" playsinline="">
+                                            <source src="{{ item.video.one().url }}" type="video/mp4"></video>
+                                        </div>
+                                        {% for partner in item.partners.all() %}
+                                            {% if loop.first %}
+                                                <div class="logos">
+                                                    <span>In coloboration with</span>
+                                                {% endif %}
+                                                {{ imageMacros.image(partner.logo.one(), {
+                                            ratio: "",
+                                            srcset: [
+                                                { height: 55, jpegQuality: 65 },
+                                            ]
+                                        }
+                                    )   
+                                }}
+                                                {% if loop.last %}
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="content">
+                                            <h2>
+                                                {{ item.title }}</h2>
+                                            {{ item.description }}
+                                            {% if not item.downloadLink.isEmpty() %}
+                                                <a class="button-download" href="{{ item.downloadLink.getUrl }}">
+                                                    {{ item.downloadLink.getText() }}</a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                        </div>
+
+                </div>
+            </div>
+        

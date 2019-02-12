@@ -1,4 +1,4 @@
-dateModified: 1549990824
+dateModified: 1549992660
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -25,15 +25,32 @@ fields:
     translationMethod: site
     type: craft\fields\Matrix
   32240357-759c-45bb-afa8-39b7fc8ef303:
-    contentColumnType: text
+    contentColumnType: string
     fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
-    handle: videoLink
+    handle: video
     instructions: 'Link to Youtube video'
-    name: 'Video Link'
+    name: Video
     searchable: false
+    settings:
+      allowedKinds:
+        - video
+      defaultUploadLocationSource: 'volume:fef177e8-2f5b-4cd1-8055-a393d357fa24'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Select video'
+      singleUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:fef177e8-2f5b-4cd1-8055-a393d357fa24'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: list
     translationKeyFormat: null
-    translationMethod: none
-    type: mikestecker\videoembedder\fields\Video
+    translationMethod: site
+    type: craft\fields\Assets
   55eec0ce-f51f-4a94-b302-d918b27db232:
     contentColumnType: text
     fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
