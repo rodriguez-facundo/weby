@@ -1,4 +1,4 @@
-dateModified: 1549945833
+dateModified: 1549989981
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -1030,6 +1030,9 @@ matrixBlockTypes:
         name: Resources
         searchable: true
         settings:
+          columns:
+            68:
+              width: ''
           contentTable: '{{%stc_13_resources}}'
           fieldLayout: table
           localizeBlocks: false
@@ -1313,24 +1316,24 @@ matrixBlockTypes:
       8b039a9a-0718-4423-8fe5-47e1adfd4a2c:
         contentColumnType: string
         fieldGroup: null
-        handle: image
-        instructions: 'Recommended size of image is 900x600  and aspect ratio is 3:2.'
-        name: Image
+        handle: video
+        instructions: ''
+        name: Video
         searchable: true
         settings:
           allowedKinds:
-            - image
+            - video
           defaultUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
           defaultUploadLocationSubpath: ''
           limit: '1'
           localizeRelations: false
           restrictFiles: '1'
-          selectionLabel: 'Select image'
+          selectionLabel: 'Select video'
           singleUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
           singleUploadLocationSubpath: ''
           source: null
           sources:
-            - 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+            - 'volume:fef177e8-2f5b-4cd1-8055-a393d357fa24'
           targetSiteId: null
           useSingleFolder: ''
           viewMode: list
@@ -2079,3 +2082,12 @@ volumes:
     sortOrder: 1
     type: craft\volumes\Local
     url: '@web/assets/images'
+  fef177e8-2f5b-4cd1-8055-a393d357fa24:
+    handle: video
+    hasUrls: true
+    name: Video
+    settings:
+      path: '@webroot/assets/video'
+    sortOrder: 1
+    type: craft\volumes\Local
+    url: '@web/assets/video'

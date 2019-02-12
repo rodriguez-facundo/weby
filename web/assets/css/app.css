@@ -774,7 +774,8 @@ select {
     z-index: 1;
     opacity: 0.2; }
   .lead-image .animation {
-    display: block; }
+    display: block;
+    width: 100%; }
   .lead-image .text-wrapper {
     position: relative;
     z-index: 1;
@@ -838,7 +839,8 @@ select {
     .lead-image .background-image .animation {
       position: absolute;
       width: 100%;
-      height: 100%; } }
+      height: 100%;
+      opacity: 0.5; } }
 
 .spotlight {
   position: relative;
@@ -918,6 +920,7 @@ select {
     font-weight: 600; }
   .portfolio-list .video-wrapper {
     overflow: hidden;
+    background-color: var(--true-black);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); }
     .portfolio-list .video-wrapper iframe {
       display: block;
@@ -928,11 +931,13 @@ select {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center; }
-    .portfolio-list .logos img, .portfolio-list .logos span {
+    .portfolio-list .logos img,
+    .portfolio-list .logos span {
       display: block;
       margin-top: var(--spacing-sm);
       margin-right: var(--spacing-md); }
-      .portfolio-list .logos img:last-child, .portfolio-list .logos span:last-child {
+      .portfolio-list .logos img:last-child,
+      .portfolio-list .logos span:last-child {
         margin-right: 0; }
   .portfolio-list .portfolio-item {
     margin-bottom: var(--spacing-lg); }
