@@ -1,4 +1,4 @@
-dateModified: 1550008712
+dateModified: 1550094498
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -2072,7 +2072,7 @@ system:
   edition: solo
   live: true
   name: Metacell
-  schemaVersion: 3.1.23
+  schemaVersion: 3.1.25
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
