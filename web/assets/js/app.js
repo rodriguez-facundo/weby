@@ -1,4 +1,10 @@
 
+var header = document.querySelector('.header');
+header.querySelector('.menu-trigger').addEventListener('click', function (e) {
+  e.preventDefault();
+  header.classList.toggle('show-nav');
+});
+
 var logoSliders = document.querySelectorAll('.logos-slider .swiper-container');
 logoSliders.forEach(function (slider) {
     var logoSliderContainer = slider.parentNode.parentNode.parentNode;
