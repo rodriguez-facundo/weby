@@ -1,6 +1,6 @@
 {% import '_macros/image' as imageMacros %}
 <div class="component-container">
-    <div class="logos-slider">
+    <div class="logos-slider spacing-both">
         <div class="grid-bg-wrapper container">
             <div class="background-grid"></div>
         </div>
@@ -9,10 +9,10 @@
                 <h5 class="title">
                     {{ component.heading }}
                 </h5>
-                <div class="swiper-container swiper-container-horizontal">
-                    <div class="swiper-wrapper" style="transform: translate3d(-750px, 0px, 0px); transition-duration: 0ms;">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
                         {% for item in component.items.all() %}
-                            <div class="swiper-slide slide" style="width: 160px; margin-right: 90px;">
+                            <div class="swiper-slide slide">
                                 {{ imageMacros.image(item.image.one(), {
                                                 ratio: (2/1),
                                                 srcset: [
