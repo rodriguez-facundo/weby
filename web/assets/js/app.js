@@ -1,10 +1,11 @@
-
+// Header
 var header = document.querySelector('.header');
 header.querySelector('.menu-trigger').addEventListener('click', function (e) {
   e.preventDefault();
   header.classList.toggle('show-nav');
 });
 
+// Logo slider
 var logoSliders = document.querySelectorAll('.logos-slider .swiper-container');
 logoSliders.forEach(function (slider) {
     var logoSliderContainer = slider.parentNode.parentNode.parentNode;
@@ -38,6 +39,7 @@ logoSliders.forEach(function (slider) {
     })
 });
 
+// Resource slider
 var resourcesSliders = document.querySelectorAll('.resources-slider .swiper-container');
 resourcesSliders.forEach(function (slider) {
     var sliderContainer = slider.parentNode;
@@ -64,4 +66,20 @@ resourcesSliders.forEach(function (slider) {
         e.preventDefault();
         swiper.slidePrev();
     })
+});
+
+// Team member
+var teamMembers = document.querySelectorAll('.team-member');
+
+teamMembers.forEach(function (member) {
+  var expandBtn = member.querySelector('.button-expand');
+  expandBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    var alreadyExpanded = member.classList.contains('expanded');
+    var newLabel = alreadyExpanded ? 'Expand' : 'Collapse';
+
+    alreadyExpanded ? member.classList.remove('expanded') : member.classList.add('expanded');
+    expandBtn.innerText = newLabel
+  });
 });
