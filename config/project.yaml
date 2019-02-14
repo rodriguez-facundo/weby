@@ -1,4 +1,4 @@
-dateModified: 1550094498
+dateModified: 1550187661
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -51,28 +51,34 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  55eec0ce-f51f-4a94-b302-d918b27db232:
+  461ede7a-008b-4e3c-a685-386717a1a5c8:
     contentColumnType: text
     fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
-    handle: downloadLink
+    handle: linkTo
     instructions: ''
-    name: 'Download link'
+    name: 'Link to'
     searchable: true
     settings:
       allowCustomText: '1'
       allowTarget: ''
       allowedLinkNames:
         1: asset
+        2: category
+        3: entry
+        4: site
+        6: custom
+        7: email
+        8: tel
+        9: url
       autoNoReferrer: ''
       defaultLinkName: asset
-      defaultText: Download
+      defaultText: ''
       enableAriaLabel: ''
       enableTitle: ''
       typeSettings:
         asset:
           allowCustomQuery: ''
-          sources:
-            - 'folder:f2d01184-41cb-464d-8c4f-7527b9192a73'
+          sources: '*'
         category:
           allowCustomQuery: ''
           sources: '*'
@@ -99,6 +105,32 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: typedlinkfield\fields\LinkField
+  55eec0ce-f51f-4a94-b302-d918b27db232:
+    contentColumnType: string
+    fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
+    handle: downloadFile
+    instructions: ''
+    name: 'Download file'
+    searchable: true
+    settings:
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:10926480-dfe2-4405-a77e-e4a24ec7e455'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: 'Select file'
+      singleUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:10926480-dfe2-4405-a77e-e4a24ec7e455'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
   712f1e4f-64d0-471b-bb0d-c93c854d9439:
     contentColumnType: string
     fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
@@ -309,7 +341,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/image/
+          limitToSubfolder: _components\image\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -396,7 +428,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/offices/
+          limitToSubfolder: _components\offices\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -427,7 +459,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/sectionTitle/
+          limitToSubfolder: _components\sectionTitle\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -478,7 +510,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/logoSlider/
+          limitToSubfolder: _components\logoSlider\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -561,7 +593,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/spotlight/
+          limitToSubfolder: _components\spotlight\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -746,7 +778,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/portfolio/
+          limitToSubfolder: _components\portfolio\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -812,7 +844,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/text/
+          limitToSubfolder: _components\text\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -863,7 +895,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/pageTitle/
+          limitToSubfolder: _components\pageTitle\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -911,7 +943,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/navigation/
+          limitToSubfolder: _components\navigation\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -965,7 +997,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/team/
+          limitToSubfolder: _components\team\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1018,7 +1050,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/resourcesSlider/
+          limitToSubfolder: _components\resourcesSlider\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1042,26 +1074,24 @@ matrixBlockTypes:
       2d980c3f-de18-4ba3-9baa-0086d10dd566:
         contentColumnType: string
         fieldGroup: null
-        handle: resources
+        handle: events
         instructions: ''
-        name: Resources
+        name: Events
         searchable: true
         settings:
-          columns:
-            68:
-              width: ''
-          contentTable: '{{%stc_13_resources}}'
-          fieldLayout: table
-          localizeBlocks: false
-          maxRows: ''
-          minRows: '1'
-          selectionLabel: 'Add resource'
-          staticField: ''
+          limit: ''
+          localizeRelations: false
+          selectionLabel: 'Add events'
+          source: null
+          sources:
+            - 'section:4351b4a2-a499-4863-bf67-64a6f01a6140'
+          targetSiteId: null
+          viewMode: null
         translationKeyFormat: null
         translationMethod: site
-        type: verbb\supertable\fields\SuperTableField
-    handle: resourcesSlider
-    name: 'Resources Slider'
+        type: craft\fields\Entries
+    handle: eventSlider
+    name: 'Event Slider'
     sortOrder: 13
   c718fcfc-e410-4da1-b753-7b352a46cc67:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
@@ -1164,7 +1194,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/callToAction/
+          limitToSubfolder: _components\callToAction\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1365,7 +1395,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/leadImage/
+          limitToSubfolder: _components\leadImage\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1525,55 +1555,15 @@ sections:
         sortOrder: 2
         titleFormat: ''
         titleLabel: Title
-      d3776047-731f-427f-9fe0-1275bbb871de:
-        fieldLayouts:
-          3dd8ff63-b1bb-46de-bfc0-8cc93f8a0af0:
-            tabs:
-              -
-                fields:
-                  55eec0ce-f51f-4a94-b302-d918b27db232:
-                    required: true
-                    sortOrder: 2
-                  dd0ccf63-85af-48ac-9721-e31ba4d68714:
-                    required: true
-                    sortOrder: 1
-                name: Content
-                sortOrder: 1
-        handle: whirePaper
-        hasTitleField: true
-        name: 'Whire Paper'
-        sortOrder: 3
-        titleFormat: ''
-        titleLabel: Title
-      fb867341-2eca-4d5a-8972-fedbf0219255:
-        fieldLayouts:
-          aa0b7089-5f2b-4340-a7b6-08cb092797ee:
-            tabs:
-              -
-                fields:
-                  55eec0ce-f51f-4a94-b302-d918b27db232:
-                    required: true
-                    sortOrder: 2
-                  dd0ccf63-85af-48ac-9721-e31ba4d68714:
-                    required: true
-                    sortOrder: 1
-                name: Content
-                sortOrder: 1
-        handle: caseStudy
-        hasTitleField: true
-        name: 'Case Study'
-        sortOrder: 4
-        titleFormat: ''
-        titleLabel: Title
-    handle: resources
-    name: Resources
+    handle: events
+    name: Events
     propagateEntries: true
     siteSettings:
       5d321cb4-ef6f-4ec7-8ea5-edbb05b24c96:
         enabledByDefault: true
         hasUrls: true
         template: ''
-        uriFormat: 'resources/{slug}'
+        uriFormat: 'events/{slug}'
     type: channel
   8e4d9968-cea1-4ad0-872b-389d98f0193d:
     enableVersioning: true
@@ -1614,6 +1604,59 @@ sections:
         template: null
         uriFormat: null
     type: channel
+  af494de9-8f9e-4f27-8fcb-49ee121d2152:
+    enableVersioning: true
+    entryTypes:
+      bbb2deaf-589c-4be7-93ca-0c55b5cf7562:
+        fieldLayouts:
+          e65ee477-b3c7-4d3b-99a5-766adabacc04:
+            tabs:
+              -
+                fields:
+                  55eec0ce-f51f-4a94-b302-d918b27db232:
+                    required: true
+                    sortOrder: 2
+                  dd0ccf63-85af-48ac-9721-e31ba4d68714:
+                    required: true
+                    sortOrder: 1
+                name: Content
+                sortOrder: 1
+        handle: whitePapaer
+        hasTitleField: true
+        name: 'White paper'
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+      e1c944b8-bedc-4dfd-947d-b67020328b36:
+        fieldLayouts:
+          09749a14-6efb-49cc-ab6e-e5052e4b099a:
+            tabs:
+              -
+                fields:
+                  55eec0ce-f51f-4a94-b302-d918b27db232:
+                    required: true
+                    sortOrder: 2
+                  dd0ccf63-85af-48ac-9721-e31ba4d68714:
+                    required: true
+                    sortOrder: 1
+                name: Content
+                sortOrder: 1
+        handle: caseStudies
+        hasTitleField: true
+        name: 'Case studies'
+        sortOrder: 2
+        titleFormat: ''
+        titleLabel: Title
+    handle: downloadable
+    name: Downloadable
+    propagateEntries: true
+    siteSettings:
+      5d321cb4-ef6f-4ec7-8ea5-edbb05b24c96:
+        enabledByDefault: true
+        hasUrls: true
+        template: ''
+        uriFormat: 'downloadable/{slug}'
+    type: channel
   f8fd00db-1e8a-45e2-b55e-65b03be90e01:
     enableVersioning: true
     entryTypes:
@@ -1626,7 +1669,7 @@ sections:
                   32240357-759c-45bb-afa8-39b7fc8ef303:
                     required: true
                     sortOrder: 3
-                  55eec0ce-f51f-4a94-b302-d918b27db232:
+                  461ede7a-008b-4e3c-a685-386717a1a5c8:
                     required: true
                     sortOrder: 2
                   a1e295a3-abd0-4b32-bff4-af4a2a4d2ce9:
@@ -1649,9 +1692,9 @@ sections:
     siteSettings:
       5d321cb4-ef6f-4ec7-8ea5-edbb05b24c96:
         enabledByDefault: true
-        hasUrls: false
-        template: null
-        uriFormat: null
+        hasUrls: true
+        template: ''
+        uriFormat: 'portfolio/{slug}'
     type: channel
 siteGroups:
   d14c9dca-37c3-4439-9c6c-7cbbbb484c9e:

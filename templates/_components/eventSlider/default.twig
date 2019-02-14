@@ -10,12 +10,11 @@
             </h2>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    {% for resource in component.resources.all() %}
-                        {% set resEntry = resource.resource.one() %}
+                    {% for event in component.events.all() %}
                         <div class="slide swiper-slide">
                             <div class="resource-card">
-                                <a class="image" href="{{ resEntry.url }}">
-                                    {{ imageMacros.image(resEntry.image[0], {
+                                <a class="image" href="{{ event.url }}">
+                                    {{ imageMacros.image(event.image[0], {
                                                 ratio: (1/1),
                                                 class: "rounded",
                                                 srcset: [
@@ -25,15 +24,15 @@
                                         )   
                                     }}
                                 </a>
-                                <h6 class="resource-type">Event</h6>
+                                <h6 class="resource-type">{{ event.type.name }}</h6>
                                 <div class="date">
                                     <i class="icon calendar"></i>
-                                    {{ resEntry.postDate | date("d.m.Y") }}</div>
+                                    {{ event.postDate | date("d.m.Y") }}</div>
                                 <h4>
-                                    {{ resEntry.title }}</h4>
+                                    {{ event.title }}</h4>
                                 <p>
-                                    {{ resEntry.description|striptags|slice(0,71)}}…</p>
-                                <a class="button-learn-more" href="{{ resEntry.url }}">Learn more</a>
+                                    {{ event.description|striptags|slice(0,71)}}…</p>
+                                <a class="button-learn-more" href="{{ event.url }}">Learn more</a>
                             </div>
                         </div>
                     {% endfor %}
