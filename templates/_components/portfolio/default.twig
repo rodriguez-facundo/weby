@@ -16,9 +16,9 @@
                                     <h2>
                                         {{ item.title }}</h2>
                                     {{ item.description }}
-                                    {% if not item.downloadLink.isEmpty() %}
-                                        <a class="button-download" href="{{ item.downloadLink.getUrl }}">
-                                            {{ item.downloadLink.getText() }}</a>
+                                    {% if not item.linkTo.isEmpty() %}
+                                        <a class="button-download" href="{{ item.linkTo.getUrl }}">
+                                            {{ item.linkTo.getText() }}</a>
                                     {% endif %}
                                 </div>
                             </div>
@@ -72,9 +72,9 @@
                                             <h2>
                                                 {{ item.title }}</h2>
                                             {{ item.description }}
-                                            {% if not item.downloadLink.isEmpty() %}
-                                                <a class="button-download" href="{{ item.downloadLink.getUrl }}">
-                                                    {{ item.downloadLink.getText() }}</a>
+                                            {% if not item.linkTo.isEmpty() %}
+                                                <a class="button-download" href="{{ item.linkTo.getUrl }}">
+                                                    {{ item.linkTo.getText() }}</a>
                                             {% endif %}
                                         </div>
                                     </div>
