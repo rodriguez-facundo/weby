@@ -1,0 +1,31 @@
+{% import '_macros/image' as imageMacros %}
+<div class="platform-features">
+    <div class="grid-bg-wrapper container">
+        <div class="background-grid"></div>
+    </div>
+    <div class="container content">
+        <div class="platform-features-inner">
+            <div class="flex-row">
+                {% for item in component.items.all() %}
+                    <div class="flex-col">
+                        <div class="platform-feature">
+                            {{ imageMacros.image(item.image[0], {
+                                        ratio: (1/1),
+                                        class: "rounded",
+                                        srcset: [
+                                            { width: 240, jpegQuality: 85 },
+                                        ]
+                                    }
+                                )   
+                            }}
+                            <div class="platform-feature-description">
+                                {{ item.text }}
+                            </div>
+                            <a class="button-expand" href="#">Expand</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

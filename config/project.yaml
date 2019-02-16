@@ -1,4 +1,4 @@
-dateModified: 1550311858
+dateModified: 1550335638
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -851,6 +851,60 @@ matrixBlockTypes:
     handle: text
     name: Text
     sortOrder: 7
+  961e3655-13a3-4165-b682-eeaf480c2eb9:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      7ced83bb-c355-4f9d-9dc6-8bb7360177eb:
+        tabs:
+          -
+            fields:
+              29c7902c-da91-480b-b901-80c935be6128:
+                required: true
+                sortOrder: 2
+              846e1207-10c3-4922-9e8b-6decbc56d92a:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      29c7902c-da91-480b-b901-80c935be6128:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\platformFeatures
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+      846e1207-10c3-4922-9e8b-6decbc56d92a:
+        contentColumnType: string
+        fieldGroup: null
+        handle: items
+        instructions: ''
+        name: Items
+        searchable: true
+        settings:
+          columns:
+            72:
+              width: ''
+            73:
+              width: ''
+          contentTable: '{{%stc_14_items}}'
+          fieldLayout: row
+          localizeBlocks: false
+          maxRows: ''
+          minRows: '1'
+          selectionLabel: 'Add item'
+          staticField: ''
+        translationKeyFormat: null
+        translationMethod: site
+        type: verbb\supertable\fields\SuperTableField
+    handle: platformFeatures
+    name: 'Platform Features'
+    sortOrder: 14
   9b2dd408-9140-4954-92a4-29434aa63921:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
@@ -1840,6 +1894,67 @@ superTableBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: typedlinkfield\fields\LinkField
+  7c00cdfb-120a-4d0a-812f-208f08d6d374:
+    field: 846e1207-10c3-4922-9e8b-6decbc56d92a
+    fieldLayouts:
+      b613ebbb-8a64-40f5-9c90-ebd38daa51fd:
+        tabs:
+          -
+            fields:
+              a5432fde-ace0-4319-8985-4997c36b0741:
+                required: true
+                sortOrder: 1
+              f7b56505-af0e-4268-8919-839cad5a13c0:
+                required: true
+                sortOrder: 2
+            name: Content
+            sortOrder: 1
+    fields:
+      a5432fde-ace0-4319-8985-4997c36b0741:
+        contentColumnType: string
+        fieldGroup: null
+        handle: image
+        instructions: 'Recommended image size is 240x240 or 1:1 aspect ratio.'
+        name: Image
+        searchable: true
+        settings:
+          allowedKinds:
+            - image
+          defaultUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: '1'
+          selectionLabel: 'Select image'
+          singleUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources:
+            - 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          targetSiteId: null
+          useSingleFolder: ''
+          viewMode: list
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+      f7b56505-af0e-4268-8919-839cad5a13c0:
+        contentColumnType: text
+        fieldGroup: null
+        handle: text
+        instructions: ''
+        name: Text
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes: ''
+          cleanupHtml: '1'
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
   8d023d9d-1cd7-4c1d-a376-5456862bbd80:
     field: 424dbbec-2b14-49b0-9142-305b224cee3b
     fieldLayouts:
