@@ -16,20 +16,18 @@
                                         <br/>
                                         {{ office.phone }}
                                     </p>
-                                    <a class="btn-secondary" href="#">Get directions</a>
+                                    <a class="btn-secondary" target="_blank" href="https://www.google.com/maps/dir/{{ office.address.lat }},{{ office.address.lng }}/">Get directions</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="map">
-                    <iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d915.238070515975!2d23.318760284460645!3d42.68934977106903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85126712c8c3%3A0x874524c8258213f5!2z0J3QlNCa!5e0!3m2!1sbg!2sbg!4v1548424910507" style="border:0"></iframe>
+                <div id="map{{ office.id }}" class="map">
                 </div>
             </div>
             {% else %}
             <div class="offices">
-                <div class="map">
-                    <iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d915.238070515975!2d23.318760284460645!3d42.68934977106903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85126712c8c3%3A0x874524c8258213f5!2z0J3QlNCa!5e0!3m2!1sbg!2sbg!4v1548424910507" style="border:0"></iframe>
+                <div id="map{{ office.id }}" class="map">
                 </div>
                 <div class="container">
                     <div class="row">
@@ -45,7 +43,7 @@
                                         <br/>
                                         {{ office.phone }}
                                     </p>
-                                    <a class="btn-secondary" href="#">Get directions</a>
+                                    <a class="btn-secondary"target="_blank" href="https://www.google.com/maps/dir/{{ office.address.lat }},{{ office.address.lng }}/">Get directions</a>
                                 </div>
                             </div>
                         </div>
@@ -53,5 +51,34 @@
                 </div>
             </div>
         {% endif %}
+        {% js %}
+        var map{{ office.id }};
+            function initMap{{ office.id }}() {
+                // Display the map
+                map{{ office.id }} = new google.maps.Map(document.getElementById("map{{ office.id }}"), {
+                center: {
+                    lat: {{ office.address.lat }},
+                    lng: {{ office.address.lng }}
+                },
+                zoom: {{ office.address.zoom }}
+                });
+                
+                // Display the marker
+                var marker = new google.maps.Marker({
+                position: {
+                    lat: {{ office.address.lat }},
+                    lng: {{ office.address.lng }}
+                },
+                // A custom icon can be defined here, if desired
+                // icon: '/path/to/custom/icon.png',
+                map: map{{ office.id }}
+                });
+            }
+            
+        {% endjs %}
+        {% js on load %}
+            initMap{{ office.id }}();
+        {% endjs %}
     {% endfor %}
+        {% do view.registerJsFile("https://maps.googleapis.com/maps/api/js?key="~ craft.simpleMap.apiKey) %}
 </div>
