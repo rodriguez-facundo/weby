@@ -1,4 +1,4 @@
-dateModified: 1550187661
+dateModified: 1550305951
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -471,7 +471,7 @@ matrixBlockTypes:
         name: Heading
         searchable: true
         settings:
-          charLimit: '100'
+          charLimit: '200'
           code: ''
           columnType: text
           initialRows: '4'
@@ -1565,6 +1565,39 @@ sections:
         template: ''
         uriFormat: 'events/{slug}'
     type: channel
+  5ec71ac2-d87d-403a-b476-802e777e046a:
+    enableVersioning: true
+    entryTypes:
+      232b15e0-256c-44be-be36-0910409adfcb:
+        fieldLayouts:
+          ce13b21c-b8f6-4896-96b0-df9b86dc5efc:
+            tabs:
+              -
+                fields:
+                  1abf9822-347f-4961-98c4-bed06e2e42c8:
+                    required: false
+                    sortOrder: 1
+                name: Content
+                sortOrder: 1
+        handle: page
+        hasTitleField: true
+        name: Page
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: headerNavigation
+    name: 'Header Navigation'
+    propagateEntries: true
+    siteSettings:
+      5d321cb4-ef6f-4ec7-8ea5-edbb05b24c96:
+        enabledByDefault: true
+        hasUrls: true
+        template: headerNavigation/_entry
+        uriFormat: '{slug}'
+    structure:
+      maxLevels: '1'
+      uid: a2c1075f-0741-4536-9543-d1d5f4870ff2
+    type: structure
   8e4d9968-cea1-4ad0-872b-389d98f0193d:
     enableVersioning: true
     entryTypes:

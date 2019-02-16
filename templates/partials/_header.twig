@@ -5,13 +5,10 @@
                 <a href="#">MetaCell</a>
             </h1>
             <nav>
-                <a class="active" href="#">Our Company</a>
-                <a href="#">Our Platform</a>
-                <a href="#">Our Service</a>
-                <a href="#">Our Services</a>
-                <a href="#">Resources</a>
-                <a href="#">Joins Us</a>
-                <a href="#">Contact Us</a>
+                {% set navItems = craft.entries.section('headerNavigation').level(1).all() %}
+                {% for item in navItems %}
+                    <a class="{% if craft.request.url == item.url %}active{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
+                {% endfor %}
                 <a class="btn-primary" href="#">Request a quote</a>
             </nav>
             <button class="menu-trigger">
