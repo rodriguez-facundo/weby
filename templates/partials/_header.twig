@@ -2,7 +2,7 @@
     <div class="container">
         <div class="header-inner">
             <h1 class="logo">
-                <a href="#">MetaCell</a>
+                <a href="{{ siteUrl }}">{{ siteName }}</a>
             </h1>
             <nav>
                 {% set navItems = craft.entries.section('headerNavigation').level(1).all() %}
