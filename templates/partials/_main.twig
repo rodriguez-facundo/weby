@@ -7,16 +7,16 @@
                 content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
                 {# CSS #}
                 <link
-                    href="assets/css/app.css" rel="stylesheet">{# {% hook "seo" %} #}
+                    href="/assets/css/app.css" rel="stylesheet">{# {% hook "seo" %} #}
                 </head>
                 <body>
                     {% include 'partials/_header' %}
                     {% block content %}{% endblock %}
                     {% include 'partials/_footer' %}{#  JavaScript  #}
                     {# <script src="{{ mix('js/app.js') }}"></script> #}
-                    <script async="" src="assets/js/lazysizes.min.js"> </script>
-                    <script src="assets/js/swiper.min.js"> </script>
-                    <script async="" src="assets/js/app.js"> </script>
+                    <script async="" src="/assets/js/lazysizes.min.js"> </script>
+                    <script src="/assets/js/swiper.min.js"> </script>
+                    <script async="" src="/assets/js/app.js"> </script>
                 </body>
             </html>
         
