@@ -5,8 +5,10 @@
             <div class="background-grid"></div>
         </div>
         <div class="container list-content">
+            {% if component.heading is empty %}
             <h6>
                 {{ component.heading }}</h6>
+            {% endif %}
             {% for item in component.items.all() %}
                 <div class="portfolio-item">
                     {% if loop.index is odd %}

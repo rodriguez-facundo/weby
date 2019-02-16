@@ -1,4 +1,4 @@
-dateModified: 1550310835
+dateModified: 1550311858
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -1034,7 +1034,7 @@ matrixBlockTypes:
                 required: true
                 sortOrder: 3
               11ffda47-951c-46f2-9f65-7e7a601ffe48:
-                required: true
+                required: false
                 sortOrder: 1
               2d980c3f-de18-4ba3-9baa-0086d10dd566:
                 required: true
