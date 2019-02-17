@@ -32,12 +32,18 @@ return [
     'dev' => [
         // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
         'devMode' => true,
+        'siteUrl' => [
+            'default' => '//metacell.localhost/',
+        ],
     ],
 
     // Staging environment settings
     'staging' => [
         // Prevent administrative changes from being made on staging
         'allowAdminChanges' => false,
+        'siteUrl' => [
+            'default' => '//metacell.petrovdev.eu/',
+        ],
     ],
 
     // Production environment settings
