@@ -1,6 +1,71 @@
 {
-  "buttons": ["formatting", "bold", "italic", "unorderedlist", "orderedlist", "link", "image", "video"],
-  "plugins": ["fullscreen", "video"],
+  "buttons": [
+    "formatting",
+    "bold",
+    "italic",
+    "unorderedlist",
+    "orderedlist",
+    "link"
+  ],
+  "plugins": [
+    "fullscreen"
+  ],
   "linkNewTab": true,
-  "toolbarFixed": true
+  "toolbarFixed": true,
+  "formattingAdd": {
+    "blue-heading-h1": {
+      "title": "Blue Heading H1",
+      "api": "module.block.format",
+      "args": {
+        "tag": "h1",
+        "class": "title",
+        "type": "add"
+      }
+    },
+    "blue-heading-h2": {
+      "title": "Blue Heading H2",
+      "api": "module.block.format",
+      "args": {
+        "tag": "h2",
+        "class": "title",
+        "type": "add"
+      }
+    },
+    "blue-heading-h3": {
+      "title": "Blue Heading H3",
+      "api": "module.block.format",
+      "args": {
+        "tag": "h3",
+        "class": "title",
+        "type": "add"
+      }
+    },
+    "blue-heading-h4": {
+      "title": "Blue Heading H4",
+      "api": "module.block.format",
+      "args": {
+        "tag": "h4",
+        "class": "title",
+        "type": "add"
+      }
+    },
+    "blue-heading-h5": {
+      "title": "Blue Heading H5",
+      "api": "module.block.format",
+      "args": {
+        "tag": "h5",
+        "class": "title",
+        "type": "add"
+      }
+    },
+    "blue-heading-h6": {
+      "title": "Blue Heading H6",
+      "api": "module.block.format",
+      "args": {
+        "tag": "h6",
+        "class": "title",
+        "type": "add"
+      }
+    }
+  }
 }

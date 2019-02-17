@@ -1,4 +1,4 @@
-dateModified: 1550335638
+dateModified: 1550346970
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -483,6 +483,142 @@ matrixBlockTypes:
     handle: sectionTitle
     name: 'Section Title'
     sortOrder: 5
+  2a6976d9-ec57-4c91-b5dc-7be3a52d894a:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      3f4e5ecd-4719-49da-aa75-82651cc1a2a0:
+        tabs:
+          -
+            fields:
+              19de9f79-c237-4850-aca9-05af89017890:
+                required: true
+                sortOrder: 2
+              7e7f7a1f-561f-4c4d-9f49-772d5472c823:
+                required: true
+                sortOrder: 1
+              983d3229-41d1-4bd5-888e-c0d020febeb2:
+                required: true
+                sortOrder: 4
+              f116ddf2-762c-4dcc-b19a-5997eff08805:
+                required: false
+                sortOrder: 3
+            name: Content
+            sortOrder: 1
+    fields:
+      19de9f79-c237-4850-aca9-05af89017890:
+        contentColumnType: text
+        fieldGroup: null
+        handle: text
+        instructions: ''
+        name: Text
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes: ''
+          cleanupHtml: '1'
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+      7e7f7a1f-561f-4c4d-9f49-772d5472c823:
+        contentColumnType: string
+        fieldGroup: null
+        handle: image
+        instructions: 'Recommended image size is 360x310'
+        name: Image
+        searchable: true
+        settings:
+          allowedKinds:
+            - image
+          defaultUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: '1'
+          selectionLabel: 'Select image'
+          singleUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources:
+            - 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
+          targetSiteId: null
+          useSingleFolder: ''
+          viewMode: list
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+      983d3229-41d1-4bd5-888e-c0d020febeb2:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\featureSet\
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+      f116ddf2-762c-4dcc-b19a-5997eff08805:
+        contentColumnType: text
+        fieldGroup: null
+        handle: linkTo
+        instructions: ''
+        name: 'Link to'
+        searchable: true
+        settings:
+          allowCustomText: '1'
+          allowTarget: ''
+          allowedLinkNames:
+            1: asset
+            2: category
+            3: entry
+            4: site
+            6: custom
+            7: email
+            8: tel
+            9: url
+          autoNoReferrer: ''
+          defaultLinkName: entry
+          defaultText: Discover
+          enableAriaLabel: ''
+          enableTitle: ''
+          typeSettings:
+            asset:
+              allowCustomQuery: ''
+              sources: '*'
+            category:
+              allowCustomQuery: ''
+              sources: '*'
+            custom:
+              allowAliases: ''
+              disableValidation: ''
+            email:
+              allowAliases: ''
+              disableValidation: ''
+            entry:
+              allowCustomQuery: ''
+              sources: '*'
+            site:
+              sites: '*'
+            tel:
+              allowAliases: ''
+              disableValidation: ''
+            url:
+              allowAliases: ''
+              disableValidation: ''
+            user:
+              allowCustomQuery: ''
+              sources: '*'
+        translationKeyFormat: null
+        translationMethod: none
+        type: typedlinkfield\fields\LinkField
+    handle: featureSet
+    name: 'Feature set'
+    sortOrder: 15
   39701ee3-8145-40de-931f-5fc023afd5fe:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
@@ -1272,6 +1408,76 @@ matrixBlockTypes:
     handle: callToAction
     name: 'Call to Action'
     sortOrder: 4
+  d1c7f2d4-a716-4134-8348-d02f5b476aea:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      ad2c8137-a04b-47c9-bc6c-e54b37496b86:
+        tabs:
+          -
+            fields:
+              011aa7af-bc98-4e36-adf6-ddfc654e7373:
+                required: true
+                sortOrder: 2
+              62af937c-dce9-40db-be51-acf429c0461d:
+                required: true
+                sortOrder: 1
+              674a87e8-c6aa-4687-acf8-6aebfe51a792:
+                required: true
+                sortOrder: 3
+            name: Content
+            sortOrder: 1
+    fields:
+      011aa7af-bc98-4e36-adf6-ddfc654e7373:
+        contentColumnType: text
+        fieldGroup: null
+        handle: secondCol
+        instructions: ''
+        name: 'Second col'
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes: ''
+          cleanupHtml: '1'
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: Standard.json
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+      62af937c-dce9-40db-be51-acf429c0461d:
+        contentColumnType: text
+        fieldGroup: null
+        handle: firstCol
+        instructions: ''
+        name: 'First col'
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes: ''
+          cleanupHtml: '1'
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: Standard.json
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+      674a87e8-c6aa-4687-acf8-6aebfe51a792:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\text2Cols\
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+    handle: text2Cols
+    name: 'Text 2 cols'
+    sortOrder: 16
   daf0be23-a36a-45dc-86fc-d16c683bfba2:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
