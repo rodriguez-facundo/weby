@@ -1,0 +1,231 @@
+{% import '_macros/image' as imageMacros %}
+{% set portfolioCategories = craft.categories.group('portfolio').all() %}
+{% set categoryIdParam = craft.app.request.getQueryParam('portfolioCategoryId') %}
+{% if categoryIdParam %}
+    {% set selectedCategory = craft.categories.group('portfolio').id(categoryIdParam).one() %}
+{% endif %}
+<div class="text">
+    <div class="grid-bg-wrapper container">
+        <div class="background-grid"></div>
+    </div>
+    <div class="container content">
+        <div class="row">
+            <div class="shift-2 text-centered">
+                <div class="row">
+                    <div class="col-6">
+                        <strong>Select filter to refine your search</strong>
+                    </div>
+                    <div class="col-6">
+                        <select id="portfolioCategorySelector{{ component.id }}" name="portfolioCategorySelect">
+                            <option value="">
+                                Select All
+                            </option>
+                            {% for category in portfolioCategories %}
+                                <option value="{{ category.id }}" {% if categoryIdParam == category.id %} selected {% endif %}>
+                                    {{ category.title }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% if not categoryIdParam  or not selectedCategory%}
+    {# All Categories #}
+    {% for category in portfolioCategories %}
+        <div class="portfolio-list spacing-both">
+            <div class="grid-bg-wrapper container">
+                <div class="background-grid"></div>
+            </div>
+            <div class="container list-content">
+                <h2>
+                    {{ category.title }}
+                </h2>
+                {% set entries = craft.entries.relatedTo(category).all() %}
+                {% for entry in entries %}
+                    <div class="portfolio-item">
+                        {% if loop.index is odd %}
+                            <div class="row image-right">
+                                <div class="col-6">
+                                    <div class="content">
+                                        <h4>
+                                            {{ entry.title }}
+                                        </h4>
+                                        {{ entry.description }}
+                                        {% if not entry.linkTo.isEmpty() %}
+                                            <a class="button-download" href="{{ entry.linkTo.getUrl }}">
+                                                {{ entry.linkTo.getText() }}
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="video-wrapper rounded">
+                                        <video autoplay="" loop="" muted="" playsinline="">
+                                            <source src="{{ entry.video.one().url }}" type="video/mp4"></video>
+                                        </div>
+                                        <div class="logos">
+                                            {% for partner in entry.partners.all() %}
+                                                {{ imageMacros.image(partner.logo.one(), {
+                                                    ratio: "",
+                                                    srcset: [
+                                                        { height: 55, jpegQuality: 65 },
+                                                    ]
+                                                }
+                                            )   
+                                        }}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% else %}
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="video-wrapper rounded">
+                                        <video autoplay="" loop="" muted="" playsinline="">
+                                            <source src="{{ entry.video.one().url }}" type="video/mp4"></video>
+                                        </div>
+                                        {% for partner in entry.partners.all() %}
+                                            {% if loop.first %}
+                                                <div class="logos">
+                                                    <span>In coloboration with</span>
+                                                {% endif %}
+                                                {{ imageMacros.image(partner.logo.one(), {
+                                                    ratio: "",
+                                                    srcset: [
+                                                        { height: 55, jpegQuality: 65 },
+                                                    ]
+                                                }
+                                            )   
+                                        }}
+                                                {% if loop.last %}
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="content">
+                                            <h2>
+                                                {{ entry.title }}
+                                            </h2>
+                                            {{ entry.description }}
+                                            {% if not entry.linkTo.isEmpty() %}
+                                                <a class="button-download" href="{{ entry.linkTo.getUrl }}">
+                                                    {{ entry.linkTo.getText() }}
+                                                </a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+        {% else %}
+        {# List all entry related to one category #}
+        {% set entries = craft.entries.relatedTo(selectedCategory).all() %}
+        <div class="portfolio-list spacing-both">
+            <div class="grid-bg-wrapper container">
+                <div class="background-grid"></div>
+            </div>
+            <div class="container list-content">
+                <h2>
+                    {{ selectedCategory.title }}
+                </h2>
+                {% for entry in entries %}
+                    <div class="portfolio-item">
+                        {% if loop.index is odd %}
+                            <div class="row image-right">
+                                <div class="col-6">
+                                    <div class="content">
+                                        <h4>
+                                            {{ entry.title }}
+                                        </h4>
+                                        {{ entry.description }}
+                                        {% if not entry.linkTo.isEmpty() %}
+                                            <a class="button-download" href="{{ entry.linkTo.getUrl }}">
+                                                {{ entry.linkTo.getText() }}
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="video-wrapper rounded">
+                                        <video autoplay="" loop="" muted="" playsinline="">
+                                            <source src="{{ entry.video.one().url }}" type="video/mp4"></video>
+                                        </div>
+                                        <div class="logos">
+                                            {% for partner in entry.partners.all() %}
+                                                {{ imageMacros.image(partner.logo.one(), {
+                                                    ratio: "",
+                                                    srcset: [
+                                                        { height: 55, jpegQuality: 65 },
+                                                    ]
+                                                }
+                                            )   
+                                        }}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% else %}
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="video-wrapper rounded">
+                                        <video autoplay="" loop="" muted="" playsinline="">
+                                            <source src="{{ entry.video.one().url }}" type="video/mp4"></video>
+                                        </div>
+                                        {% for partner in entry.partners.all() %}
+                                            {% if loop.first %}
+                                                <div class="logos">
+                                                    <span>In coloboration with</span>
+                                                {% endif %}
+                                                {{ imageMacros.image(partner.logo.one(), {
+                                                    ratio: "",
+                                                    srcset: [
+                                                        { height: 55, jpegQuality: 65 },
+                                                    ]
+                                                }
+                                            )   
+                                        }}
+                                                {% if loop.last %}
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="content">
+                                            <h2>
+                                                {{ entry.title }}
+                                            </h2>
+                                            {{ entry.description }}
+                                            {% if not entry.linkTo.isEmpty() %}
+                                                <a class="button-download" href="{{ entry.linkTo.getUrl }}">
+                                                    {{ entry.linkTo.getText() }}
+                                                </a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+        {% js on load %}
+        document.querySelector('#portfolioCategorySelector{{ component.id }}').addEventListener('change', function(event){
+                                                                                                        queryString = "";
+                                                                                                        if(event.target.value){
+                                                                                                            queryString = "?portfolioCategoryId=" +event.target.value;
+                                                                                                        }
+                                                                                                        window.location.href = window.location.origin + window.location.pathname + queryString;
+                                                                                                    })
+        {% endjs %}
+        

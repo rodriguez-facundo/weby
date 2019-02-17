@@ -1,4 +1,15 @@
 categoryGroups:
+  7d58fd67-b89e-44ca-bf8a-6c866f59fcb6:
+    handle: portfolio
+    name: Portfolio
+    siteSettings:
+      5d321cb4-ef6f-4ec7-8ea5-edbb05b24c96:
+        hasUrls: false
+        template: null
+        uriFormat: null
+    structure:
+      maxLevels: '1'
+      uid: cf2c7a14-e565-415b-8799-e8071b13d060
   89cc93d4-fd14-4fc7-acb3-64a539afbd4f:
     handle: resources
     name: Resources
@@ -10,7 +21,7 @@ categoryGroups:
     structure:
       maxLevels: '1'
       uid: b0a5dd7c-6109-4ecd-bbaf-8095b047d9a6
-dateModified: 1550408806
+dateModified: 1550425778
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -189,6 +200,25 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  716a11df-eae7-47f1-a783-b69e09fe38e4:
+    contentColumnType: string
+    fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
+    handle: portfolio
+    instructions: ''
+    name: Portfolio
+    searchable: true
+    settings:
+      branchLimit: ''
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      source: 'group:7d58fd67-b89e-44ca-bf8a-6c866f59fcb6'
+      sources: '*'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
   8f2765e1-c533-4145-a088-1b5167412db9:
     contentColumnType: text
     fieldGroup: ac757e69-61e5-4446-a1c8-0a249fd73e3d
@@ -1738,6 +1768,34 @@ matrixBlockTypes:
     handle: leadImage
     name: 'Lead Image'
     sortOrder: 1
+  f91bf151-f1cb-4537-9e1c-6c5e1fe73528:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      7be60397-f9c2-403f-bf36-5d3dc72f623b:
+        tabs:
+          -
+            fields:
+              7c8d7388-8558-4adb-aaa6-a96ab811937a:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      7c8d7388-8558-4adb-aaa6-a96ab811937a:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\portfolioListing\
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+    handle: portfolioListing
+    name: 'Portfolio Listing'
+    sortOrder: 18
 plugins:
   imager:
     edition: standard
@@ -2060,6 +2118,13 @@ sections:
                     sortOrder: 1
                 name: Content
                 sortOrder: 1
+              -
+                fields:
+                  716a11df-eae7-47f1-a783-b69e09fe38e4:
+                    required: false
+                    sortOrder: 1
+                name: Categories
+                sortOrder: 2
         handle: portfolio
         hasTitleField: true
         name: Portfolio
