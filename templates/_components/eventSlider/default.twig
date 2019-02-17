@@ -1,20 +1,19 @@
 {% import '_macros/image' as imageMacros %}
-<div class="component-container">
-    <div class="resource-list spacing-both">
-        <div class="grid-bg-wrapper container">
-            <div class="background-grid"></div>
-        </div>
-        <div class="container content resources-slider">
-            <h2>
-                {{ component.heading }}
-            </h2>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    {% for event in component.events.all() %}
-                        <div class="slide swiper-slide">
-                            <div class="resource-card">
-                                <a class="image" href="{{ event.url }}">
-                                    {{ imageMacros.image(event.image[0], {
+<div class="resource-list spacing-both">
+    <div class="grid-bg-wrapper container">
+        <div class="background-grid"></div>
+    </div>
+    <div class="container content resources-slider">
+        <h2>
+            {{ component.heading }}
+        </h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {% for event in component.events.all() %}
+                    <div class="slide swiper-slide">
+                        <div class="resource-card">
+                            <a class="image" href="{{ event.url }}">
+                                {{ imageMacros.image(event.image[0], {
                                                 ratio: (1/1),
                                                 class: "rounded",
                                                 srcset: [
@@ -23,24 +22,24 @@
                                             }
                                         )   
                                     }}
-                                </a>
-                                <h6 class="resource-type">{{ event.type.name }}</h6>
-                                <div class="date">
-                                    <i class="icon calendar"></i>
-                                    {{ event.postDate | date("d.m.Y") }}</div>
-                                <h4>
-                                    {{ event.title }}</h4>
-                                <p>
-                                    {{ event.description|striptags|slice(0,71)}}…</p>
-                                <a class="button-learn-more" href="{{ event.url }}">Learn more</a>
-                            </div>
+                            </a>
+                            <h6 class="resource-type">
+                                {{ event.type.name }}</h6>
+                            <div class="date">
+                                <i class="icon calendar"></i>
+                                {{ event.postDate | date("d.m.Y") }}</div>
+                            <h4>
+                                {{ event.title }}</h4>
+                            <p>
+                                {{ event.description|striptags|slice(0,71)}}…</p>
+                            <a class="button-learn-more" href="{{ event.url }}">Learn more</a>
                         </div>
-                    {% endfor %}
-                </div>
-                <span aria-atomic="true" aria-live="assertive" class="swiper-notification"></span>
+                    </div>
+                {% endfor %}
             </div>
-            <button class="swiper-button-next"></button>
-            <button class="swiper-button-prev"></button>
+            <span aria-atomic="true" aria-live="assertive" class="swiper-notification"></span>
         </div>
+        <button class="swiper-button-next"></button>
+        <button class="swiper-button-prev"></button>
     </div>
 </div>

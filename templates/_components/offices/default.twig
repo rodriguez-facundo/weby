@@ -1,84 +1,77 @@
-<div class="component-container">
-    {% for office in component.offices.all() %}
-        {% if loop.index is odd %}
-            <div class="offices right">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="text-wrapper">
-                                <div class="text">
-                                    <p>
-                                        {{ office.addressLine1 }}
-                                        <br/>
-                                        {{ office.addressLine2 }}
-                                        <br/>
-                                        {{ office.country }}
-                                        <br/>
-                                        {{ office.phone }}
-                                    </p>
-                                    <a class="btn-secondary" target="_blank" href="https://www.google.com/maps/dir/{{ office.address.lat }},{{ office.address.lng }}/">Get directions</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="map{{ office.id }}" class="map">
-                </div>
-            </div>
-            {% else %}
-            <div class="offices">
-                <div id="map{{ office.id }}" class="map">
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="text-wrapper">
-                                <div class="text">
-                                    <p>
-                                        {{ office.addressLine1 }}
-                                        <br/>
-                                        {{ office.addressLine2 }}
-                                        <br/>
-                                        {{ office.country }}
-                                        <br/>
-                                        {{ office.phone }}
-                                    </p>
-                                    <a class="btn-secondary"target="_blank" href="https://www.google.com/maps/dir/{{ office.address.lat }},{{ office.address.lng }}/">Get directions</a>
-                                </div>
+{% for office in component.offices.all() %}
+    {% if loop.index is odd %}
+        <div class="offices right">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="text-wrapper">
+                            <div class="text">
+                                <p>
+                                    {{ office.addressLine1 }}
+                                    <br/>
+                                    {{ office.addressLine2 }}
+                                    <br/>
+                                    {{ office.country }}
+                                    <br/>
+                                    {{ office.phone }}
+                                </p>
+                                <a class="btn-secondary" href="https://www.google.com/maps/dir/{{ office.address.lat }},{{ office.address.lng }}/" target="_blank">Get directions</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        {% endif %}
-        {% js %}
-        var map{{ office.id }};
-            function initMap{{ office.id }}() {
-                // Display the map
-                map{{ office.id }} = new google.maps.Map(document.getElementById("map{{ office.id }}"), {
-                center: {
-                    lat: {{ office.address.lat }},
-                    lng: {{ office.address.lng }}
-                },
-                zoom: {{ office.address.zoom }}
-                });
-                
-                // Display the marker
-                var marker = new google.maps.Marker({
-                position: {
-                    lat: {{ office.address.lat }},
-                    lng: {{ office.address.lng }}
-                },
-                // A custom icon can be defined here, if desired
-                // icon: '/path/to/custom/icon.png',
-                map: map{{ office.id }}
-                });
-            }
-            
-        {% endjs %}
-        {% js on load %}
-            initMap{{ office.id }}();
-        {% endjs %}
-    {% endfor %}
-        {% do view.registerJsFile("https://maps.googleapis.com/maps/api/js?key="~ craft.simpleMap.apiKey) %}
-</div>
+            <div class="map" id="map{{ office.id }}"></div>
+        </div>
+        {% else %}
+        <div class="offices">
+            <div class="map" id="map{{ office.id }}"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="text-wrapper">
+                            <div class="text">
+                                <p>
+                                    {{ office.addressLine1 }}
+                                    <br/>
+                                    {{ office.addressLine2 }}
+                                    <br/>
+                                    {{ office.country }}
+                                    <br/>
+                                    {{ office.phone }}
+                                </p>
+                                <a class="btn-secondary" href="https://www.google.com/maps/dir/{{ office.address.lat }},{{ office.address.lng }}/" target="_blank">Get directions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% js %}
+    var map{{ office.id }};
+    function initMap{{ office.id }}() {
+        // Display the map
+        map{{ office.id }} = new google.maps.Map(document.getElementById("map{{ office.id }}"), {
+        center: {
+            lat:{{ office.address.lat }},
+            lng:{{ office.address.lng }}
+        },
+        zoom: {{ office.address.zoom }}
+    });
+    
+    // Display the marker
+    var marker = new google.maps.Marker({
+        position: {
+            lat:{{ office.address.lat }},
+            lng:{{ office.address.lng }}
+        },
+        map: map{{ office.id }}
+    });
+    }
+    {% endjs %}
+    {% js on load %}
+    initMap{{ office.id }}();
+    {% endjs %}
+{% endfor %}
+{% do view.registerJsFile("https://maps.googleapis.com/maps/api/js?key="~ craft.simpleMap.apiKey) %}

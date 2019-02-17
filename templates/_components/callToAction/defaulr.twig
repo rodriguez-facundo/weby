@@ -1,19 +1,20 @@
-<div class="component-container">
-    <div class="cta">
-        <div class="container content">
-            <div class="row">
-                <div class="col-8">
-                    <h2>
-                        {{ component.heading }}</h2>
-                    <p>
-                        {{ component.description }}</p>
-                </div>
-                <div class="col-4">
-                    {% if not component.button.isEmpty() %}
-                        <a class="btn-secondary" href="{{ component.button.getUrl() }}">
-                            {{ component.button.getText() }}</a>
-                    {% endif %}
-                </div>
+<div class="cta">
+    <div class="grid-bg-wrapper container">
+        <div class="background-grid"></div>
+    </div>
+    <div class="container content">
+        <div class="row">
+            <div class="col-8">
+                <h2>
+                    {{ component.heading }}</h2>
+                <p>
+                    {{ component.description }}</p>
+            </div>
+            <div class="col-4">
+                {% if not component.button.isEmpty() %}
+                    <a class="btn-secondary" href="{{ component.button.getUrl() }}">
+                        {{ component.button.getText() }}</a>
+                {% endif %}
             </div>
         </div>
     </div>

@@ -1,35 +1,34 @@
 {% import '_macros/image' as imageMacros %}
-<div class="component-container">
-    <div class="lead-image">
-        <div class="container">
-            <div class="row background-grid">
-                <div class="col-6">
-                    <div class="text-wrapper">
-                        <h1>
-                            {{component.headingColor1|nl2br}}<span class="text-blue">
-                                {{component.headingColor2|nl2br}}</span>
-                        </h1>
-                        <p>
-                            {{ component.description|nl2br }}
-                        </p>
-                        {% if not component.button.isEmpty() %}
-                            <a class="btn-primary" href="{{ component.button.getUrl() }}">
-                                {{ component.button.getText() }}</a>
-                        {% endif %}
-                    </div>
+<div class="lead-image">
+    <div class="container">
+        <div class="row background-grid">
+            <div class="col-6">
+                <div class="text-wrapper">
+                    <h1>
+                        {{component.headingColor1|nl2br}}<span class="text-blue">
+                            {{component.headingColor2|nl2br}}</span>
+                    </h1>
+                    <p>
+                        {{ component.description|nl2br }}
+                    </p>
+                    {% if not component.button.isEmpty() %}
+                        <a class="btn-primary" href="{{ component.button.getUrl() }}">
+                            {{ component.button.getText() }}</a>
+                    {% endif %}
                 </div>
-                <div class="image-col">
-                    <div class="background-image">
-                        <video autoplay="" class="animation" loop="" muted="" playsinline="">
-                            <source src="{{ component.video.one().url }}" type="video/mp4"></video>
-                        </div>
+            </div>
+            <div class="image-col">
+                <div class="background-image">
+                    <video autoplay="" class="animation" loop="" muted="" playsinline="">
+                        <source src="{{ component.video.one().url }}" type="video/mp4"></video>
                     </div>
                 </div>
             </div>
-            <nav class="nav">
-                {% for link in component.bottomLinks.all() %}
-                    <a href="{{ link.linkTo.getUrl() }}">
-                        {{ imageMacros.image(link.image[0], {
+        </div>
+        <nav class="nav">
+            {% for link in component.bottomLinks.all() %}
+                <a href="{{ link.linkTo.getUrl() }}">
+                    {{ imageMacros.image(link.image[0], {
                                 ratio: (1/1),
                                 srcset: [
                                     { width: 40, jpegQuality: 65 },
@@ -37,11 +36,10 @@
                             }
                         )   
                     }}
-                        <span class="link-text">
-                            {{ link.linkTo.getText() }}
-                        </span>
-                    </a>
-                {% endfor %}
-            </nav>
-        </div>
+                    <span class="link-text">
+                        {{ link.linkTo.getText() }}
+                    </span>
+                </a>
+            {% endfor %}
+        </nav>
     </div>
