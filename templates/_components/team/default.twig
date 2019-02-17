@@ -1,47 +1,45 @@
 {% import '_macros/image' as imageMacros %}
-<div class="component-container">
-    <div class="team">
-        <div class="grid-bg-wrapper container">
-            <div class="background-grid"></div>
-        </div>
-        <div class="container content">
-            <div class="team-inner">
-                <div class="flex-row">
-                    {% for member in component.team.all() %}
-                        <div class="flex-col-large">
-                            <div class="team-member ">
-                                {{ imageMacros.image(member.image.one(), {
-                                            ratio: (1/1),
-                                            class: "rounded",
-                                            srcset: [
-                                                { width: 250, jpegQuality: 85 },
-                                            ]
-                                        }
-                                    )   
-                                }}
-                                <div class="team-member-contacts">
-                                    {% if not member.linketin.isEmpty() %}
-                                        <a href="{{ member.linketin.getUrl() }}">
-                                            <i class="icon linkedin"></i>
-                                        </a>
-                                    {% endif %}
-                                    {% if not member.email.isEmpty() %}
-                                        <a href="{{ member.email.getUrl() }}">
-                                            <i class="icon email"></i>
-                                        </a>
-                                    {% endif %}
-                                </div>
-                                <h6>
-                                    {{ member.title }}
-                                </h6>
-                                <div class="team-member-description">
-                                    {{ member.description }}
-                                </div>
-                                <a class="button-expand" href="#">Expand</a>
+<div class="team">
+    <div class="grid-bg-wrapper container">
+        <div class="background-grid"></div>
+    </div>
+    <div class="container content">
+        <div class="team-inner">
+            <div class="flex-row">
+                {% for member in component.team.all() %}
+                    <div class="flex-col-large">
+                        <div class="team-member ">
+                            {{ imageMacros.image(member.image.one(), {
+                                        ratio: (1/1),
+                                        class: "rounded",
+                                        srcset: [
+                                            { width: 250, jpegQuality: 85 },
+                                        ]
+                                    }
+                                )   
+                            }}
+                            <div class="team-member-contacts">
+                                {% if not member.linketin.isEmpty() %}
+                                    <a href="{{ member.linketin.getUrl() }}">
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                {% endif %}
+                                {% if not member.email.isEmpty() %}
+                                    <a href="{{ member.email.getUrl() }}">
+                                        <i class="icon email"></i>
+                                    </a>
+                                {% endif %}
                             </div>
+                            <h6>
+                                {{ member.title }}
+                            </h6>
+                            <div class="team-member-description">
+                                {{ member.description }}
+                            </div>
+                            <a class="button-expand" href="#">Expand</a>
                         </div>
-                    {% endfor %}
-                </div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
