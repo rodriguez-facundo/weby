@@ -10,7 +10,7 @@ categoryGroups:
     structure:
       maxLevels: '1'
       uid: b0a5dd7c-6109-4ecd-bbaf-8095b047d9a6
-dateModified: 1550400582
+dateModified: 1550408806
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -356,10 +356,10 @@ matrixBlockTypes:
           -
             fields:
               a64b99af-3baf-47f2-868e-54b6129c3ff5:
-                required: '1'
+                required: true
                 sortOrder: 2
               d5c676e9-511e-479a-ab85-b6d172ea8127:
-                required: '1'
+                required: true
                 sortOrder: 1
             name: Content
             sortOrder: 1
@@ -370,7 +370,7 @@ matrixBlockTypes:
         handle: template
         instructions: ''
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
           limitToSubfolder: _components\image\
         translationKeyFormat: null
@@ -382,7 +382,7 @@ matrixBlockTypes:
         handle: image
         instructions: 'Recommended image size is 1440x540'
         name: Image
-        searchable: '1'
+        searchable: true
         settings:
           allowedKinds:
             - image
@@ -414,10 +414,10 @@ matrixBlockTypes:
           -
             fields:
               4eda84a2-2821-436f-948f-0037d4caa142:
-                required: '1'
+                required: true
                 sortOrder: 1
               f097cefb-9d8f-4f63-bfb4-37298d95f676:
-                required: '1'
+                required: true
                 sortOrder: 2
             name: Content
             sortOrder: 1
@@ -428,7 +428,7 @@ matrixBlockTypes:
         handle: offices
         instructions: ''
         name: Offices
-        searchable: '1'
+        searchable: true
         settings:
           columns:
             55:
@@ -457,7 +457,7 @@ matrixBlockTypes:
         handle: template
         instructions: ''
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
           limitToSubfolder: _components\offices\
         translationKeyFormat: null
@@ -474,10 +474,10 @@ matrixBlockTypes:
           -
             fields:
               2062e029-0f46-4e2c-9303-9801450db2c7:
-                required: '1'
+                required: true
                 sortOrder: 2
               a5eabda2-35b9-42aa-a459-33f6b794814d:
-                required: '1'
+                required: true
                 sortOrder: 1
             name: Content
             sortOrder: 1
@@ -488,7 +488,7 @@ matrixBlockTypes:
         handle: template
         instructions: ''
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
           limitToSubfolder: _components\sectionTitle\
         translationKeyFormat: null
@@ -500,7 +500,7 @@ matrixBlockTypes:
         handle: heading
         instructions: ''
         name: Heading
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: '200'
           code: ''
@@ -514,6 +514,34 @@ matrixBlockTypes:
     handle: sectionTitle
     name: 'Section Title'
     sortOrder: 5
+  1e8861b4-bbc1-4952-9f6f-926e6b25f422:
+    field: 1abf9822-347f-4961-98c4-bed06e2e42c8
+    fieldLayouts:
+      eb7661a9-fb73-4543-a521-aefe1b0462b6:
+        tabs:
+          -
+            fields:
+              da0ffa74-2bb5-424a-a07f-a04ab39838a8:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      da0ffa74-2bb5-424a-a07f-a04ab39838a8:
+        contentColumnType: string
+        fieldGroup: null
+        handle: template
+        instructions: ''
+        name: Template
+        searchable: true
+        settings:
+          limitToSubfolder: _components\resourceListing\
+        translationKeyFormat: null
+        translationMethod: none
+        type: superbig\templateselect\fields\TemplateSelectField
+    handle: resourceListing
+    name: 'Resource Listing'
+    sortOrder: 17
   2a6976d9-ec57-4c91-b5dc-7be3a52d894a:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
@@ -522,16 +550,16 @@ matrixBlockTypes:
           -
             fields:
               19de9f79-c237-4850-aca9-05af89017890:
-                required: '1'
+                required: true
                 sortOrder: 2
               7e7f7a1f-561f-4c4d-9f49-772d5472c823:
-                required: '1'
+                required: true
                 sortOrder: 1
               983d3229-41d1-4bd5-888e-c0d020febeb2:
-                required: '1'
+                required: true
                 sortOrder: 4
               f116ddf2-762c-4dcc-b19a-5997eff08805:
-                required: '0'
+                required: false
                 sortOrder: 3
             name: Content
             sortOrder: 1
@@ -542,7 +570,7 @@ matrixBlockTypes:
         handle: text
         instructions: ''
         name: Text
-        searchable: '1'
+        searchable: true
         settings:
           availableTransforms: '*'
           availableVolumes: ''
@@ -560,7 +588,7 @@ matrixBlockTypes:
         handle: image
         instructions: 'Recommended image size is 360x310'
         name: Image
-        searchable: '1'
+        searchable: true
         settings:
           allowedKinds:
             - image
@@ -587,7 +615,7 @@ matrixBlockTypes:
         handle: template
         instructions: ''
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
           limitToSubfolder: _components\featureSet\
         translationKeyFormat: null
@@ -599,7 +627,7 @@ matrixBlockTypes:
         handle: linkTo
         instructions: ''
         name: 'Link to'
-        searchable: '1'
+        searchable: true
         settings:
           allowCustomText: '1'
           allowTarget: ''
@@ -658,13 +686,13 @@ matrixBlockTypes:
           -
             fields:
               21ba5577-f036-416a-a1a9-e456fc7fea5e:
-                required: '1'
+                required: true
                 sortOrder: 3
               74bfa3d0-dd35-4280-bb75-ba09cbd2fe00:
-                required: '1'
+                required: true
                 sortOrder: 1
               95023b21-caf2-4423-8266-7e5b90a192bf:
-                required: '1'
+                required: true
                 sortOrder: 2
             name: Content
             sortOrder: 1
@@ -675,7 +703,7 @@ matrixBlockTypes:
         handle: template
         instructions: ''
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
           limitToSubfolder: _components\logoSlider\
         translationKeyFormat: null
@@ -687,7 +715,7 @@ matrixBlockTypes:
         handle: heading
         instructions: ''
         name: Heading
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: ''
           code: ''
@@ -704,7 +732,7 @@ matrixBlockTypes:
         handle: items
         instructions: ''
         name: Items
-        searchable: '1'
+        searchable: true
         settings:
           columns:
             61:
@@ -732,22 +760,22 @@ matrixBlockTypes:
           -
             fields:
               0c1e6527-3212-43ac-8667-58aafd826905:
-                required: '1'
+                required: true
                 sortOrder: 6
               4ea963b0-48e4-4081-9c58-54a533b90e26:
-                required: '1'
+                required: true
                 sortOrder: 2
               6e63d03d-587d-4e14-b79f-586f987bc930:
-                required: '1'
+                required: true
                 sortOrder: 3
               d4133f7c-733d-4868-8344-2d77ab214e21:
-                required: '1'
+                required: true
                 sortOrder: 1
               eeb5a0f5-000a-4e40-a516-b14fe9e96c0b:
-                required: '1'
+                required: true
                 sortOrder: 5
               efc8a47b-9446-4c6e-bbf5-7516fd016c2a:
-                required: '0'
+                required: false
                 sortOrder: 4
             name: Content
             sortOrder: 1
@@ -758,7 +786,7 @@ matrixBlockTypes:
         handle: template
         instructions: ''
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
           limitToSubfolder: _components\spotlight\
         translationKeyFormat: null
@@ -770,7 +798,7 @@ matrixBlockTypes:
         handle: subheading
         instructions: ''
         name: Subheading
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: '50'
           code: ''
@@ -787,7 +815,7 @@ matrixBlockTypes:
         handle: description
         instructions: ''
         name: Description
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: '200'
           code: ''
@@ -804,7 +832,7 @@ matrixBlockTypes:
         handle: heading
         instructions: ''
         name: Heading
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: '100'
           code: ''
@@ -821,7 +849,7 @@ matrixBlockTypes:
         handle: video
         instructions: ''
         name: Video
-        searchable: '1'
+        searchable: true
         settings:
           allowedKinds:
             - video
@@ -848,7 +876,7 @@ matrixBlockTypes:
         handle: button
         instructions: ''
         name: Button
-        searchable: '1'
+        searchable: true
         settings:
           allowCustomText: '1'
           allowTarget: ''
@@ -907,13 +935,13 @@ matrixBlockTypes:
           -
             fields:
               7471db44-e144-4539-86ce-e3000a28e331:
-                required: '1'
+                required: true
                 sortOrder: 2
               9683f155-de9e-4916-8991-62e3183b38cd:
-                required: '1'
+                required: true
                 sortOrder: 3
               97c47023-3f71-4fe5-acd1-0aa33fd7db03:
-                required: '1'
+                required: true
                 sortOrder: 1
             name: Content
             sortOrder: 1
@@ -924,7 +952,7 @@ matrixBlockTypes:
         handle: items
         instructions: ''
         name: Items
-        searchable: '1'
+        searchable: true
         settings:
           limit: ''
           localizeRelations: false
@@ -943,7 +971,7 @@ matrixBlockTypes:
         handle: template
         instructions: ''
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
           limitToSubfolder: _components\portfolio\
         translationKeyFormat: null
@@ -955,7 +983,7 @@ matrixBlockTypes:
         handle: heading
         instructions: ''
         name: Heading
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: '50'
           code: ''
@@ -977,10 +1005,10 @@ matrixBlockTypes:
           -
             fields:
               31f359d1-4275-4740-b55d-c8d5d8a55f05:
-                required: '1'
+                required: true
                 sortOrder: 1
               9798275e-9774-4c2f-9c13-d72517147bfe:
-                required: '1'
+                required: true
                 sortOrder: 2
             name: Content
             sortOrder: 1
@@ -991,7 +1019,7 @@ matrixBlockTypes:
         handle: text
         instructions: ''
         name: Text
-        searchable: '1'
+        searchable: true
         settings:
           availableTransforms: '*'
           availableVolumes: '*'
@@ -1009,7 +1037,7 @@ matrixBlockTypes:
         handle: template
         instructions: ''
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
           limitToSubfolder: _components\text\
         translationKeyFormat: null
@@ -1026,10 +1054,10 @@ matrixBlockTypes:
           -
             fields:
               29c7902c-da91-480b-b901-80c935be6128:
-                required: '1'
+                required: true
                 sortOrder: 2
               846e1207-10c3-4922-9e8b-6decbc56d92a:
-                required: '1'
+                required: true
                 sortOrder: 1
             name: Content
             sortOrder: 1
@@ -1040,9 +1068,9 @@ matrixBlockTypes:
         handle: template
         instructions: ''
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
-          limitToSubfolder: _components\platformFeatures
+          limitToSubfolder: _components\platformFeatures\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1052,7 +1080,7 @@ matrixBlockTypes:
         handle: items
         instructions: ''
         name: Items
-        searchable: '1'
+        searchable: true
         settings:
           columns:
             72:
@@ -1080,13 +1108,13 @@ matrixBlockTypes:
           -
             fields:
               8d0f29c0-7875-4011-bf63-d3d574ec2f8f:
-                required: '1'
+                required: true
                 sortOrder: 1
               b929cc5a-36aa-47dd-95e1-5ca560658c0d:
-                required: '1'
+                required: true
                 sortOrder: 3
               d9eae1b5-0e48-40b9-84bb-2c318d64f4a5:
-                required: '0'
+                required: false
                 sortOrder: 2
             name: Content
             sortOrder: 1
@@ -1097,7 +1125,7 @@ matrixBlockTypes:
         handle: heading
         instructions: ''
         name: Heading
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: '30'
           code: ''
@@ -1114,7 +1142,7 @@ matrixBlockTypes:
         handle: template
         instructions: ''
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
           limitToSubfolder: _components\pageTitle\
         translationKeyFormat: null
@@ -1126,7 +1154,7 @@ matrixBlockTypes:
         handle: description
         instructions: ''
         name: Description
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: '100'
           code: ''
@@ -1148,10 +1176,10 @@ matrixBlockTypes:
           -
             fields:
               0794a62b-43e8-404c-a9aa-852761d60d7c:
-                required: '1'
+                required: true
                 sortOrder: 2
               42ce70ca-0f94-4c01-ae87-45df28f1827d:
-                required: '1'
+                required: true
                 sortOrder: 1
             name: Content
             sortOrder: 1
@@ -1162,7 +1190,7 @@ matrixBlockTypes:
         handle: template
         instructions: ''
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
           limitToSubfolder: _components\navigation\
         translationKeyFormat: null
@@ -1174,7 +1202,7 @@ matrixBlockTypes:
         handle: links
         instructions: ''
         name: Links
-        searchable: '1'
+        searchable: true
         settings:
           columns:
             42:
@@ -1202,10 +1230,10 @@ matrixBlockTypes:
           -
             fields:
               18a9f66b-ae5c-4d89-984c-5aa3b33b2536:
-                required: '1'
+                required: true
                 sortOrder: 2
               31741e1e-0e81-47dc-b2d6-200222c2207d:
-                required: '1'
+                required: true
                 sortOrder: 1
             name: Content
             sortOrder: 1
@@ -1216,7 +1244,7 @@ matrixBlockTypes:
         handle: template
         instructions: ''
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
           limitToSubfolder: _components\team\
         translationKeyFormat: null
@@ -1228,7 +1256,7 @@ matrixBlockTypes:
         handle: team
         instructions: ''
         name: Team
-        searchable: '1'
+        searchable: true
         settings:
           limit: ''
           localizeRelations: false
@@ -1252,13 +1280,13 @@ matrixBlockTypes:
           -
             fields:
               07cf3ed3-7aa7-4d6b-ab15-b05872da1a22:
-                required: '1'
+                required: true
                 sortOrder: 3
               11ffda47-951c-46f2-9f65-7e7a601ffe48:
-                required: '0'
+                required: false
                 sortOrder: 1
               2d980c3f-de18-4ba3-9baa-0086d10dd566:
-                required: '1'
+                required: true
                 sortOrder: 2
             name: Content
             sortOrder: 1
@@ -1269,7 +1297,7 @@ matrixBlockTypes:
         handle: template
         instructions: ''
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
           limitToSubfolder: _components\resourcesSlider\
         translationKeyFormat: null
@@ -1281,7 +1309,7 @@ matrixBlockTypes:
         handle: heading
         instructions: ''
         name: Heading
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: ''
           code: ''
@@ -1298,7 +1326,7 @@ matrixBlockTypes:
         handle: events
         instructions: ''
         name: Events
-        searchable: '1'
+        searchable: true
         settings:
           limit: ''
           localizeRelations: false
@@ -1322,16 +1350,16 @@ matrixBlockTypes:
           -
             fields:
               1d6e0569-5692-4649-9341-c8403a084144:
-                required: '1'
+                required: true
                 sortOrder: 2
               3e160a2e-0c84-4df1-acdf-167bbd0aeeb1:
-                required: '1'
+                required: true
                 sortOrder: 3
               6d226f7b-5700-424d-8fb0-075fb38f9b8d:
-                required: '1'
+                required: true
                 sortOrder: 4
               e95fafe3-731d-4be5-bf77-f352ea4f21bb:
-                required: '1'
+                required: true
                 sortOrder: 1
             name: Content
             sortOrder: 1
@@ -1342,7 +1370,7 @@ matrixBlockTypes:
         handle: description
         instructions: ''
         name: Description
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: '100'
           code: ''
@@ -1359,7 +1387,7 @@ matrixBlockTypes:
         handle: button
         instructions: ''
         name: Button
-        searchable: '1'
+        searchable: true
         settings:
           allowCustomText: '1'
           allowTarget: ''
@@ -1413,7 +1441,7 @@ matrixBlockTypes:
         handle: template
         instructions: ''
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
           limitToSubfolder: _components\callToAction\
         translationKeyFormat: null
@@ -1425,7 +1453,7 @@ matrixBlockTypes:
         handle: heading
         instructions: ''
         name: Heading
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: '50'
           code: ''
@@ -1447,13 +1475,13 @@ matrixBlockTypes:
           -
             fields:
               011aa7af-bc98-4e36-adf6-ddfc654e7373:
-                required: '1'
+                required: true
                 sortOrder: 2
               62af937c-dce9-40db-be51-acf429c0461d:
-                required: '1'
+                required: true
                 sortOrder: 1
               674a87e8-c6aa-4687-acf8-6aebfe51a792:
-                required: '1'
+                required: true
                 sortOrder: 3
             name: Content
             sortOrder: 1
@@ -1464,7 +1492,7 @@ matrixBlockTypes:
         handle: secondCol
         instructions: ''
         name: 'Second col'
-        searchable: '1'
+        searchable: true
         settings:
           availableTransforms: '*'
           availableVolumes: ''
@@ -1482,7 +1510,7 @@ matrixBlockTypes:
         handle: firstCol
         instructions: ''
         name: 'First col'
-        searchable: '1'
+        searchable: true
         settings:
           availableTransforms: '*'
           availableVolumes: ''
@@ -1500,7 +1528,7 @@ matrixBlockTypes:
         handle: template
         instructions: ''
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
           limitToSubfolder: _components\text2Cols\
         translationKeyFormat: null
@@ -1517,25 +1545,25 @@ matrixBlockTypes:
           -
             fields:
               21809e57-fdc5-46df-b163-d2ad31c3ef38:
-                required: '1'
+                required: true
                 sortOrder: 1
               3a572883-2502-4626-bcee-ba431ae944af:
-                required: '1'
+                required: true
                 sortOrder: 3
               3b96a340-0ccf-4a49-ac8c-a6da1f9495b1:
-                required: '0'
+                required: false
                 sortOrder: 4
               424dbbec-2b14-49b0-9142-305b224cee3b:
-                required: '1'
+                required: true
                 sortOrder: 6
               8b039a9a-0718-4423-8fe5-47e1adfd4a2c:
-                required: '1'
+                required: true
                 sortOrder: 5
               d5440e7d-9852-4308-93f1-55cab050a88e:
-                required: '1'
+                required: true
                 sortOrder: 7
               eb2395aa-d2fb-41a8-a10e-e87d7f430ba8:
-                required: '0'
+                required: false
                 sortOrder: 2
             name: Content
             sortOrder: 1
@@ -1546,7 +1574,7 @@ matrixBlockTypes:
         handle: headingColor1
         instructions: ''
         name: 'Heading Color 1'
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: '50'
           code: ''
@@ -1563,7 +1591,7 @@ matrixBlockTypes:
         handle: description
         instructions: ''
         name: Description
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: '150'
           code: ''
@@ -1580,7 +1608,7 @@ matrixBlockTypes:
         handle: button
         instructions: ''
         name: Button
-        searchable: '1'
+        searchable: true
         settings:
           allowCustomText: '1'
           allowTarget: ''
@@ -1634,7 +1662,7 @@ matrixBlockTypes:
         handle: bottomLinks
         instructions: ''
         name: 'Bottom links'
-        searchable: '1'
+        searchable: true
         settings:
           columns:
             9:
@@ -1657,7 +1685,7 @@ matrixBlockTypes:
         handle: video
         instructions: ''
         name: Video
-        searchable: '1'
+        searchable: true
         settings:
           allowedKinds:
             - video
@@ -1684,7 +1712,7 @@ matrixBlockTypes:
         handle: template
         instructions: 'Select a template that will be used to render the content.'
         name: Template
-        searchable: '1'
+        searchable: true
         settings:
           limitToSubfolder: _components\leadImage\
         translationKeyFormat: null
@@ -1696,7 +1724,7 @@ matrixBlockTypes:
         handle: headingColor2
         instructions: ''
         name: 'Heading Color 2'
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: '50'
           code: ''
@@ -2070,10 +2098,10 @@ superTableBlockTypes:
           -
             fields:
               7110b38e-c70a-4b13-a266-0c355b6b1366:
-                required: '1'
+                required: true
                 sortOrder: 1
               9560254d-6012-48c4-ba2a-a815c8ad3168:
-                required: '1'
+                required: true
                 sortOrder: 2
             name: Content
             sortOrder: 1
@@ -2084,7 +2112,7 @@ superTableBlockTypes:
         handle: image
         instructions: ''
         name: Image
-        searchable: '1'
+        searchable: true
         settings:
           allowedKinds:
             - image
@@ -2111,7 +2139,7 @@ superTableBlockTypes:
         handle: linkTo
         instructions: ''
         name: 'Link to'
-        searchable: '1'
+        searchable: true
         settings:
           allowCustomText: '1'
           allowTarget: ''
@@ -2167,10 +2195,10 @@ superTableBlockTypes:
           -
             fields:
               a5432fde-ace0-4319-8985-4997c36b0741:
-                required: '1'
+                required: true
                 sortOrder: 1
               f7b56505-af0e-4268-8919-839cad5a13c0:
-                required: '1'
+                required: true
                 sortOrder: 2
             name: Content
             sortOrder: 1
@@ -2181,7 +2209,7 @@ superTableBlockTypes:
         handle: image
         instructions: 'Recommended image size is 240x240 or 1:1 aspect ratio.'
         name: Image
-        searchable: '1'
+        searchable: true
         settings:
           allowedKinds:
             - image
@@ -2208,7 +2236,7 @@ superTableBlockTypes:
         handle: text
         instructions: ''
         name: Text
-        searchable: '1'
+        searchable: true
         settings:
           availableTransforms: '*'
           availableVolumes: ''
@@ -2228,10 +2256,10 @@ superTableBlockTypes:
           -
             fields:
               4bb5c04b-7be2-43b2-a9dd-8dcb7e80865b:
-                required: '1'
+                required: true
                 sortOrder: 1
               fd5228d4-cb0c-4827-84cd-418b4d9bac27:
-                required: '1'
+                required: true
                 sortOrder: 2
             name: Content
             sortOrder: 1
@@ -2242,7 +2270,7 @@ superTableBlockTypes:
         handle: image
         instructions: ''
         name: Image
-        searchable: '1'
+        searchable: true
         settings:
           allowedKinds: null
           defaultUploadLocationSource: 'volume:37d4eab2-7b5c-41b8-828e-be194d1f3fd0'
@@ -2267,7 +2295,7 @@ superTableBlockTypes:
         handle: linkTo
         instructions: ''
         name: 'Link to'
-        searchable: '1'
+        searchable: true
         settings:
           allowCustomText: '1'
           allowTarget: ''
@@ -2355,10 +2383,10 @@ superTableBlockTypes:
           -
             fields:
               909e6f34-1567-4a5d-a046-18f0673f783d:
-                required: '1'
+                required: true
                 sortOrder: 2
               9297e802-7b53-4364-9c98-cc49922ad893:
-                required: '1'
+                required: true
                 sortOrder: 1
             name: Content
             sortOrder: 1
@@ -2369,7 +2397,7 @@ superTableBlockTypes:
         handle: text
         instructions: ''
         name: Text
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: ''
           code: ''
@@ -2386,7 +2414,7 @@ superTableBlockTypes:
         handle: image
         instructions: 'Recommended size 160x80.'
         name: Image
-        searchable: '1'
+        searchable: true
         settings:
           allowedKinds:
             - image
@@ -2415,19 +2443,19 @@ superTableBlockTypes:
           -
             fields:
               02049cd3-fea6-4ce5-962c-6a2b35a14d47:
-                required: '1'
+                required: true
                 sortOrder: 2
               336a57d3-d8fe-49d4-8a20-895448e4d993:
-                required: '1'
+                required: true
                 sortOrder: 3
               44c9f16c-ac01-4744-8661-fd998079a92f:
-                required: '1'
+                required: true
                 sortOrder: 5
               45301164-aad2-49d6-b8da-725142f675a8:
-                required: '1'
+                required: true
                 sortOrder: 1
               53dc926d-ae6b-4fd6-b1be-25082f9f9145:
-                required: '1'
+                required: true
                 sortOrder: 4
             name: Content
             sortOrder: 1
@@ -2438,7 +2466,7 @@ superTableBlockTypes:
         handle: addressLine1
         instructions: ''
         name: 'Address line 1'
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: ''
           code: ''
@@ -2455,7 +2483,7 @@ superTableBlockTypes:
         handle: addressLine2
         instructions: ''
         name: 'Address line 2'
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: ''
           code: ''
@@ -2472,7 +2500,7 @@ superTableBlockTypes:
         handle: phone
         instructions: ''
         name: Phone
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: ''
           code: ''
@@ -2489,7 +2517,7 @@ superTableBlockTypes:
         handle: address
         instructions: ''
         name: Address
-        searchable: '1'
+        searchable: true
         settings:
           boundary: '""'
           boundaryRestrictionNELat: ''
@@ -2513,7 +2541,7 @@ superTableBlockTypes:
         handle: country
         instructions: ''
         name: Country
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: ''
           code: ''

@@ -1,0 +1,147 @@
+{% import '_macros/image' as imageMacros %}
+{% set resourcesCategories = craft.categories.group('resources').all() %}
+{% set categoryIdParam = craft.app.request.getQueryParam('resourceCategoryId') %}
+{% if categoryIdParam %}
+    {% set selectedCategory = craft.categories.group('resources').id(categoryIdParam).one() %}
+{% endif %}
+<div class="text">
+    <div class="grid-bg-wrapper container">
+        <div class="background-grid"></div>
+    </div>
+    <div class="container content">
+        <div class="row">
+            <div class="shift-2 text-centered">
+            <div class="row">
+                <div class="col-6"><strong>Select filter to refine your search</strong></div>
+                    <div class="col-6">
+                    <select id="categorySelector{{ component.id }}" name="categorySelect">
+                        <option value="">
+                            Select All
+                        </option>
+                        {% for category in resourcesCategories %}
+                            <option value="{{ category.id }}" {% if categoryIdParam == category.id %} selected {% endif %}>
+                                {{ category.title }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% if not categoryIdParam  or not selectedCategory%}
+    {# All Categories #}
+    {% for category in resourcesCategories %}
+        <div class="resource-list spacing-both">
+            <div class="grid-bg-wrapper container">
+                <div class="background-grid"></div>
+            </div>
+            <div class="container content resources-slider">
+                <h2>
+                    {{ category.title }}
+                </h2>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        {% set entries = craft.entries.relatedTo(category).all() %}
+                        {% for entry in entries %}
+                            <div class="slide swiper-slide">
+                                <div class="resource-card">
+                                    {% if entry.type.handle in ['pressReleace','webinar'] %}
+                                        <a class="image" href="{{ entry.url }}">
+                                            {{ imageMacros.image(entry.image[0], {
+                                                ratio: (1/1),
+                                                class: "rounded",
+                                                srcset: [
+                                                    { width: 200, jpegQuality: 85 },
+                                                ]
+                                            }
+                                        )   
+                                    }}
+                                        </a>
+                                        <h6 class="resource-type">
+                                            {{ entry.type.name }}</h6>
+                                        <div class="date">
+                                            <i class="icon calendar"></i>
+                                            {{ entry.postDate | date("d.m.Y") }}
+                                        </div>
+                                    {% endif %}
+                                    <h4>
+                                        {{ entry.title }}</h4>
+                                    <p>
+                                        {{ entry.description|striptags|slice(0,71)}}…</p>
+                                    {% if entry.type.handle in ['pressReleace','webinar'] %}
+                                        <a class="button-learn-more" href="{{ entry.url }}">Learn more</a>
+                                        {% else %}
+                                        <a class="button-download" href="{{ entry.url }}">Download Case Study</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <span aria-atomic="true" aria-live="assertive" class="swiper-notification"></span>
+                </div>
+                <button class="swiper-button-next"></button>
+                <button class="swiper-button-prev"></button>
+            </div>
+        </div>
+    {% endfor %}
+    {% else %}
+    {# List all entry related to one category #}
+    {% set entries = craft.entries.relatedTo(selectedCategory).all() %}
+    <div class="resource-list">
+        <div class="grid-bg-wrapper container">
+            <div class="background-grid"></div>
+        </div>
+        <div class="container content">
+            <h2>
+                {{ selectedCategory.title }}
+            </h2>
+            <div class="flex-row">
+                {% for entry in entries %}
+                    <div class="flex-col small">
+                        <div class="resource-card">
+                            {% if entry.type.handle in ['pressReleace','webinar'] %}
+                                <a class="image" href="{{ entry.url }}">
+                                    {{ imageMacros.image(entry.image[0], {
+                                                ratio: (1/1),
+                                                class: "rounded",
+                                                srcset: [
+                                                    { width: 200, jpegQuality: 85 },
+                                                ]
+                                            }
+                                        )   
+                                    }}
+                                </a>
+                                <h6 class="resource-type">
+                                    {{ entry.type.name }}</h6>
+                                <div class="date">
+                                    <i class="icon calendar"></i>
+                                    {{ entry.postDate | date("d.m.Y") }}
+                                </div>
+                            {% endif %}
+                            <h4>
+                                {{ entry.title }}</h4>
+                            <p>
+                                {{ entry.description|striptags|slice(0,71)}}…</p>
+                            {% if entry.type.handle in ['pressReleace','webinar'] %}
+                                <a class="button-learn-more" href="{{ entry.url }}">Learn more</a>
+                                {% else %}
+                                <a class="button-download" href="{{ entry.url }}">Download Case Study</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endif %}
+{% js on load %}
+document.querySelector('#categorySelector{{ component.id }}').addEventListener('change', function(event){
+                                                                                            queryString = "";
+                                                                                            if(event.target.value){
+                                                                                                queryString = "?resourceCategoryId=" +event.target.value;
+                                                                                            }
+                                                                                            window.location.href = window.location.origin + window.location.pathname + queryString;
+                                                                                        })
+{% endjs %}
