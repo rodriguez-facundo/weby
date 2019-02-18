@@ -21,7 +21,7 @@ categoryGroups:
     structure:
       maxLevels: '1'
       uid: b0a5dd7c-6109-4ecd-bbaf-8095b047d9a6
-dateModified: 1550425778
+dateModified: 1550427382
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -402,7 +402,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\image\
+          limitToSubfolder: _components/image/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -489,7 +489,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\offices\
+          limitToSubfolder: _components/offices/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -520,7 +520,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\sectionTitle\
+          limitToSubfolder: _components/sectionTitle/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -565,7 +565,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\resourceListing\
+          limitToSubfolder: _components/resourceListing/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -647,7 +647,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\featureSet\
+          limitToSubfolder: _components/featureSet/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -735,7 +735,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\logoSlider\
+          limitToSubfolder: _components/logoSlider/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -818,7 +818,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\spotlight\
+          limitToSubfolder: _components/spotlight/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1003,7 +1003,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\portfolio\
+          limitToSubfolder: _components/portfolio/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1069,7 +1069,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\text\
+          limitToSubfolder: _components/text/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1100,7 +1100,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\platformFeatures\
+          limitToSubfolder: _components/platformFeatures/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1174,7 +1174,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\pageTitle\
+          limitToSubfolder: _components/pageTitle/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1222,7 +1222,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\navigation\
+          limitToSubfolder: _components/navigation/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1276,7 +1276,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\team\
+          limitToSubfolder: _components/team/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1329,7 +1329,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\resourcesSlider\
+          limitToSubfolder: _components/resourcesSlider/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1473,7 +1473,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\callToAction\
+          limitToSubfolder: _components/callToAction/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1560,7 +1560,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\text2Cols\
+          limitToSubfolder: _components/text2Cols/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1744,7 +1744,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\leadImage\
+          limitToSubfolder: _components/leadImage/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1789,7 +1789,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components\portfolioListing\
+          limitToSubfolder: _components/portfolioListing/
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField

@@ -3,11 +3,11 @@
     "aelvan/imager": "v2.1.4",
     "craftcms/cms": "3.1.12",
     "craftcms/redactor": "^2.3",
-    "ether/simplemap": "^3.3",
+    "ether/simplemap": "3.3.5",
     "mikestecker/craft-videoembedder": "^1.1",
     "sebastianlenz/linkfield": "^1.0",
     "superbig/craft3-templateselect": "^2.0",
-    "verbb/super-table": "2.1.7",
+    "verbb/super-table": "2.1.8",
     "vlucas/phpdotenv": "^2.4.0"
   },
   "autoload": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4457c3e4c935e284f88dc63e897b0648",
+    "content-hash": "f473ea51d5e7d09d657d5ce9b39a2167",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -992,11 +992,11 @@
         },
         {
             "name": "ether/simplemap",
-            "version": "3.3.4",
+            "version": "3.3.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ethercreative/simplemap/zipball/be90293f603dac8521b54eeb3835c1a00c686ad9",
-                "reference": "be90293f603dac8521b54eeb3835c1a00c686ad9",
+                "url": "https://api.github.com/repos/ethercreative/simplemap/zipball/b26a760977f3028c0c2022eab3c3385d52d1c171",
+                "reference": "b26a760977f3028c0c2022eab3c3385d52d1c171",
                 "shasum": ""
             },
             "require": {
@@ -1016,12 +1016,14 @@
                     "ether\\simplemap\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "A beautifully simple Google Map field type.",
-            "time": "2018-09-05T14:31:25+00:00"
+            "support": {
+                "email": "tam@ethercreative.co.uk"
+            },
+            "time": "2019-02-17T09:04:56+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -3426,11 +3428,11 @@
         },
         {
             "name": "verbb/super-table",
-            "version": "2.1.7",
+            "version": "2.1.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/super-table/zipball/b03a289a943d2fbcb7570816f1a9a720d3edb6e4",
-                "reference": "b03a289a943d2fbcb7570816f1a9a720d3edb6e4",
+                "url": "https://api.github.com/repos/verbb/super-table/zipball/2c943c16ff5a09286cbf352a7d54cf4d6523e324",
+                "reference": "2c943c16ff5a09286cbf352a7d54cf4d6523e324",
                 "shasum": ""
             },
             "require": {
@@ -3474,7 +3476,7 @@
                 "docs": "https://github.com/verbb/super-table",
                 "rss": "https://github.com/verbb/super-table/commits/v2.atom"
             },
-            "time": "2019-02-10T11:12:07+00:00"
+            "time": "2019-02-18T07:51:04+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
