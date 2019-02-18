@@ -1,0 +1,33 @@
+<div class="testimonial-slider spacing-both">
+    <div class="grid-bg-wrapper container">
+        <div class="background-grid"></div>
+    </div>
+    <div class="container content">
+        <div class="row">
+            <div class="shift-3">
+                <div class="testimonial-slider-inner">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            {% for slide in component.slides %}
+                                <div class="swiper-slide slide">
+                                    <div class="testimonial-slide">
+                                        <div class="testimonial-content">
+                                            {{ slide.text }}
+                                        </div>
+                                        <div class="testimonial-author">
+                                            <small>
+                                                {{ slide.author|nl2br }}
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <button class="swiper-button-next"></button>
+                    <button class="swiper-button-prev"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

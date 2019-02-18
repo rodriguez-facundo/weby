@@ -83,3 +83,57 @@ teamMembers.forEach(function (member) {
     expandBtn.innerText = newLabel
   });
 });
+
+// Text slider
+var testimonialSliders = document.querySelectorAll('.testimonial-slider .swiper-container');
+testimonialSliders.forEach(function (slider) {
+  var sliderContainer = slider.parentNode;
+
+  // initialize swiper
+  var swiper = new Swiper (slider, {
+    slideClass: 'slide',
+  });
+
+  sliderContainer.querySelector('.swiper-button-next').addEventListener('click', function (e) {
+    e.preventDefault();
+    swiper.slideNext();
+  })
+
+  sliderContainer.querySelector('.swiper-button-prev').addEventListener('click', function (e) {
+    e.preventDefault();
+    swiper.slidePrev();
+  })
+});
+
+// feature Sets
+var featureSets = document.querySelectorAll('.feature-set');
+
+featureSets.forEach(function (item) {
+  var expandBtn = item.querySelector('.button-expand');
+  expandBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    var alreadyExpanded = item.classList.contains('expanded');
+    var newLabel = alreadyExpanded ? 'Expand' : 'Collapse';
+
+    alreadyExpanded ? item.classList.remove('expanded') : item.classList.add('expanded');
+    expandBtn.innerText = newLabel
+  });
+});
+
+// plarform Features
+var plarformFeatures = document.querySelectorAll('.platform-feature');
+
+plarformFeatures.forEach(function (item) {
+  var expandBtn = item.querySelector('.button-expand');
+  expandBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    var alreadyExpanded = item.classList.contains('expanded');
+    var newLabel = alreadyExpanded ? 'Expand' : 'Collapse';
+
+    alreadyExpanded ? item.classList.remove('expanded') : item.classList.add('expanded');
+    expandBtn.innerText = newLabel
+  });
+});
+
