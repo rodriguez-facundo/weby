@@ -8,8 +8,11 @@
                 <div class="row">
                     <div class="col-6 text-wrapper">
                         <div class="text-content">
-                            <h6>
-                                {{ component.subheading }}</h6>
+                            {% if component.subheading is not empty %}
+                                <h6>
+                                    {{ component.subheading }}
+                                </h6>
+                            {% endif %}
                             <h2>
                                 {{ component.heading }}</h2>
                             <p>

@@ -21,7 +21,7 @@ categoryGroups:
     structure:
       maxLevels: '1'
       uid: b0a5dd7c-6109-4ecd-bbaf-8095b047d9a6
-dateModified: 1550515847
+dateModified: 1550518359
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -435,7 +435,7 @@ matrixBlockTypes:
         type: craft\fields\Assets
     handle: image
     name: Image
-    sortOrder: 3
+    sortOrder: 4
   0c7a763d-1db9-447d-a87c-b49a4adfa36e:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
@@ -587,10 +587,13 @@ matrixBlockTypes:
                 sortOrder: 1
               983d3229-41d1-4bd5-888e-c0d020febeb2:
                 required: true
-                sortOrder: 4
-              f116ddf2-762c-4dcc-b19a-5997eff08805:
+                sortOrder: 5
+              a8e815bf-9ce3-467e-8c34-5bd24ab13a33:
                 required: false
                 sortOrder: 3
+              f116ddf2-762c-4dcc-b19a-5997eff08805:
+                required: false
+                sortOrder: 4
             name: Content
             sortOrder: 1
     fields:
@@ -608,7 +611,7 @@ matrixBlockTypes:
           columnType: text
           purifierConfig: ''
           purifyHtml: '1'
-          redactorConfig: ''
+          redactorConfig: Standard.json
         translationKeyFormat: null
         translationMethod: none
         type: craft\redactor\Field
@@ -651,6 +654,18 @@ matrixBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
+      a8e815bf-9ce3-467e-8c34-5bd24ab13a33:
+        contentColumnType: boolean
+        fieldGroup: null
+        handle: expandable
+        instructions: ''
+        name: Expandable
+        searchable: true
+        settings:
+          default: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Lightswitch
       f116ddf2-762c-4dcc-b19a-5997eff08805:
         contentColumnType: text
         fieldGroup: null
@@ -735,7 +750,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/logoSlider/
+          limitToSubfolder: _components\logoSlider\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -956,7 +971,7 @@ matrixBlockTypes:
         type: typedlinkfield\fields\LinkField
     handle: spotlight
     name: Spotlight
-    sortOrder: 2
+    sortOrder: 3
   66ee294b-3efe-4b96-b308-721276ad1397:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
@@ -1496,7 +1511,7 @@ matrixBlockTypes:
         type: craft\fields\PlainText
     handle: callToAction
     name: 'Call to Action'
-    sortOrder: 4
+    sortOrder: 1
   d1c7f2d4-a716-4134-8348-d02f5b476aea:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
@@ -1767,7 +1782,7 @@ matrixBlockTypes:
         type: craft\fields\PlainText
     handle: leadImage
     name: 'Lead Image'
-    sortOrder: 1
+    sortOrder: 2
   f91bf151-f1cb-4537-9e1c-6c5e1fe73528:
     field: 1abf9822-347f-4961-98c4-bed06e2e42c8
     fieldLayouts:
