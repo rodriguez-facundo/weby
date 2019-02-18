@@ -1,0 +1,35 @@
+{% import '_macros/image' as imageMacros %}
+<div class="feature-set right spacing-both">
+    <div class="grid-bg-wrapper container">
+        <div class="background-grid"></div>
+    </div>
+    <div class="container content">
+        <div class="row">
+            <div class="shift-2">
+                <div class="feature-set-row">
+                    <div class="feature-set-col">
+                        {{ imageMacros.image(component.image[0], {
+                                    ratio: "",
+                                    class: "rounded",
+                                    srcset: [
+                                        { width: 360, jpegQuality: 85 },
+                                    ]
+                                }
+                            )   
+                        }}
+                    </div>
+                    <div class="feature-set-col">
+                        <div class="feature-set-description">
+                            {{ component.text }}
+                            {% if not component.linkTo.isEmpty() %}
+                                <a class="btn-primary" href="{{ component.linkTo.getUrl() }}">
+                                    {{ component.linkTo.getText() }}</a>
+                            {% endif %}
+                        </div>
+                        <a class="button-expand" href="#">Expand</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

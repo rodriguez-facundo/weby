@@ -1,5 +1,5 @@
 {% import '_macros/image' as imageMacros %}
-<div class="feature-set">
+<div class="feature-set spacing-both">
     <div class="grid-bg-wrapper container">
         <div class="background-grid"></div>
     </div>
@@ -17,13 +17,16 @@
                                 }
                             )   
                         }}
-                        </div>
-                        <div class="feature-set-col">
+                    </div>
+                    <div class="feature-set-col">
+                        <div class="feature-set-description">
                             {{ component.text }}
                             {% if not component.linkTo.isEmpty() %}
                                 <a class="btn-primary" href="{{ component.linkTo.getUrl() }}">
                                     {{ component.linkTo.getText() }}</a>
                             {% endif %}
+                        </div>
+                        <a class="button-expand" href="#">Expand</a>
                     </div>
                 </div>
             </div>

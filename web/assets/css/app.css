@@ -1309,7 +1309,7 @@ select {
     position: relative;
     z-index: 1; }
   .feature-set .feature-set-description {
-    height: 66px;
+    height: 260px;
     margin-bottom: var(--spacing-sm);
     overflow: hidden; }
   .feature-set.expanded .feature-set-description {

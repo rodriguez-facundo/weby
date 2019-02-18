@@ -110,20 +110,24 @@ var featureSets = document.querySelectorAll('.feature-set');
 
 featureSets.forEach(function (item) {
   var expandBtn = item.querySelector('.button-expand');
-  expandBtn.addEventListener('click', function (e) {
-    e.preventDefault();
 
-    var alreadyExpanded = item.classList.contains('expanded');
-    var newLabel = alreadyExpanded ? 'Expand' : 'Collapse';
+  if (expandBtn) {
+    expandBtn.addEventListener('click', function (e) {
+      e.preventDefault();
 
-    alreadyExpanded ? item.classList.remove('expanded') : item.classList.add('expanded');
-    expandBtn.innerText = newLabel
-  });
+      var alreadyExpanded = item.classList.contains('expanded');
+      var newLabel = alreadyExpanded ? 'Expand' : 'Collapse';
+
+      alreadyExpanded ? item.classList.remove('expanded') : item.classList.add('expanded');
+      expandBtn.innerText = newLabel
+    });
+  }
 });
+
 
 // plarform Features
 var plarformFeatures = document.querySelectorAll('.platform-feature');
-
+console.log(plarformFeatures);
 plarformFeatures.forEach(function (item) {
   var expandBtn = item.querySelector('.button-expand');
   expandBtn.addEventListener('click', function (e) {
