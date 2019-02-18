@@ -21,7 +21,7 @@ categoryGroups:
     structure:
       maxLevels: '1'
       uid: b0a5dd7c-6109-4ecd-bbaf-8095b047d9a6
-dateModified: 1550427382
+dateModified: 1550515847
 email:
   fromEmail: ipetrov87@gmail.com
   fromName: Metacell
@@ -402,7 +402,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/image/
+          limitToSubfolder: _components\image\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -520,7 +520,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/sectionTitle/
+          limitToSubfolder: _components\sectionTitle\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -818,7 +818,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/spotlight/
+          limitToSubfolder: _components\spotlight\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1003,7 +1003,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/portfolio/
+          limitToSubfolder: _components\portfolio\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1052,12 +1052,12 @@ matrixBlockTypes:
         searchable: true
         settings:
           availableTransforms: '*'
-          availableVolumes: '*'
+          availableVolumes: ''
           cleanupHtml: '1'
           columnType: text
           purifierConfig: ''
           purifyHtml: '1'
-          redactorConfig: Simple.json
+          redactorConfig: Standard.json
         translationKeyFormat: null
         translationMethod: none
         type: craft\redactor\Field
@@ -1069,7 +1069,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/text/
+          limitToSubfolder: _components\text\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1174,7 +1174,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/pageTitle/
+          limitToSubfolder: _components\pageTitle\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1222,7 +1222,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/navigation/
+          limitToSubfolder: _components\navigation\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1473,7 +1473,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/callToAction/
+          limitToSubfolder: _components\callToAction\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField
@@ -1744,7 +1744,7 @@ matrixBlockTypes:
         name: Template
         searchable: true
         settings:
-          limitToSubfolder: _components/leadImage/
+          limitToSubfolder: _components\leadImage\
         translationKeyFormat: null
         translationMethod: none
         type: superbig\templateselect\fields\TemplateSelectField

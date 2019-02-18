@@ -8,23 +8,27 @@
     <div class="grid-bg-wrapper container">
         <div class="background-grid"></div>
     </div>
-    <div class="container content">
-        <div class="row">
-            <div class="shift-2 text-centered">
+    <div class="spacing-both">
+        <div class="container content">
             <div class="row">
-                <div class="col-6"><strong>Select filter to refine your search</strong></div>
-                    <div class="col-6">
-                    <select id="categorySelector{{ component.id }}" name="categorySelect">
-                        <option value="">
-                            Select All
-                        </option>
-                        {% for category in resourcesCategories %}
-                            <option value="{{ category.id }}" {% if categoryIdParam == category.id %} selected {% endif %}>
-                                {{ category.title }}
-                            </option>
-                        {% endfor %}
-                    </select>
-                </div>
+                <div class="shift-2 text-centered">
+                    <div class="row">
+                        <div class="col-6">
+                            <strong>Select filter to refine your search</strong>
+                        </div>
+                        <div class="col-6">
+                            <select id="categorySelector{{ component.id }}" name="categorySelect">
+                                <option value="">
+                                    Select All
+                                </option>
+                                {% for category in resourcesCategories %}
+                                    <option value="{{ category.id }}" {% if categoryIdParam == category.id %} selected {% endif %}>
+                                        {{ category.title }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -8,24 +8,26 @@
     <div class="grid-bg-wrapper container">
         <div class="background-grid"></div>
     </div>
-    <div class="container content">
-        <div class="row">
-            <div class="shift-2 text-centered">
-                <div class="row">
-                    <div class="col-6">
-                        <strong>Select filter to refine your search</strong>
-                    </div>
-                    <div class="col-6">
-                        <select id="portfolioCategorySelector{{ component.id }}" name="portfolioCategorySelect">
-                            <option value="">
-                                Select All
-                            </option>
-                            {% for category in portfolioCategories %}
-                                <option value="{{ category.id }}" {% if categoryIdParam == category.id %} selected {% endif %}>
-                                    {{ category.title }}
+    <div class="spacing-both">
+        <div class="container content">
+            <div class="row">
+                <div class="shift-2 text-centered">
+                    <div class="row">
+                        <div class="col-6">
+                            <strong>Select filter to refine your search</strong>
+                        </div>
+                        <div class="col-6">
+                            <select id="portfolioCategorySelector{{ component.id }}" name="portfolioCategorySelect">
+                                <option value="">
+                                    Select All
                                 </option>
-                            {% endfor %}
-                        </select>
+                                {% for category in portfolioCategories %}
+                                    <option value="{{ category.id }}" {% if categoryIdParam == category.id %} selected {% endif %}>
+                                        {{ category.title }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -221,11 +223,11 @@
         {% endif %}
         {% js on load %}
         document.querySelector('#portfolioCategorySelector{{ component.id }}').addEventListener('change', function(event){
-                                                                                                        queryString = "";
-                                                                                                        if(event.target.value){
-                                                                                                            queryString = "?portfolioCategoryId=" +event.target.value;
-                                                                                                        }
-                                                                                                        window.location.href = window.location.origin + window.location.pathname + queryString;
-                                                                                                    })
+                                                                                                                queryString = "";
+                                                                                                                if(event.target.value){
+                                                                                                                    queryString = "?portfolioCategoryId=" +event.target.value;
+                                                                                                                }
+                                                                                                                window.location.href = window.location.origin + window.location.pathname + queryString;
+                                                                                                            })
         {% endjs %}
         
