@@ -1,0 +1,41 @@
+{% import '_macros/image' as imageMacros %}
+<div class="spotlight right">
+    <div class="background-image">
+        <video autoplay="" class="animation" loop="" muted="" playsinline="">
+            <source src="{{ component.video.one().url }}" type="video/mp4"></video>
+        </div>
+        <div class="spotlight-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 text-wrapper">
+                        <div class="text-content">
+                            {% if component.icon.one() %}
+                                {{ imageMacros.image(component.icon[0], {
+                                ratio: (1/1),
+                                class: "icon",
+                                srcset: [
+                                    { width: 40, jpegQuality: 65 },
+                                ]
+                            }
+                        )   
+                    }}
+                            {% endif %}
+                            <h2>
+                                {{ component.heading }}</h2>
+                            <p>
+                                {{ component.description }}
+                            </p>
+                            {% if not component.button.isEmpty() %}
+                                <a class="btn-primary" href="{{ component.button.getUrl() }}">
+                                    {{ component.button.getText() }}
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-bg-wrapper container">
+            <div class="background-grid"></div>
+        </div>
+    </div>
