@@ -1,0 +1,85 @@
+<div class="content-and-form spacing-both">
+    <div class="grid-bg-wrapper container">
+        <div class="background-grid"></div>
+    </div>
+    <div class="container content">
+        <div class="row">
+            <div class="col-6">
+                {{ component.text }}
+            </div>
+            <div class="col-6">
+                <div class="form-wrapper">
+                    <h5>Apply for a job at MetaCell</h5>
+                    <form id="job-apply-{{ entry.id }}">
+                    {{ csrfInput() }}
+                    <input type="hidden" name="action" value="wheelform/message/send">
+                                <input type="hidden" name="form_id" value="3">
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label class="control-label" for="first-name">First name*</label>
+                                    <input class="form-control" id="first-name" name="first_name" placeholder="Enter your name" type="text"></div>
+                                </div>
+                                <div class="form-col">
+                                    <div class="form-group">
+                                        <label class="control-label" for="last-name">Last name*</label>
+                                        <input class="form-control" id="last-name" name="last_name" placeholder="Enter your last name" type="text"></div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label class="control-label" for="email">Email*</label>
+                                            <input class="form-control" id="email" name="email" placeholder="Enter your email" type="email"></div>
+                                        </div>
+                                        <div class="form-col">
+                                            <div class="form-group">
+                                                <label class="control-label" for="phone">Phone number</label>
+                                                <input class="form-control" id="phone" name="phone_number" placeholder="Enter your last name" type="text"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-col">
+                                                <div class="form-group">
+                                                    <label class="control-label" for="company">Company</label>
+                                                    <input class="form-control" id="company" name="company" placeholder="Enter your company" type="email"></div>
+                                                </div>
+                                                <div class="form-col">
+                                                    <div class="form-group">
+                                                        <label class="control-label" for="job_title">Job title</label>
+                                                        <input class="form-control" id="job_title" name="job_title" placeholder="Enter your job title" type="text"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-full-col">
+                                                        <div class="form-group">
+                                                            <label class="control-label" for="cv">Resume/CV*</label>
+                                                            <input class="form-control" id="cv" name="cv" type="file"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-full-col">
+                                                            <div class="form-group">
+                                                                <label class="control-label" for="address">Any comments or questions?</label>
+                                                                <textarea class="form-control" id="address" name="comments_and_questions" placeholder="Enter your comments"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="actions">
+                                                        <button class="btn-primary" type="submit">Apply</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% js %}
+                            $( document ).ready(function() {
+                                    // Ajax submission of form
+                                    $('#job-apply-{{ entry.id }}').submit(function(ev){
+                                        window.ajaxFormSubmit(ev);
+                                    });
+                                });
+                            {% endjs %}
+                            

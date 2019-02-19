@@ -1,0 +1,41 @@
+{% extends 'partials/_main' %}
+{% block content %}
+    <div class="resource-detail spacing-both">
+        <div class="grid-bg-wrapper container">
+            <div class="background-grid"></div>
+        </div>
+        <div class="container content">
+            <div class="row">
+                <div class="col-8">
+                    <div class="date">
+                        <i class="icon calendar"></i>
+                        {{ entry.postDate | date("d.m.Y") }}
+                    </div>
+                    <h3>
+                        {{ entry.title }}
+                    </h3>
+                    {{ entry.description }}
+                </div>
+                <div class="col-4">
+                    <div class="sidebar">
+                        <h5 class="sidebar-title">Related Press Releases</h5>
+                        {% for event in entry.relatedEvents.all() %}
+                            <div class="related-content">
+                                <div class="related-content-item">
+                                    <div class="date">
+                                        <i class="icon calendar"></i>
+                                        {{ event.postDate | date("d.m.Y") }}
+                                    </div>
+                                    <h4>
+                                        {{ event.title }}</h4>
+                                    <a class="button-learn-more" href="{{ event.url }}">Learn more</a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {# {% include '_components/include' %} #}
+{% endblock %}
