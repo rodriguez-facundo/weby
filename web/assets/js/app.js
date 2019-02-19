@@ -141,3 +141,73 @@ plarformFeatures.forEach(function (item) {
   });
 });
 
+// ------------------------------
+// Ajax form submition
+// ------------------------------
+// Submit the form data
+function ajaxFormSubmit(ev) {
+    // Prevent the form from actually submitting
+    ev.preventDefault();
+    var form = ev.target;
+    // ajaxFormShowSending(form);
+
+    var formData = new FormData(form);
+
+    // ajaxFormClearValidation(form);
+
+    // Send it to the server
+    $.ajax({
+        url: '/wheelform/message/send',
+        type: 'POST',
+        data: formData,
+        success: function (response) {
+            if (response.success) {
+                // $('.thank-you .text', form).html(response.message);
+                // $(form).addClass('thank-you');
+                form.reset();
+                // setTimeout(function(){
+                //     $(form).removeClass('thank-you');
+                //     $('.thank-you .text', form).html('');
+                // }, 3000)
+                window.open( $('.download-link', form).val() );
+            } else {
+                // ajaxFormDisplayValidationMsg(form, response.errors);
+            }
+        },
+        complete: function (){
+            // ajaxFormHideSending(form);
+        },
+        dataType: 'json',
+        cache: false,
+        contentType: false,
+        processData: false
+    });
+}
+
+// make the function accessible from outside the file
+// window.ajaxFormSubmit = ajaxFormSubmit;
+
+// Add the validation class styling and messages
+function ajaxFormDisplayValidationMsg(form, messages){
+    for ( let key in messages){
+        let formGroup = $('[name="'+ key +'"]', form).parent();
+        $('.form-control, .form-control-file', formGroup).addClass('is-invalid');
+        $('.invalid-feedback', formGroup).append(messages[key]);
+   }
+}
+
+// Show to user that sending of data is start
+function ajaxFormShowSending(form){
+    $(form).addClass('sending');
+}
+
+// Show to user that sending of data is end
+function ajaxFormHideSending(form){
+    $(form).removeClass('sending');
+}
+
+// Clear the validation messages and styling
+function ajaxFormClearValidation(form){
+    $('.is-invalid', form).removeClass('is-invalid');
+    $('.invalid-feedback', form).html('');
+}
