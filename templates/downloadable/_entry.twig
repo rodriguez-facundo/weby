@@ -109,7 +109,7 @@
     $( document ).ready(function() {
         // Ajax submission of form
         $('#downloadable-{{ entry.id }}').submit(function(ev){
-            window.ajaxFormSubmit(ev);
+            window.ajaxFormSubmitAndDownload(ev);
         });
     });
 {% endjs %}

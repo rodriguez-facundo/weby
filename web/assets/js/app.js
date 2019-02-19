@@ -169,7 +169,6 @@ function ajaxFormSubmit(ev) {
                 //     $(form).removeClass('thank-you');
                 //     $('.thank-you .text', form).html('');
                 // }, 3000)
-                window.open( $('.download-link', form).val() );
             } else {
                 // ajaxFormDisplayValidationMsg(form, response.errors);
             }
@@ -182,6 +181,45 @@ function ajaxFormSubmit(ev) {
         contentType: false,
         processData: false
     });
+}
+
+function ajaxFormSubmitAndDownload(ev) {
+  // Prevent the form from actually submitting
+  ev.preventDefault();
+  var form = ev.target;
+  // ajaxFormShowSending(form);
+
+  var formData = new FormData(form);
+
+  // ajaxFormClearValidation(form);
+
+  // Send it to the server
+  $.ajax({
+      url: '/wheelform/message/send',
+      type: 'POST',
+      data: formData,
+      success: function (response) {
+          if (response.success) {
+              // $('.thank-you .text', form).html(response.message);
+              // $(form).addClass('thank-you');
+              form.reset();
+              // setTimeout(function(){
+              //     $(form).removeClass('thank-you');
+              //     $('.thank-you .text', form).html('');
+              // }, 3000)
+              window.open( $('.download-link', form).val() );
+          } else {
+              // ajaxFormDisplayValidationMsg(form, response.errors);
+          }
+      },
+      complete: function (){
+          // ajaxFormHideSending(form);
+      },
+      dataType: 'json',
+      cache: false,
+      contentType: false,
+      processData: false
+  });
 }
 
 // make the function accessible from outside the file

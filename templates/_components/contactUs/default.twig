@@ -9,16 +9,15 @@
             </div>
             <div class="col-6">
                 <div class="form-wrapper">
-                    <h5>Apply for a job at MetaCell</h5>
-                    <form id="job-apply-{{ component.id }}">
+                    <form id="contact-us-{{ component.id }}">
                         {{ csrfInput() }}
                         <input name="action" type="hidden" value="wheelform/message/send">
-                            <input name="form_id" type="hidden" value="3">
+                            <input name="form_id" type="hidden" value="1">
                                 <div class="form-row">
                                     <div class="form-col">
                                         <div class="form-group">
                                             <label class="control-label" for="first-name">First name*</label>
-                                            <input class="form-control" id="first-name" name="first_name" placeholder="Enter your name" type="text"></div>
+                                            <input class="form-control" id="first-name"name="first_name" placeholder="Enter your name" type="text"></div>
                                         </div>
                                         <div class="form-col">
                                             <div class="form-group">
@@ -53,33 +52,39 @@
                                                         <div class="form-row">
                                                             <div class="form-full-col">
                                                                 <div class="form-group">
-                                                                    <label class="control-label" for="cv">Resume/CV*</label>
-                                                                    <input class="form-control" id="cv" name="cv" type="file"></div>
+                                                                    <label class="control-label" for="subject">What solutions are you interested in?</label>
+                                                                    <select class="form-control" name="interest_in" id="subject">
+                                                                        <option value="Custom Software Development">Custom Software Development</option>
+                                                                            <option value="Data Visualisation">Data Visualisation</option>
+                                                                            <option value="Big Data">Big Data</option>
+                                                                            <option value="Consulting">Consulting</option>
+                                                                    </select>
                                                                 </div>
                                                             </div>
-                                                            <div class="form-row">
-                                                                <div class="form-full-col">
-                                                                    <div class="form-group">
-                                                                        <label class="control-label" for="address">Any comments or questions?</label>
-                                                                        <textarea class="form-control" id="address" name="comments_and_questions" placeholder="Enter your comments"></textarea>
-                                                                    </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="form-full-col">
+                                                                <div class="form-group">
+                                                                    <label class="control-label" for="address">Any comments or questions?</label>
+                                                                    <textarea class="form-control" name="com_and_questions" id="address" placeholder="Enter your comments"></textarea>
                                                                 </div>
                                                             </div>
-                                                            <div class="actions">
-                                                                <button class="btn-primary" type="submit">Apply</button>
-                                                            </div>
-                                                        </form>
-                                                    </div>
+                                                        </div>
+                                                        <div class="actions">
+                                                            <button class="btn-primary" type="submit">Send a request</button>
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    {% js %}
-                                    $( document ).ready(function() {
-                                                                                                            // Ajax submission of form
-                                                                                                            $('#job-apply-{{ component.id }}').submit(function(ev){
-                                                                                                                window.ajaxFormSubmit(ev);
-                                                                                                            });
-                                                                                                        });
-                                    {% endjs %}
-                                    
+                                </div>
+                                {% js %}
+                                $( document ).ready(function() {
+                                                                    // Ajax submission of form
+                                                                    $('#contact-us-{{ component.id }}').submit(function(ev){
+                                                                        window.ajaxFormSubmit(ev);
+                                                                    });
+                                                                });
+                                {% endjs %}
+                                
