@@ -27,15 +27,16 @@
                                         {{ event.postDate | date("d.m.Y") }}
                                     </div>
                                     <h4>
-                                        {{ event.title }}</h4>
+                                        {{ event.title }}
+                                    </h4>
                                     <a class="button-learn-more" href="{{ event.url }}">Learn more</a>
                                 </div>
-                            {% endfor %}
-                        </div>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    {# {% include '_components/include' %} #}
-{% endblock %}
+</div>
+{# {% include '_components/include' %} #}{% endblock %}
