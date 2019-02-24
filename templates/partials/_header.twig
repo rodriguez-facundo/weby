@@ -2,14 +2,19 @@
     <div class="container">
         <div class="header-inner">
             <h1 class="logo">
-                <a href="{{ siteUrl }}">{{ siteName }}</a>
+                <a href="{{ siteUrl }}">
+                    {{ siteName }}</a>
             </h1>
             <nav>
                 {% set navItems = craft.entries.section('headerNavigation').level(1).all() %}
                 {% for item in navItems %}
-                    <a class="{% if craft.app.request.absoluteUrl == item.url %}active{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
+                    {% switch item.type.handle %}
+                        {% case "linkTo" %}
+                        {% include 'partials/header/_linkTo' %}
+                        {% case "page" %}
+                        {% include 'partials/header/_page' %}
+                    {% endswitch %}
                 {% endfor %}
-                <a class="btn-primary" href="#">Request a quote</a>
             </nav>
             <button class="menu-trigger">
                 <span class="triger-item"></span>
