@@ -7,7 +7,7 @@
     "mikestecker/craft-videoembedder": "^1.1",
     "sebastianlenz/linkfield": "^1.0",
     "superbig/craft3-templateselect": "^2.0",
-    "verbb/super-table": "2.1.11",
+    "verbb/super-table": "2.1.12",
     "vlucas/phpdotenv": "^2.4.0",
     "xpertbot/craft-wheelform": "^1.21"
   },
