@@ -51,7 +51,7 @@
                         {% for entry in entries %}
                             <div class="slide swiper-slide">
                                 <div class="resource-card">
-                                    {% if entry.type.handle in ['pressReleace','webinar'] %}
+                                    {% if entry.type.handle in ['pressRelease','webinar'] %}
                                         <a class="image" href="{{ entry.url }}">
                                             {{ imageMacros.image(entry.image[0], {
                                                 ratio: (1/1),
@@ -74,7 +74,7 @@
                                         {{ entry.title }}</h4>
                                     <p>
                                         {{ entry.description|striptags|slice(0,71)}}…</p>
-                                    {% if entry.type.handle in ['pressReleace','webinar'] %}
+                                    {% if entry.type.handle in ['pressRelease','webinar'] %}
                                         <a class="button-learn-more" href="{{ entry.url }}">Learn more</a>
                                         {% else %}
                                         <a class="button-download" href="{{ entry.url }}">Download Case Study</a>
@@ -105,7 +105,7 @@
                 {% for entry in entries %}
                     <div class="flex-col small">
                         <div class="resource-card">
-                            {% if entry.type.handle in ['pressReleace','webinar'] %}
+                            {% if entry.type.handle in ['pressRelease','webinar'] %}
                                 <a class="image" href="{{ entry.url }}">
                                     {{ imageMacros.image(entry.image[0], {
                                                 ratio: (1/1),
@@ -128,7 +128,7 @@
                                 {{ entry.title }}</h4>
                             <p>
                                 {{ entry.description|striptags|slice(0,71)}}…</p>
-                            {% if entry.type.handle in ['pressReleace','webinar'] %}
+                            {% if entry.type.handle in ['pressRelease','webinar'] %}
                                 <a class="button-learn-more" href="{{ entry.url }}">Learn more</a>
                                 {% else %}
                                 <a class="button-download" href="{{ entry.url }}">Download Case Study</a>

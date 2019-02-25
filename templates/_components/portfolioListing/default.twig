@@ -223,11 +223,11 @@
         {% endif %}
         {% js on load %}
         document.querySelector('#portfolioCategorySelector{{ component.id }}').addEventListener('change', function(event){
-                                                                                                                        queryString = "";
-                                                                                                                        if(event.target.value){
-                                                                                                                            queryString = "?portfolioCategoryId=" +event.target.value;
-                                                                                                                        }
-                                                                                                                        window.location.href = window.location.origin + window.location.pathname + queryString;
-                                                                                                                    })
+                                                                                                                                queryString = "";
+                                                                                                                                if(event.target.value){
+                                                                                                                                    queryString = "?portfolioCategoryId=" +event.target.value;
+                                                                                                                                }
+                                                                                                                                window.location.href = window.location.origin + window.location.pathname + queryString;
+                                                                                                                            })
         {% endjs %}
         
