@@ -8,8 +8,8 @@
     {% set srcset = options.srcset ?? [
     { width: 1600 },
     { width: 1200 },
-    { width: 960, ratio: 16/10, jpegQuality: 65 },
-    { width: 640, ratio: 16/10, jpegQuality: 65 },
+    { width: 960, ratio: 16/10, jpegQuality: 90 },
+    { width: 640, ratio: 16/10, jpegQuality: 90 },
   ] %}
     {% if image.getExtension() != "svg" %}
         {% set transformedImages = craft.imager.transformImage(image,
@@ -35,14 +35,14 @@
     [
       { width: 1600 },
       { width: 1200 },
-      { width: 960, ratio: 16/10, jpegQuality: 65 },
-      { width: 640, ratio: 16/10, jpegQuality: 65 },
+      { width: 960, ratio: 16/10, jpegQuality: 90 },
+      { width: 640, ratio: 16/10, jpegQuality: 90 },
     ],
     {
         format: 'jpg',
         allowUpscale: false,
         mode: 'crop',
-        jpegQuality: 80,
+        jpegQuality: 90,
         position: image.getFocalPoint(true),
         interlace: true
     }
