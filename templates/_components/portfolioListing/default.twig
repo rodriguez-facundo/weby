@@ -110,9 +110,9 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="content">
-                                            <h2>
+                                            <h4>
                                                 {{ entry.title }}
-                                            </h2>
+                                            </h4>
                                             {{ entry.description }}
                                             {% if not entry.linkTo.isEmpty() %}
                                                 <a class="button-download" href="{{ entry.linkTo.getUrl }}">
@@ -223,11 +223,11 @@
         {% endif %}
         {% js on load %}
         document.querySelector('#portfolioCategorySelector{{ component.id }}').addEventListener('change', function(event){
-                                                                                                                queryString = "";
-                                                                                                                if(event.target.value){
-                                                                                                                    queryString = "?portfolioCategoryId=" +event.target.value;
-                                                                                                                }
-                                                                                                                window.location.href = window.location.origin + window.location.pathname + queryString;
-                                                                                                            })
+                                                                                                                        queryString = "";
+                                                                                                                        if(event.target.value){
+                                                                                                                            queryString = "?portfolioCategoryId=" +event.target.value;
+                                                                                                                        }
+                                                                                                                        window.location.href = window.location.origin + window.location.pathname + queryString;
+                                                                                                                    })
         {% endjs %}
         
