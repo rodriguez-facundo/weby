@@ -10,13 +10,12 @@
                     <h2>
                         {{ entry.title }}</h2>
                     <div class="portfolio-item">
-                    {% if entry.videoLink is not empty %}
-                    
-                        <div class="video-wrapper rounded">
-                            {% set embedUrl = craft.videoEmbedder.getEmbedUrl(entry.videoLink) %}
-                            <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0" src="{{ embedUrl }}"></iframe>
-                        </div>
-                    {% endif %}
+                        {% if entry.videoLink is not empty %}
+                            <div class="video-wrapper rounded">
+                                {% set embedUrl = craft.videoEmbedder.getEmbedUrl(entry.videoLink) %}
+                                <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0" src="{{ embedUrl }}"></iframe>
+                            </div>
+                        {% endif %}
                         <div class="logos">
                             <img alt="" src="/static/images/portfolio-ucl.svg">
                                 <img alt="" src="/static/images/portfolio-ucl.svg"></div>
@@ -26,91 +25,77 @@
                         <div class="col-6">
                             <div class="form-wrapper">
                                 <h5>Download Case Study</h5>
-
-
-
                                 <form id="downloadable-{{ entry.id }}">
-                                {{ csrfInput() }}
-                                <input type="hidden" name="action" value="wheelform/message/send">
-                                <input type="hidden" name="form_id" value="2">
-                                <input type="hidden" class="download-link" value="{{ entry.downloadFile.one().url }}">
-                                    <div class="form-row">
-                                        <div class="form-col">
-                                            <div class="form-group">
-                                                <label class="control-label" for="first-name">First name*</label>
-                                                <input class="form-control" id="first-name" name="first_name" placeholder="Enter your name" type="text">
-                                                </div>
-                                            </div>
-                                            <div class="form-col">
-                                                <div class="form-group">
-                                                    <label class="control-label" for="last-name">Last name*</label>
-                                                    <input class="form-control" id="last-name" name="last_name" placeholder="Enter your last name" type="text"></div>
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
-                                                <div class="form-col">
-                                                    <div class="form-group">
-                                                        <label class="control-label" for="email">Email*</label>
-                                                        <input class="form-control" id="email" name="email" placeholder="Enter your email" type="email"></div>
-                                                    </div>
+                                    {{ csrfInput() }}
+                                    <input name="action" type="hidden" value="wheelform/message/send">
+                                        <input name="form_id" type="hidden" value="2">
+                                            <input type="hidden" class="download-link" value="{{ entry.downloadFile.one().url }}">
+                                                <div class="form-row">
                                                     <div class="form-col">
                                                         <div class="form-group">
-                                                            <label class="control-label" for="phone">Phone number</label>
-                                                            <input class="form-control" id="phone" name="phone_number" placeholder="Enter your last name" type="text"></div>
+                                                            <label class="control-label" for="first-name">First name*</label>
+                                                            <input class="form-control" id="first-name" name="first_name" placeholder="Enter your name" type="text"></div>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-row">
                                                         <div class="form-col">
                                                             <div class="form-group">
-                                                                <label class="control-label" for="company">Company</label>
-                                                                <input class="form-control" id="company" name="company" placeholder="Enter your company" type="text"></div>
+                                                                <label class="control-label" for="last-name">Last name*</label>
+                                                                <input class="form-control" id="last-name" name="last_name" placeholder="Enter your last name" type="text"></div>
                                                             </div>
+                                                        </div>
+                                                        <div class="form-row">
                                                             <div class="form-col">
                                                                 <div class="form-group">
-                                                                    <label class="control-label" for="job_title">Job title</label>
-                                                                    <input class="form-control" id="job_title" name="job_title" placeholder="Enter your job title" type="text"></div>
+                                                                    <label class="control-label" for="email">Email*</label>
+                                                                    <input class="form-control" id="email" name="email" placeholder="Enter your email" type="email"></div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="form-row">
-                                                                <div class="form-full-col">
+                                                                <div class="form-col">
                                                                     <div class="form-group">
-                                                                        <label class="control-label" for="subject">What solutions are you interested in?</label>
-                                                                        <select class="form-control" id="subject" name="interested_in">
-                                                                            <option value="Custom Software Development">Custom Software Development</option>
-                                                                            <option value="Data Visualisation">Data Visualisation</option>
-                                                                            <option value="Big Data">Big Data</option>
-                                                                            <option value="Consulting">Consulting</option>
-                                                                        </select>
+                                                                        <label class="control-label" for="phone">Phone number</label>
+                                                                        <input class="form-control" id="phone" name="phone_number" placeholder="Enter your phone number" type="text"></div>
                                                                     </div>
                                                                 </div>
+                                                                <div class="form-row">
+                                                                    <div class="form-col">
+                                                                        <div class="form-group">
+                                                                            <label class="control-label" for="company">Company</label>
+                                                                            <input class="form-control" id="company" name="company" placeholder="Enter your company" type="text"></div>
+                                                                        </div>
+                                                                        <div class="form-col">
+                                                                            <div class="form-group">
+                                                                                <label class="control-label" for="job_title">Job title</label>
+                                                                                <input class="form-control" id="job_title" name="job_title" placeholder="Enter your job title" type="text"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-row">
+                                                                            <div class="form-full-col">
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label" for="subject">What solutions are you interested in?</label>
+                                                                                    <select class="form-control" id="subject" name="interested_in">
+                                                                                        <option value="Custom Software Development">Custom Software Development</option>
+                                                                                        <option value="Data Visualisation">Data Visualisation</option>
+                                                                                        <option value="Big Data">Big Data</option>
+                                                                                        <option value="Consulting">Consulting</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="actions">
+                                                                            <button class="btn-primary" type="submit">Download</button>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
                                                             </div>
-                                                            <div class="actions">
-                                                                <button class="btn-primary" type="submit">Download</button>
-                                                            </div>
-
-
-
-
-
-                                                        </form>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-                                    {% include '_components/include' %}
-                                {% endblock %}
-
-                                
-{% js %}
-    $( document ).ready(function() {
-        // Ajax submission of form
-        $('#downloadable-{{ entry.id }}').submit(function(ev){
-            window.ajaxFormSubmitAndDownload(ev);
-        });
-    });
-{% endjs %}
-                            
+                                                {% include '_components/include' %}
+                                            {% endblock %}
+                                            {% js %}
+                                            $( document ).ready(function() {
+                                                    // Ajax submission of form
+                                                    $('#downloadable-{{ entry.id }}').submit(function(ev){
+                                                        window.ajaxFormSubmitAndDownload(ev);
+                                                    });
+                                                });
+                                            {% endjs %}
+                                            
