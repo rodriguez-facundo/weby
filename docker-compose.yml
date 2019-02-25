@@ -26,6 +26,7 @@ services:
       - ./config/general.php:/var/www/html/config/general.php
       - ./config/imager.php:/var/www/html/config/imager.php
       - ./composer.json:/var/www/html/composer.json
+      - ./php.ini:/usr/local/etc/php/php.ini
     environment:
       # DEPENDENCIES: >- # additional composer packages
         
