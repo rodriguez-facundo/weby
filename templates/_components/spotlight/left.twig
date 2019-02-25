@@ -1,7 +1,24 @@
 <div class="spotlight undefined">
     <div class="background-image">
-        <video autoplay="" class="animation" loop="" muted="" playsinline="">
-            <source src="{{ component.video.one().url }}" type="video/mp4"></video>
+        {% set visual = component.visualization.one() %}
+        {% switch visual.kind %}
+            {% case "video" %}
+            <video autoplay="" class="animation" loop="" muted="" playsinline="">
+                <source src="{{ component.visualization.one().url }}" type="video/mp4"></video>
+                {% case "image" %}
+                {{ imageMacros.image(visual, {
+                                ratio: (1/1),
+                                srcset: [
+                                    { width: 1600 },
+                                    { width: 1200 },
+                                    { width: 960, jpegQuality: 90 },
+                                    { width: 640, jpegQuality: 90 },
+                                ]
+                            }
+                        )   
+                    }}
+                {% default %}
+            {% endswitch %}
         </div>
         <div class="spotlight-inner">
             <div class="container">
