@@ -1,7 +1,7 @@
 {
   "require": {
     "aelvan/imager": "v2.1.5",
-    "craftcms/cms": "3.1.14",
+    "craftcms/cms": "3.1.15",
     "craftcms/redactor": "^2.3",
     "ether/simplemap": "3.3.5",
     "mikestecker/craft-videoembedder": "^1.1",
