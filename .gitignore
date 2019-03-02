@@ -2,8 +2,4 @@
 /.idea
 /vendor
 /web/cache
-/web/assets/images
-/web/assets/files
-/web/assets/video
-/web/assets/form_upload
 .DS_Store

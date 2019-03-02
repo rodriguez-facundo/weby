@@ -1,0 +1,6 @@
+FROM mariadb:10.1
+
+ENV MYSQL_ROOT_PASSWORD=root \
+  MYSQL_USER=craft \
+  MYSQL_PASSWORD=secret \
+  MYSQL_DATABASE=craft

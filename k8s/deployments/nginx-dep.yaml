@@ -1,0 +1,57 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nginx
+  labels:
+    chart: k8s
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        # image: bitnami/nginx:latest
+        # image:  nginx:alpine
+        image: r.cfcr.io/facundorodriguez/nginx:{{CF_SHORT_REVISION}}
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 80
+        - name: https
+          containerPort: 8443
+        # livenessProbe:
+        #   httpGet:
+        #     path: /
+        #     port: http
+        #   initialDelaySeconds: 30
+        #   timeoutSeconds: 5
+        # readinessProbe:
+        #   httpGet:
+        #     path: /
+        #     port: http
+        #   initialDelaySeconds: 5
+        #   timeoutSeconds: 1
+        volumeMounts:
+        - name: nginx
+          mountPath: /etc/nginx/conf.d
+        # - name: html
+        #   mountPath: /var/www/html
+        resources:
+          limits:
+            cpu: 100m
+            memory: 124Mi
+          requests:
+            cpu: 100m
+            memory: 124Mi
+      volumes:
+      - name: nginx
+        configMap: 
+          name: nginx-config
+      # - name: html
+      #   persistentVolumeClaim:
+      #     claimName: html
+      imagePullSecrets:
+      - name: codefresh-generated-r.cfcr.io-facu-website

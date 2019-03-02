@@ -1,0 +1,49 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mariadb
+  labels:
+    chart: k8s
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mariadb
+    spec:
+      containers:
+      - name: mariadb
+        image:  mariadb:10.1
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 3306
+        - name: https
+          containerPort: 8443
+        livenessProbe:
+          tcpSocket:
+            port: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: root
+        - name: MYSQL_USER
+          value: craft
+        - name: MYSQL_PASSWORD
+          value: secret
+        - name: MYSQL_DATABASE
+          value: craft
+        volumeMounts:
+        - name: db
+          mountPath: /var/lib/mysql
+        resources:
+          limits:
+            cpu: 100m
+            memory: 124Mi
+          requests:
+            cpu: 100m
+            memory: 124Mi
+      restartPolicy: Always
+      volumes:
+      - name: db
+        persistentVolumeClaim:
+          claimName: db
