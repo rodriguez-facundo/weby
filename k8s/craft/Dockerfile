@@ -22,7 +22,7 @@ RUN chown -R www-data:www-data /var/www/html/.
 USER www-data
 
 COPY --chown=www-data:www-data web/ /var/www/html/web/
-COPY --chown=www-data:www-data storage/backups/metacell_270227_050552_l0ocsnar0b_v3.1.15.sql /var/www/html/storage/backups/metacell_270227_050552_l0ocsnar0b_v3.1.15.sql
+COPY --chown=www-data:www-data storage/backups/jhsbk.sql /var/www/html/storage/backups/jhsbk.sql
 COPY --chown=www-data:www-data templates /var/www/html/templates/
 COPY --chown=www-data:www-data config/ /var/www/html/config
 
