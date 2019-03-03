@@ -18,10 +18,10 @@ spec:
         #   fsGroup: 82
         image:  r.cfcr.io/facundorodriguez/craft:{{CF_SHORT_REVISION}}
         imagePullPolicy: Always
-        lifecycle:
-          postStart:
-            exec:
-              command: ["/bin/sh", "-c", "cp -r /tmp/html/. /var/www/html"]
+        # lifecycle:
+        #   postStart:
+        #     exec:
+        #       command: ["/bin/sh", "-c", "cp -r /tmp/html/. /var/www/html"]
         ports:
         - containerPort: 9000
         resources:
