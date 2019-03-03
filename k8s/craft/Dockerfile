@@ -20,7 +20,7 @@ ENV CRAFTCMS_EMAIL=admin@company.com \
 # USER root
 # RUN chown -R www-data:www-data /var/www/html/.
 # USER www-data
-
+RUN cp /var/www/html /tmp/default
 COPY --chown=www-data:www-data web/ /tmp/html/web/
 COPY --chown=www-data:www-data storage/backups/jhsbk.sql /tmp/html/storage/backups/jhsbk.sql
 COPY --chown=www-data:www-data templates /tmp/html/templates/
