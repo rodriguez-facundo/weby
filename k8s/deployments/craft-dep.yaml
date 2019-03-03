@@ -55,5 +55,5 @@ spec:
       volumes:
       - name: nfs-volume
         nfs: 
-          server: 10.11.254.224
+          server: 10.11.245.221
           path: /
