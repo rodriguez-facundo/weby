@@ -56,7 +56,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: nfs-pv
+  name: nfs
 spec:
   capacity:
     storage: 1Gi
@@ -69,7 +69,7 @@ spec:
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: nfs-pv
+  name: nfs
 spec:
   accessModes:
     - ReadWriteMany
