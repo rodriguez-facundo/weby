@@ -12,7 +12,7 @@
     "vlucas/phpdotenv": "^2.4.0",
     "xpertbot/craft-wheelform": "^1.21"
   },
-  "autoload": {
+  "autoload": { 
     "psr-4": {
       "modules\\": "modules/"
     }
