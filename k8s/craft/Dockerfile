@@ -32,3 +32,5 @@ COPY --chown=www-data:www-data craft /var/www/html/craft
 COPY --chown=www-data:www-data craft.bat /var/www/html/craft.bat
 COPY --chown=www-data:www-data modules /var/www/html/modules
 COPY --chown=www-data:www-data php.ini /var/www/html/php.ini
+
+RUN chmod u+x /var/www/html/craft
