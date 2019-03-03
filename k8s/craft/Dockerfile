@@ -16,10 +16,10 @@ ENV CRAFTCMS_EMAIL=admin@company.com \
   DB_TABLE_PREFIX=metac \
   DEFAULT_SITE_URL=localhost
 
+# # USER root
 # USER root
-USER root
-RUN chown -R www-data:www-data /var/www/html/.
-USER www-data
+# RUN chown -R www-data:www-data /var/www/html/.
+# USER www-data
 
 COPY --chown=www-data:www-data web/ /tmp/html/web/
 COPY --chown=www-data:www-data storage/backups/jhsbk.sql /tmp/html/storage/backups/jhsbk.sql

@@ -37,8 +37,8 @@ spec:
         #   initialDelaySeconds: 10
         #   timeoutSeconds: 5
         volumeMounts:
-        - name: nfs
-          mountPath: "/var/www/html"
+        - name: nfs-volume
+          mountPath: /var/www/html
         # volumeMounts:
         # - name: html
         #   mountPath: /var/www/html
@@ -53,6 +53,7 @@ spec:
       #   persistentVolumeClaim:
       #     claimName: html
       volumes:
-      - name: nfs
-        persistentVolumeClaim:
-          claimName: nfs
+      - name: nfs-volume
+        type: nfs
+        server: 10.11.254.224
+        path: /

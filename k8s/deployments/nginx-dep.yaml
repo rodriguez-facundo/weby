@@ -37,8 +37,8 @@ spec:
         volumeMounts:
         - name: nginx
           mountPath: /etc/nginx/conf.d
-        - name: nfs
-          mountPath: "/mnt"
+        # - name: nfs
+        #   mountPath: "/mnt"
         # - name: html
         #   mountPath: /var/www/html
         resources:
@@ -52,9 +52,9 @@ spec:
       - name: nginx
         configMap: 
           name: nginx-config
-      - name: nfs
-        persistentVolumeClaim:
-          claimName: nfs
+      # - name: nfs
+      #   persistentVolumeClaim:
+      #     claimName: nfs
       # - name: html
       #   persistentVolumeClaim:
       #     claimName: html
