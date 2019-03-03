@@ -34,5 +34,3 @@ COPY --chown=www-data:www-data modules /tmp/html/modules
 COPY --chown=www-data:www-data php.ini /tmp/html/php.ini
 
 # RUN chmod u+x /tmp/html/craft
-
-USER root
