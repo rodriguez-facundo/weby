@@ -20,17 +20,19 @@ ENV CRAFTCMS_EMAIL=admin@company.com \
 # USER root
 # RUN chown -R www-data:www-data /var/www/html/.
 # USER www-data
-RUN cp /var/www/html /tmp/default
+RUN cp -R /var/www/html/. /tmp/html
+
 COPY --chown=www-data:www-data web/ /tmp/html/web/
 COPY --chown=www-data:www-data storage/backups/jhsbk.sql /tmp/html/storage/backups/jhsbk.sql
 COPY --chown=www-data:www-data templates /tmp/html/templates/
 COPY --chown=www-data:www-data config/ /tmp/html/config
 
 COPY --chown=www-data:www-data composer.json /tmp/html/composer.json
-COPY --chown=www-data:www-data composer.lock /tmp/html/composer.lock
+# COPY --chown=www-data:www-data composer.lock /tmp/html/composer.lock
 COPY --chown=www-data:www-data craft /tmp/html/craft
 COPY --chown=www-data:www-data craft.bat /tmp/html/craft.bat
 COPY --chown=www-data:www-data modules /tmp/html/modules
 COPY --chown=www-data:www-data php.ini /tmp/html/php.ini
 
+RUN chmod -R a+wx /tmp/html/
 # RUN chmod u+x /tmp/html/craft

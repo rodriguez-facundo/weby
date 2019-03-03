@@ -21,17 +21,7 @@ spec:
         lifecycle:
           postStart:
             exec:
-              - "/bin/sh"
-              - "-c"
-              - >
-                cp -r /tmp/default/. /var/www/html/;
-                cp -r /tmp/html/web/assets/. /var/www/html/web/assers/;
-                cp -r /tmp/html/storage/backups/. /var/www/html/storage/backups/;
-                cp -r /tmp/html/templates /var/www/html/templates/;
-                cp -r /tmp/html/config/refactor/. /var/www/html/config/refactor/;
-                cp -r /tmp/html/config/. /var/www/html/config/;
-                cp /tmp/html/composer.json /var/www/html/composer.json;
-                cp /tmp/html/php.ini /var/www/html/php.ini;
+              command: ["/bin/sh", "-c", "cp -r /tmp/html/. /var/www/html"]
         ports:
         - containerPort: 9000
         resources:
