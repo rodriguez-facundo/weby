@@ -54,6 +54,5 @@ spec:
       #     claimName: html
       volumes:
       - name: nfs-volume
-        nfs: 
-          server: 10.11.245.221
-          path: /
+        persistentVolumeClaim:
+          claimName: nfs
