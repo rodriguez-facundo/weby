@@ -21,7 +21,7 @@ spec:
         lifecycle:
           postStart:
             exec:
-              command: ["/bin/sh", "-c", "cp -r /tmp/html/. /var/www/html && /script/run.sh docker-php-entrypoint php-fpm"]
+              command: ["/bin/sh", "-c", "cp -r /tmp/html/. /var/www/html && /scripts/run.sh docker-php-entrypoint php-fpm"]
         ports:
         - containerPort: 9000
         resources:
