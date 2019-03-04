@@ -4,7 +4,7 @@ ENV CRAFTCMS_EMAIL=admin@company.com \
   CRAFTCMS_USERNAME=SuperAdmin \
   CRAFTCMS_PASSWORD=Pas5WordMetaCell \
   CRAFTCMS_SITENAME=MetaCell \
-  CRAFTCMS_SITEURL='' \
+  CRAFTCMS_SITEURL=35.192.137.162 \
   DB_SERVER=mariadb  \
   DB_NAME=craft  \
   DB_USER=craft \
@@ -14,7 +14,7 @@ ENV CRAFTCMS_EMAIL=admin@company.com \
   DB_DRIVER=mysql \
   DB_PORT=3306 \
   DB_TABLE_PREFIX=metac \
-  DEFAULT_SITE_URL=35.192.137.162
+  DEFAULT_SITE_URL=''
 
 # # USER root
 # USER root
