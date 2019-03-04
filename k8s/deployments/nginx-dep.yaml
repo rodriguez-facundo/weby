@@ -15,7 +15,7 @@ spec:
       - name: nginx
         # image: bitnami/nginx:latest
         image:  nginx:alpine
-        # image: r.cfcr.io/facundorodriguez/nginx:{{CF_SHORT_REVISION}}
+        # image: r.cfcr.io/facundo/nginx:{{CF_SHORT_REVISION}}
         imagePullPolicy: Always
         ports:
         - name: http

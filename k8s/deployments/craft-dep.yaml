@@ -16,7 +16,7 @@ spec:
         # securityContext:
         #   runAsUser: 82
         #   fsGroup: 82
-        image:  r.cfcr.io/facundorodriguez/craft:{{CF_SHORT_REVISION}}
+        image:  r.cfcr.io/facundo/craft:{{CF_SHORT_REVISION}}
         imagePullPolicy: Always
         # lifecycle:
         #   postStart:
