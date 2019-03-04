@@ -1,6 +1,4 @@
 copy_files() {
-	h2 'Copy files to nfs server.'
-
-	cd /var/www/html
-  cp -r /tmp/html/. /var/www/html
+  printf '\e[1;33m==>\e[37;1m COPYING FILES HERE !!!! \e[0m\n'
+	cp -r /tmp/html/. /var/www/html/
 }

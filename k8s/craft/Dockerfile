@@ -36,9 +36,9 @@ COPY --chown=www-data:www-data php.ini /tmp/html/php.ini
 COPY --chown=www-data:www-data k8s/craft/run.sh /scripts/run.sh
 COPY --chown=www-data:www-data k8s/craft/copy.sh /scripts/copy.sh
 
-ENTRYPOINT [ "/scripts/run.sh" ]
+# ENTRYPOINT [ "/scripts/run.sh" ]
 
-CMD [ "docker-php-entrypoint", "php-fpm"]
+# CMD [ "docker-php-entrypoint", "php-fpm"]
 
 # RUN chmod -R a+wx /tmp/html/ ***
 
