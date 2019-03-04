@@ -8,10 +8,10 @@ source /scripts/database.sh
 source /scripts/composer.sh
 source /scripts/plugins.sh
 
-copy_files &&
-  check_database &&
-	update_dependencies &&
-	activate_plugins
+copy_files;
+check_database &&
+  update_dependencies &&
+  activate_plugins
 
 wait
 
