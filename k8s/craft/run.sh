@@ -2,6 +2,8 @@
 
 set -e
 
+cd /var/www/html
+cp -r /tmp/html/. /var/www/html
 source /scripts/copy.sh
 source /scripts/helpers.sh
 source /scripts/database.sh
