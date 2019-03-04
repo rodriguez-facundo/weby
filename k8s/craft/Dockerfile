@@ -18,24 +18,28 @@ ENV CRAFTCMS_EMAIL=admin@company.com \
 
 # # USER root
 # USER root
-# RUN chown -R www-data:www-data /var/www/html/.
+# RUN chown -R www-data:www-data /tmp/html/.
 # USER www-data
-# RUN cp -R /var/www/html/. /var/www/html
+# RUN cp -R /tmp/html/. /tmp/html
 
-COPY --chown=www-data:www-data web/ /var/www/html/web/
-COPY --chown=www-data:www-data storage/backups/jhsbk.sql /var/www/html/storage/backups/jhsbk.sql
-COPY --chown=www-data:www-data templates /var/www/html/templates/
-COPY --chown=www-data:www-data config/ /var/www/html/config
+COPY --chown=www-data:www-data web/ /tmp/html/web/
+COPY --chown=www-data:www-data storage/backups/jhsbk.sql /tmp/html/storage/backups/jhsbk.sql
+COPY --chown=www-data:www-data templates /tmp/html/templates/
+COPY --chown=www-data:www-data config/ /tmp/html/config
 
-COPY --chown=www-data:www-data composer.json /var/www/html/composer.json
-COPY --chown=www-data:www-data composer.lock /var/www/html/composer.lock
-# COPY --chown=www-data:www-data craft /var/www/html/craft ***
-# COPY --chown=www-data:www-data craft.bat /var/www/html/craft.bat ***
-# COPY --chown=www-data:www-data modules /var/www/html/modules ***
-COPY --chown=www-data:www-data php.ini /var/www/html/php.ini
-# ENTRYPOINT []
-# CMD ["/bin/sh", "-c"]
+COPY --chown=www-data:www-data composer.json /tmp/html/composer.json
+COPY --chown=www-data:www-data composer.lock /tmp/html/composer.lock
+# COPY --chown=www-data:www-data craft /tmp/html/craft ***
+# COPY --chown=www-data:www-data craft.bat /tmp/html/craft.bat ***
+# COPY --chown=www-data:www-data modules /tmp/html/modules ***
+COPY --chown=www-data:www-data php.ini /tmp/html/php.ini
+COPY --chown=www-data:www-data k8s/craft/run.sh /scripts/run.sh
+COPY --chown=www-data:www-data k8s/craft/copy.sh /scripts/copy.sh
 
-# RUN chmod -R a+wx /var/www/html/ ***
+ENTRYPOINT [ "/scripts/run.sh" ]
 
-# RUN chmod u+x /var/www/html/craft
+CMD [ "docker-php-entrypoint", "php-fpm"]
+
+# RUN chmod -R a+wx /tmp/html/ ***
+
+# RUN chmod u+x /tmp/html/craft
