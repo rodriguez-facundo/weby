@@ -28,7 +28,7 @@ COPY --chown=www-data:www-data templates /tmp/html/templates/
 COPY --chown=www-data:www-data config/ /tmp/html/config
 
 COPY --chown=www-data:www-data composer.json /tmp/html/composer.json
-COPY --chown=www-data:www-data composer.lock /tmp/html/composer.lock
+# COPY --chown=www-data:www-data composer.lock /tmp/html/composer.lock
 # COPY --chown=www-data:www-data craft /tmp/html/craft ***
 # COPY --chown=www-data:www-data craft.bat /tmp/html/craft.bat ***
 # COPY --chown=www-data:www-data modules /tmp/html/modules ***
